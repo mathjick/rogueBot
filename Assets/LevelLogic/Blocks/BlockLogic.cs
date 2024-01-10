@@ -14,8 +14,7 @@ public enum BlockType
 
 public abstract class BlockLogic : MonoBehaviour
 {
-    public string BlockType;
-    public int BlockNbr;
+    public int BlockId;
     public BlockDifficulty blockDifficulty;
     public BlockType blockType;
 

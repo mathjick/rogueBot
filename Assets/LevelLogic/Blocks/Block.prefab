@@ -1840,9 +1840,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c0dbf4c93558f49a86570d80d0b1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlockType: 
-  BlockNbr: 0
-  BlockDifficulty: 0
+  BlockId: 0
+  blockDifficulty: 0
+  blockType: 0
 --- !u!1 &4175247586390182514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,7 +1983,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 1, b: 0.34976888, a: 1}
+  m_Color: {r: 1, g: 0.9053154, b: 0, a: 1}
   m_Intensity: 2.49
   m_Range: 83.43
   m_SpotAngle: 30

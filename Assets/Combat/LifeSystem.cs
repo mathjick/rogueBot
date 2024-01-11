@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,33 +22,42 @@ public class LifeSystem : MonoBehaviour
     public int lifePoints;
     public int maxLifePoints;
     public DamageTypesArmor[] damageTypesArmors;
-    private GameObject lastSourceOfDamage;
+    public TextMeshProUGUI PvNBr;
+    public GameObject lastSourceOfDamage;
 
     [SerializeField] private UnityEvent OnDeath;
 
     public void Start()
     {
         lifePoints = maxLifePoints;
+        PvNBr.text = lifePoints.ToString();
     }
     public void TakeDamage(DamageTypes[] damageTypes, float damages, GameObject sourceOfDamage)
     {
         lastSourceOfDamage = sourceOfDamage;
         var trueDamageTaken = damages;
-        foreach (var armor in this.damageTypesArmors)
+        if (damageTypesArmors.Length > 0)
         {
-            if (damageTypes.Contains<DamageTypes>(armor.damageType))
+            foreach (var armor in this.damageTypesArmors)
             {
-                trueDamageTaken -= trueDamageTaken*armor.percentReduction;
-                trueDamageTaken -= armor.flatReduction;
+                if (damageTypes.Contains<DamageTypes>(armor.damageType))
+                {
+                    trueDamageTaken -= trueDamageTaken * armor.percentReduction;
+                    trueDamageTaken -= armor.flatReduction;
+                }
             }
         }
         trueDamageTaken = Mathf.CeilToInt(trueDamageTaken);
         lifePoints -= (int)trueDamageTaken;
+        PvNBr.text = lifePoints.ToString();
         CheckForDeath();
     }
 
     public void CheckForDeath()
     {
-        OnDeath.Invoke();
+        if(lifePoints <= 0)
+        {
+            OnDeath.Invoke();
+        }
     }
 }

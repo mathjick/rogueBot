@@ -48,9 +48,9 @@ public class PlayerWeapon : MonoBehaviour
         {
             Debug.DrawLine(inventory.playerController.playerView.transform.position, hit.point, Color.red, 10);
         }
-        if (hit.collider && hit.collider.gameObject.GetComponent<LifeSystem>())
+        if (hit.collider && hit.collider.gameObject.GetComponent<ImpactZone>())
         {
-            //hit.collider.gameObject.GetComponent<LifeSystem>().TakeDamage(damageTypes, 0,inventory.playerController.gameObject);
+            hit.collider.gameObject.GetComponent<ImpactZone>().TakeDamage(damageTypes, 10,inventory.playerController.gameObject);
         }
     }
 }

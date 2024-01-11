@@ -28,7 +28,7 @@ public class PlayerMouvement : MonoBehaviour
 
     private Vector2 playerInput;
     private Vector3 _mouvement;
-    public int _jumpsLeft;
+    private int _jumpsLeft;
     private bool _storedJump;
     private bool _flagTouchGround;
     private int _gravityMode = 0;

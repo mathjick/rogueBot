@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerAbility : MonoBehaviour
 {
     public PlayerController controller;
+    [Space(1)]
+    [Header("------------ Dash Parameters ------------")]
+    [Space(1)]
     public float dashPower;
     public float cooldown;
 

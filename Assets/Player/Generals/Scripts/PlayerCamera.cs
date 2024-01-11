@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerCamera : MonoBehaviour
 {
     public PlayerController playerController;
+    [Space(1)]
+    [Header("------------ Look Parameters ------------")]
+    [Space(1)]
     public Vector2 _lookMultiplyer;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +18,7 @@ public class PlayerCamera : MonoBehaviour
 
     public void Look(InputValue val)
     {
-        if(Mathf.Abs(val.Get<Vector2>().x) <= 5 && Mathf.Abs(val.Get<Vector2>().y) <= 5)
+        if(Mathf.Abs(val.Get<Vector2>().x) <= 1 && Mathf.Abs(val.Get<Vector2>().y) <= 1)
         {
         }
         else

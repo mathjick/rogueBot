@@ -6,10 +6,13 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     public Camera playerView;
     public Transform playerTransform;
-
+    [Space(1)]
+    [Header("-------------- Setup Player --------------")]
+    [Space(1)]
     public PlayerMouvement playerMouvementSystem;
     public PlayerCamera playerCameraSystem;
     public PlayerAbility playerAbility;
+    public PlayerInventory playerInventory;
     public bool isGrounded;
 
     // Start is called before the first frame update
@@ -47,6 +50,11 @@ public class PlayerController : MonoBehaviour
     public void OnAbility(InputValue val)
     {
         playerAbility.Activate();
+    }
+
+    public void OnPrimaryTrigger(InputValue val)
+    {
+        playerInventory.HoldTrigger(val);
     }
 
 }

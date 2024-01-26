@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class IaBase : MonoBehaviour
 {
+    public EnnemieSpawnManager Spawner;
 
+    virtual public void Dead()
+    {
+    }
 }

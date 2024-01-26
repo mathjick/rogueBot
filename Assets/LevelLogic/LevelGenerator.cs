@@ -1,18 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+
+public struct UsedTile
+{
+    int x, y;
+    GameObject BLock;
+}
 
 public class LevelGenerator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject[] Blocks;
+    public GameObject[] PossibleSpawnPoints;
+    public UsedTile[] Tiles;
+    public int nbrOfTiles;
+
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GenerateLevel()
     {
-        
+        KillDoubleInSpawnPoints();
+        for (int i = 0; i < nbrOfTiles; i++)
+        {
+
+        }
+    }
+
+    public void KillDoubleInSpawnPoints()
+    {
+        var _clearedSpawns = PossibleSpawnPoints[0..0];
+        foreach (var item in Blocks)
+        {
+            if (!_clearedSpawns.Contains(item))
+            {
+                _clearedSpawns.Append(item);
+            }
+        }
+        PossibleSpawnPoints = _clearedSpawns;
     }
 }

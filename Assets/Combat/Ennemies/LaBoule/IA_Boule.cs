@@ -51,8 +51,9 @@ public class IA_Boule : IaBase
         canShot = true;
     }
 
-    public void Dead()
+    override public void Dead()
     {
         isAlive = false;
+        base.Dead();
     }
 }

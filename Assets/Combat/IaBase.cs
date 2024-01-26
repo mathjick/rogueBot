@@ -8,5 +8,6 @@ public class IaBase : MonoBehaviour
 
     virtual public void Dead()
     {
+        Spawner.RemoveEnnemi(gameObject);
     }
 }

@@ -1,10 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
 public class EnnemieWeigtedSpec
 {
     public GameObject Ennemie;
@@ -13,62 +12,41 @@ public class EnnemieWeigtedSpec
 
 public class EnnemieSpawnManager : MonoBehaviour
 {
-    public GameObject[] SpawnPoints;
-    public EnnemieWeigtedSpec[] Ennemies;
-    public List<GameObject> EnnemiesAlive;
-    public GameObject EnnemiToSpawn;
+    public List<GameObject> SpawnPoints;
+    public List<EnnemieWeigtedSpec> EnnemiesRollChance = new List<EnnemieWeigtedSpec>();
     public int maxEnnemies = 1;
     public float SpawnSpeed = 1;
     public int nbrOfSpawn = 1;
-    public bool canSpawn = false;
+    public List<GameObject> EnnemiesAlive;
 
     [SerializeField] private UnityEvent AllEnnemiDead;
 
-    public float lastSpawnTime = 0;
-    private bool finishedSpawning = false;
-
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        if (canSpawn && !finishedSpawning && lastSpawnTime + SpawnSpeed <= Time.time && Ennemies.Length < maxEnnemies)
-        {
-            lastSpawnTime = Time.time;
-            SpawnAnEnnemi();
-        }
-    }
-
     public void SpawnAnEnnemi()
     {
-        var newEnnemi = Instantiate(RollForEnnemie(),RollForSpawnPoint());
-        newEnnemi.GetComponent<IaBase>().Spawner = this;
-        EnnemiesAlive.Append(newEnnemi);
-        nbrOfSpawn--;
-        if(nbrOfSpawn <= 0)
+        if (nbrOfSpawn > 0)
         {
-            canSpawn = false;
-            finishedSpawning = true;
+            GameObject newEnnemi = Instantiate(RollForEnnemie(), RollForSpawnPoint().position, RollForSpawnPoint().rotation);
+            newEnnemi.GetComponent<IaBase>().Spawner = this;
+            EnnemiesAlive.Add(newEnnemi);
+            nbrOfSpawn--;
         }
     }
 
     public GameObject RollForEnnemie()
     {
-        var total_weight = 0f;
-        foreach (var enemy in Ennemies)
+        //add up all the weights and pick a random number between 0 and the total
+        float total = EnnemiesRollChance.Sum(weight => weight.weight);
+        float randomPoint = Random.value * total;
+        //go through all the items adding the weight to the runningTotal until we reach the randomPoint
+        for (int i = 0; i < EnnemiesRollChance.Count; i++)
         {
-            total_weight += enemy.weight;
-        }
-        var roll = Random.Range(0, total_weight);
-        total_weight = 0f;
-        foreach (var enemy in Ennemies)
-        {
-            total_weight += enemy.weight;
-            if(total_weight > roll)
+            if (randomPoint < EnnemiesRollChance[i].weight)
             {
-                return enemy.Ennemie;
+                return EnnemiesRollChance[i].Ennemie;
+            }
+            else
+            {
+                randomPoint -= EnnemiesRollChance[i].weight;
             }
         }
         return null;
@@ -76,20 +54,28 @@ public class EnnemieSpawnManager : MonoBehaviour
 
     public Transform RollForSpawnPoint()
     {
-        var roll = SpawnPoints[Mathf.RoundToInt(Random.Range(0,SpawnPoints.Length))].transform;
-        return roll;
-    }
-
-    public void ActivateSpawner()
-    {
-        if (!finishedSpawning)
-        {
-            this.canSpawn = true;
-        }
+        //return a random spawn point beetwen the list of spawn points
+        return SpawnPoints[Random.Range(0, SpawnPoints.Count)].transform;
     }
 
     public void RemoveEnnemi(GameObject ennemi)
     {
         EnnemiesAlive.Remove(ennemi);
+        if (EnnemiesAlive.Count == 0 && nbrOfSpawn <= 0)
+        {
+            AllEnnemiDead.Invoke();
+        }
+    }
+
+    public void CallBackSpawn()
+    {
+        if (maxEnnemies > EnnemiesAlive.Count && nbrOfSpawn > 0)
+        {
+            SpawnAnEnnemi();
+        }
+        if (nbrOfSpawn > 0)
+        {
+            Invoke("CallBackSpawn", SpawnSpeed);
+        }
     }
 }

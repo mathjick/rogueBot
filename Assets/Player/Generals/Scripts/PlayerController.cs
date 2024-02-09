@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics.Raycast(playerTransform.position, Vector3.down, 1.1f);
+        this.playerMouvementSystem.velocityMode = isGrounded ? 0 : 1;
     }
 
     public void OnMove(InputValue val)

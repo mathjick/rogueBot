@@ -33,7 +33,7 @@ public class PlayerMouvement : MonoBehaviour
     private bool _storedJump;
     private bool _flagTouchGround;
     private int _gravityMode = 0;
-    private int _velocityMode = 0;
+    public int velocityMode = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,11 +65,11 @@ public class PlayerMouvement : MonoBehaviour
         }
         _mouvement = playerController.playerTransform.forward * playerInput.y * _mouvementMultiplyer.x + playerController.playerTransform.right * playerInput.x * _mouvementMultiplyer.y;
         var _aimedVelocity = new Vector3(_mouvement.x * Time.deltaTime, playerController.rb.velocity.y, _mouvement.z * Time.deltaTime);
-        playerController.rb.velocity = _gravityMode == 0 ? Vector3.Lerp(playerController.rb.velocity, _aimedVelocity, reactivityFactor) : Vector3.Lerp(playerController.rb.velocity, _aimedVelocity, floatingReactivityFactor);
+        playerController.rb.velocity = velocityMode == 0 ? Vector3.Lerp(playerController.rb.velocity, _aimedVelocity, reactivityFactor) : Vector3.Lerp(playerController.rb.velocity, _aimedVelocity, floatingReactivityFactor);
         playerController.rb.velocity += _gravityMode == 0 ? gravity * Time.deltaTime : holdJumpGravity * Time.deltaTime;
         var ClampGround  = new Vector3(Mathf.Clamp(playerController.rb.velocity.x, -velocityMax.x, velocityMax.x), Mathf.Clamp(playerController.rb.velocity.y, -velocityMax.y, velocityMax.y), Mathf.Clamp(playerController.rb.velocity.z, -velocityMax.z, velocityMax.z));
         var ClampAir = new Vector3(Mathf.Clamp(playerController.rb.velocity.x, -holdJumpVelocityMax.x, holdJumpVelocityMax.x), Mathf.Clamp(playerController.rb.velocity.y, -holdJumpVelocityMax.y, holdJumpVelocityMax.y), Mathf.Clamp(playerController.rb.velocity.z, -holdJumpVelocityMax.z, holdJumpVelocityMax.z));
-        playerController.rb.velocity = _gravityMode == 0 ? ClampGround : ClampAir;
+        playerController.rb.velocity = velocityMode == 0 ? ClampGround : ClampAir;
     }
 
     public void Move(InputValue val)

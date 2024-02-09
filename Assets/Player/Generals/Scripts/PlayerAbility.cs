@@ -10,7 +10,7 @@ public class PlayerAbility : MonoBehaviour
     [Space(1)]
     public float dashPower;
     public float cooldown;
-    public float fricionModifier;
+    public float frictionModifier = 1;
     public float timeBeforeResetFriction;
 
     private bool canActivate = true;

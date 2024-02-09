@@ -743,12 +743,13 @@ MonoBehaviour:
   velocityMax: {x: 50, y: 50, z: 50}
   _mouvementMultiplyer: {x: 800, y: 800}
   reactivityFactor: 0.2
+  floatingReactivityFactor: 0.1
   jumpForce: 20
   jumps: 2
   bufferBeforeJump: 0
   coyoteTime: 0
   holdJumpGravity: {x: 0, y: -20, z: 0}
-  holdJumpVelocityMax: {x: 100, y: -20, z: 100}
+  holdJumpVelocityMax: {x: 1000, y: 20, z: 1000}
 --- !u!114 &7244356293050925389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,6 +778,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 605614677769541540}
   weapon: {fileID: 6446003923338327192}
+  moduleEquiped: {fileID: 0}
+  modulesStocked: []
 --- !u!114 &3110761786520066476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,7 +793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 605614677769541540}
-  dashPower: 100
+  dashPower: 5
   cooldown: 1
 --- !u!114 &2364643521974911295
 MonoBehaviour:

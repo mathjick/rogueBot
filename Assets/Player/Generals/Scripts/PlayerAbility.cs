@@ -17,7 +17,7 @@ public class PlayerAbility : MonoBehaviour
         if (canActivate)
         {
             canActivate = false;
-            controller.rb.AddForce(new Vector3(controller.rb.velocity.x * dashPower, 0, controller.rb.velocity.z * dashPower));
+            controller.rb.AddForce(new Vector3(controller.rb.velocity.x * dashPower, 0, controller.rb.velocity.z * dashPower),ForceMode.Impulse);
             Invoke("ReloadAbility", cooldown);
         }
     }

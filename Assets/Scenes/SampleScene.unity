@@ -363,7 +363,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &234829914
 MonoBehaviour:
@@ -923,6 +923,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4239694415259092432, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
+      propertyPath: floatingReactivityFactor
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6913838984201861094, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1009,7 +1013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6457443897468362333, guid: 4b49d2c3831079e49b914dc09b7f1525, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6457443897468362333, guid: 4b49d2c3831079e49b914dc09b7f1525, type: 3}
       propertyPath: m_LocalPosition.x

@@ -33,10 +33,18 @@ public class PlayerWeapon : MonoBehaviour
         if (val.isPressed)
         {
             holdingTrigger = true;
+            if (inventory.moduleEquiped)
+            {
+                inventory.moduleEquiped.triggerOn();
+            }
         }
         else
         {
             holdingTrigger = false;
+            if (inventory.moduleEquiped)
+            {
+                inventory.moduleEquiped.triggerOff();
+            }
         }
     }
 

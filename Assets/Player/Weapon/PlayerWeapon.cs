@@ -52,13 +52,12 @@ public class PlayerWeapon : MonoBehaviour
     {
         RaycastHit hit;
         Physics.Raycast(inventory.playerController.playerView.transform.position, inventory.playerController.playerView.transform.forward * 1000,out hit);
-        if (hit.collider)
+        if (hit.collider && hit.collider.tag != "tag_player")
         {
-            Debug.DrawLine(inventory.playerController.playerView.transform.position, hit.point, Color.red, 10);
-        }
-        if (hit.collider && hit.collider.gameObject.GetComponent<ImpactZone>())
-        {
-            hit.collider.gameObject.GetComponent<ImpactZone>().TakeDamage(damageTypes, 10,inventory.playerController.gameObject);
+            Debug.Log("yeah");
+            var spawnSpec = projectileLaunchAnchor.transform;
+            var projectile = Instantiate(projectilePrefab, spawnSpec.position,spawnSpec.rotation);
+            projectile.GetComponent<Rigidbody>().AddForce((hit.point - projectileLaunchAnchor.transform.position).normalized * 200);
         }
     }
 }

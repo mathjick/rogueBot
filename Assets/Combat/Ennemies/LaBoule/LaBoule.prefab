@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6775886406857932515}
   m_Layer: 7
   m_Name: HPText
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 4264772788574637186}
   m_Layer: 7
   m_Name: BouleSummonPoint
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 1218442300847446873}
   m_Layer: 7
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 4247050711361472628}
   m_Layer: 7
   m_Name: LaBoule
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -429,6 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b18fcc1433d1c42add3c0c46204eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Spawner: {fileID: 0}
   isAlive: 1
   lifeSystem: {fileID: 6574296361857269976}
   projectile: {fileID: 7373683308321032716, guid: 6eff2686906235148868784153771b44, type: 3}
@@ -450,7 +451,7 @@ GameObject:
   - component: {fileID: 5666060103059508023}
   m_Layer: 7
   m_Name: CritSpot
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

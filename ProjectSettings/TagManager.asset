@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - player
+  - tag_ennemie
+  - tag_player
+  - tag_solid
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - IgnoreAll
   - Ennemies
   - ProjectileEnnemies
-  - 
+  - ProjectilePlayer
   - 
   - 
   - 

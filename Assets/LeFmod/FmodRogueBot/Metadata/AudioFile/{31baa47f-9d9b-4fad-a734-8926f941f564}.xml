@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{31baa47f-9d9b-4fad-a734-8926f941f564}">
+		<property name="assetPath">
+			<value>GLXplosion2.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.67308333333333337</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{12217ae5-0e77-4f04-a1f6-898cf44d92df}</destination>
+		</relationship>
+	</object>
+</objects>

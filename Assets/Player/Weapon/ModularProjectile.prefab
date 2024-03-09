@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 2036972495046013300}
   - component: {fileID: 5871003929454663620}
   - component: {fileID: 8129692738370623943}
+  - component: {fileID: 638262697011990523}
   - component: {fileID: 6840737283581508878}
+  - component: {fileID: 5209842160526063553}
   - component: {fileID: 169775078617303332}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ModularProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,6 +101,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &638262697011990523
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749752667786575973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.7
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6840737283581508878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +127,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextEffect: {fileID: 0}
+--- !u!114 &5209842160526063553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749752667786575973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f2e5b9fb3e63c47988c9160ac125db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagesTypes: 00000000
+  damages: 10
 --- !u!54 &169775078617303332
 Rigidbody:
   m_ObjectHideFlags: 0

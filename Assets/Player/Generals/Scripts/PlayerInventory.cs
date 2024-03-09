@@ -8,6 +8,7 @@ public class PlayerInventory : MonoBehaviour
 {
     public PlayerController playerController;
     public PlayerWeapon weapon;
+    public TriggerModule triggerModuleEquipped;
     public BaseModule moduleEquiped;
     public List<BaseModule> modulesStocked;
 

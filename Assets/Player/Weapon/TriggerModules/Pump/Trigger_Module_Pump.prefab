@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &317778197907245217
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1223029754703530821, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: triggerModuleToEquip
+      value: 
+      objectReference: {fileID: 8894596620558738858}
+    - target: {fileID: 1930768058988581017, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: damages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625272, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_Name
+      value: Trigger_Module_Pump
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 74.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 388659252033107057, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+--- !u!114 &2207765230645106744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1930768058988581017, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+  m_PrefabInstance: {fileID: 317778197907245217}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690607944546404566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f2e5b9fb3e63c47988c9160ac125db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7690607944546404566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7985584433234985079, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+  m_PrefabInstance: {fileID: 317778197907245217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8894596620558738858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690607944546404566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86565200c5aaba842803dfa1b57764c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerWeapon: {fileID: 0}
+  damageData: {fileID: 2207765230645106744}
+  projectilePrefab: {fileID: 7749752667786575973, guid: 6d6ba07ca5105cc40b8fbe8fa753e14d, type: 3}
+  RPM: 60
+  projectileSpeed: 2000
+  pelletCount: 10
+  spread: 0.0001

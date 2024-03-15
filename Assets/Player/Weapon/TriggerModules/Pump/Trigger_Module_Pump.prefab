@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: triggerModuleToEquip
       value: 
       objectReference: {fileID: 8894596620558738858}
+    - target: {fileID: 1930768058988581017, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: damages
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7400264267591625272, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: m_Name
       value: Trigger_Module_Pump
@@ -62,6 +66,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 388659252033107057, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+--- !u!114 &2207765230645106744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1930768058988581017, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+  m_PrefabInstance: {fileID: 317778197907245217}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690607944546404566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f2e5b9fb3e63c47988c9160ac125db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7690607944546404566 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7985584433234985079, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
@@ -80,23 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerWeapon: {fileID: 0}
-  damageData: {fileID: 1001177917870792830}
+  damageData: {fileID: 2207765230645106744}
   projectilePrefab: {fileID: 7749752667786575973, guid: 6d6ba07ca5105cc40b8fbe8fa753e14d, type: 3}
   RPM: 60
   projectileSpeed: 2000
   pelletCount: 10
   spread: 0.0001
---- !u!114 &1001177917870792830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7690607944546404566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f2e5b9fb3e63c47988c9160ac125db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damagesTypes: 00000000
-  damages: 1

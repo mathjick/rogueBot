@@ -2,7 +2,36 @@ using UnityEngine;
 
 public class TM_PumpAction : TriggerModule
 {
-    public bool isHolding = false;
+    #region Parameters
+    public GameObject projectilePrefab;
+    public float RPM;
+    public int projectileSpeed;
+    public int pelletCount;
+    public float spread;
+    #endregion
+    #region Variables
+    private float timer = 0;
+    private float timeBeetweenShots = 0;
+    private bool isHolding = false;
+    #endregion
+
+    public void Start()
+    {
+        timeBeetweenShots = 60f / RPM;
+    }
+
+    public void FixedUpdate()
+    {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+        else if (isHolding)
+        {
+            timer = timeBeetweenShots;
+            Shoot();
+        }
+    }
 
     public override void Hold()
     {
@@ -12,5 +41,23 @@ public class TM_PumpAction : TriggerModule
     public override void Release()
     {
         isHolding = false;
+    }
+
+    public void Shoot()
+    {
+        RaycastHit hit;
+        for (int i = 0; i < pelletCount; i++)
+        {
+            Physics.Raycast(playerWeapon.inventory.playerController.playerView.transform.position, playerWeapon.inventory.playerController.playerView.transform.forward + new Vector3(Random.Range(-spread, spread), Random.Range(-spread, spread), Random.Range(-spread, spread)) * 1000, out hit);
+            if (hit.collider && hit.collider.tag != "tag_player")
+            {
+                var spawnSpec = playerWeapon.projectileLaunchAnchor.transform;
+                var projectile = Instantiate(projectilePrefab, spawnSpec.position, spawnSpec.rotation);
+                projectile.GetComponent<ModularProjectileBase>().owner = playerWeapon.inventory.gameObject;
+                projectile.GetComponent<ModularProjectileBase>().damageData.damagesTypes = this.damageData.damagesTypes;
+                projectile.GetComponent<ModularProjectileBase>().damageData.damages = this.damageData.damages;
+                projectile.GetComponent<Rigidbody>().AddForce((hit.point - playerWeapon.projectileLaunchAnchor.transform.position).normalized * projectileSpeed);
+            }
+        }
     }
 }

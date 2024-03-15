@@ -5,6 +5,7 @@ using UnityEngine;
 public class TriggerModule : MonoBehaviour
 {
     public PlayerWeapon playerWeapon;
+    public DamageData damageData;
     public virtual void Hold()
     {
         Debug.Log("Hold with module");

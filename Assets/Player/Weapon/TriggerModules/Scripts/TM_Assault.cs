@@ -16,7 +16,6 @@ public class TM_Assault : TriggerModule
     public void Start()
     {
         timeBeetweenShots = 60f / RPM;
-        Debug.Log("timeBeetweenShots : " + timeBeetweenShots);
     }
 
     public void FixedUpdate()
@@ -34,13 +33,11 @@ public class TM_Assault : TriggerModule
 
     public override void Hold()
     {
-        Debug.Log("Hold with module");
         isHolding = true;
     }
 
     public override void Release()
     {
-        Debug.Log("Release with module");
         isHolding = false;
     }
 
@@ -53,6 +50,8 @@ public class TM_Assault : TriggerModule
             var spawnSpec = playerWeapon.projectileLaunchAnchor.transform;
             var projectile = Instantiate(projectilePrefab, spawnSpec.position, spawnSpec.rotation);
             projectile.GetComponent<ModularProjectileBase>().owner = playerWeapon.inventory.gameObject;
+            projectile.GetComponent<ModularProjectileBase>().damageData.damagesTypes = this.damageData.damagesTypes;
+            projectile.GetComponent<ModularProjectileBase>().damageData.damages = this.damageData.damages;
             projectile.GetComponent<Rigidbody>().AddForce((hit.point - playerWeapon.projectileLaunchAnchor.transform.position).normalized * projectileSpeed);
         }
     }

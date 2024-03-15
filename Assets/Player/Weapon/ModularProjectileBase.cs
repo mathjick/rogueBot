@@ -10,11 +10,16 @@ public class ModularProjectileBase : MonoBehaviour
     public DamageData damageData;
     public GameObject owner;
 
+    public void Start()
+    {
+        Invoke("CleanItself", 10);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
         {
-            case "tag_ennemi":
+            case "tag_ennemie":
                 HitEnnemi(other);
                 break;
             case "tag_player":
@@ -31,7 +36,8 @@ public class ModularProjectileBase : MonoBehaviour
 
     public void HitEnnemi(Collider other)
     {
-        other.GetComponent<LifeSystem>().TakeDamage(damageData.damagesTypes,damageData.damages,owner);
+        other.GetComponent<ImpactZone>().TakeDamage(damageData.damagesTypes,damageData.damages,owner);
+        CleanItself();
     }
 
     public void HitPlayer()
@@ -40,6 +46,11 @@ public class ModularProjectileBase : MonoBehaviour
     }
 
     public void HitSolid()
+    {
+        CleanItself();
+    }
+
+    public void CleanItself()
     {
         Destroy(gameObject);
     }

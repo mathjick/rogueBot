@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextEffect: {fileID: 0}
+  damageData: {fileID: 5209842160526063553}
+  owner: {fileID: 0}
 --- !u!114 &5209842160526063553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagesTypes: 00000000
-  damages: 10
+  damages: 1
 --- !u!54 &169775078617303332
 Rigidbody:
   m_ObjectHideFlags: 0

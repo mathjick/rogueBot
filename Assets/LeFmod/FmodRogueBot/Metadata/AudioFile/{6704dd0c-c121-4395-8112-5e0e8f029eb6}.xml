@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6704dd0c-c121-4395-8112-5e0e8f029eb6}">
+		<property name="assetPath">
+			<value>plasmjectile loop.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.17174603174603176</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{12217ae5-0e77-4f04-a1f6-898cf44d92df}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="EventFolder" id="{603a6551-35ae-4012-ba11-96828149846f}">
 		<property name="color">
-			<value>Red</value>
+			<value>Yellow</value>
 		</property>
 		<property name="name">
 			<value>Character</value>

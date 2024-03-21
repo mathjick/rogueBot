@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{20d26c40-25ca-49c9-9a5c-5828a72cf91e}">
 		<property name="color">
-			<value>Red</value>
+			<value>Yellow</value>
 		</property>
 		<property name="name">
 			<value>MEN_Click</value>
@@ -62,11 +62,18 @@
 	<object class="EventAutomatableProperties" id="{d2530f54-e2ac-4afc-84f5-5efad0e15da7}" />
 	<object class="MarkerTrack" id="{e8f0f519-0c62-4212-aa17-557222fa564a}" />
 	<object class="GroupTrack" id="{b4c1fe78-bc95-4532-b9f5-7d09acdf0600}">
+		<relationship name="modules">
+			<destination>{0d966391-9620-4b36-aa4b-e1f78a3acdc5}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{bc0830c5-b760-44dd-99b4-1544433d08f0}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{4583ca29-a605-4832-bcf3-69ecb5809c74}" />
+	<object class="Timeline" id="{4583ca29-a605-4832-bcf3-69ecb5809c74}">
+		<relationship name="modules">
+			<destination>{0d966391-9620-4b36-aa4b-e1f78a3acdc5}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{e409ee4f-3814-4461-a297-6a98f9f13c17}">
 		<relationship name="effectChain">
 			<destination>{dca8a5d9-a7bb-4256-afd8-c0a0a2ad756e}</destination>
@@ -84,6 +91,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{0ce73de3-ced5-4d78-9777-0f6413167ec8}" />
+	<object class="SingleSound" id="{0d966391-9620-4b36-aa4b-e1f78a3acdc5}">
+		<property name="length">
+			<value>0.30176870748299317</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{329b577e-612f-4d5b-a57b-23b57d5eddbb}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{bc0830c5-b760-44dd-99b4-1544433d08f0}">
 		<property name="name">
 			<value>Audio 1</value>

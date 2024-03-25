@@ -1024,25 +1024,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1910578492808001192, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1910578492808001192, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 2028345250374724636, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2259491358845717089, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2538314525046135667, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3110761786520066476, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
       propertyPath: dashPower

@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{361b790f-d39d-4292-8a9d-ac2f498264ef}">
 		<property name="color">
-			<value>Red</value>
+			<value>Yellow</value>
 		</property>
 		<property name="name">
-			<value>MOV_Jump</value>
+			<value>MOV_DoubleJump</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{10311e31-c513-45b8-949e-ec59702a558b}</destination>
@@ -62,11 +62,18 @@
 	<object class="EventAutomatableProperties" id="{c1e108cc-5106-4c0d-9705-d5db2e2bdfe3}" />
 	<object class="MarkerTrack" id="{be2f733a-9be9-4ca1-a30a-5b40f0700e6c}" />
 	<object class="GroupTrack" id="{4251c4ed-6462-4618-9f5b-e95d01df5457}">
+		<relationship name="modules">
+			<destination>{6c4c50a4-11e6-4163-ad9e-02a43b050a92}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{2f15b2be-02b0-4dcb-a3b0-e1efce2749f8}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{3672d5ad-74a8-4185-87ea-ede51bddd8a7}" />
+	<object class="Timeline" id="{3672d5ad-74a8-4185-87ea-ede51bddd8a7}">
+		<relationship name="modules">
+			<destination>{6c4c50a4-11e6-4163-ad9e-02a43b050a92}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{9137a18c-fb80-4f06-a0ca-a0ddc56bc2d0}">
 		<relationship name="effectChain">
 			<destination>{6657d0f2-df8b-4b3c-ae20-0a0a61bc50fe}</destination>
@@ -84,7 +91,18 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7ca92971-18ad-409a-9128-540d3d928867}" />
+	<object class="SingleSound" id="{6c4c50a4-11e6-4163-ad9e-02a43b050a92}">
+		<property name="length">
+			<value>0.51442176870748302</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{f0ff213e-5e6b-4019-acda-2d4b0983ae67}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{2f15b2be-02b0-4dcb-a3b0-e1efce2749f8}">
+		<property name="volume">
+			<value>-4</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>

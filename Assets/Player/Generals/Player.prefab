@@ -804,16 +804,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 605614677769541540}
   gravity: {x: 0, y: -75, z: 0}
-  velocityMax: {x: 1000, y: 1000, z: 1000}
+  velocityMax: {x: 10000, y: 10000, z: 10000}
   _mouvementMultiplyer: {x: 900, y: 900}
   groundFriction: 0.15
   airFriction: 0.05
-  jumpForce: 30
+  jumpForce: 35
   jumps: 2
-  bufferBeforeJump: 0
+  bufferBeforeJump: 0.2
   coyoteTime: 0
   holdJumpGravity: {x: 0, y: -75, z: 0}
-  holdJumpVelocityMax: {x: 1000, y: 50, z: 1000}
+  holdJumpVelocityMax: {x: 2000, y: 2000, z: 2000}
   playerInput: {x: 0, y: 0}
   velocityMode: 0
 --- !u!114 &7244356293050925389
@@ -860,9 +860,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 605614677769541540}
-  dashPower: 3
+  dashPower: 30
   cooldown: 1
-  frictionModifier: 1
+  frictionModifier: 0.5
   timeBeforeResetFriction: 0.8
 --- !u!114 &2364643521974911295
 MonoBehaviour:

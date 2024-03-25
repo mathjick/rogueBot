@@ -1037,10 +1037,6 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3110761786520066476, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
-      propertyPath: dashPower
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3110761786520066476, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
       propertyPath: fricionModifier
       value: 0.5
       objectReference: {fileID: 0}

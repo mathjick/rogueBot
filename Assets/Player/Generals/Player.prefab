@@ -860,7 +860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 605614677769541540}
-  dashPower: 3
+  dashPower: 30
   cooldown: 1
   frictionModifier: 1
   timeBeforeResetFriction: 0.8

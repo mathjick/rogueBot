@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger_Module_Assault
       objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625274, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9385fe549166e4a4cae3301b12234a75, type: 2}
     - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: m_RootOrder
       value: 0

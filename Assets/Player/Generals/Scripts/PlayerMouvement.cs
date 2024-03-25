@@ -28,7 +28,7 @@ public class PlayerMouvement : MonoBehaviour
     public Vector3 holdJumpGravity;
     public Vector3 holdJumpVelocityMax;
 
-    private Vector2 playerInput;
+    public Vector2 playerInput;
     private Vector3 _mouvement;
     private int _jumpsLeft;
     private bool _storedJump;

@@ -6,31 +6,52 @@ using UnityEngine;
 public class ModularProjectileBase : MonoBehaviour
 {
     public Dictionary<string,GameObject> projectiles;
-    public ModularProjectileBase nextEffect;
+    public BaseModule nextEffect;
     public DamageData damageData;
     public GameObject owner;
+    public Collider physicCollider;
+    public Collider overlapCollider;
 
     public void Start()
     {
+        if (nextEffect)
+        {
+            nextEffect.CallStart();
+        }
         Invoke("CleanItself", 10);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        switch (other.tag)
+        if (nextEffect)
         {
-            case "tag_ennemie":
-                HitEnnemi(other);
-                break;
-            case "tag_player":
-                HitPlayer();
-                break;
-            case "tag_solid":
-                HitSolid();
-                break;
-            default:
-                Debug.Log("Hit something non-tagged");
-                break;
+            nextEffect.CallOnTriggerEnter(other);
+        }
+        else
+        {
+            switch (other.tag)
+            {
+                case "tag_ennemie":
+                    HitEnnemi(other);
+                    break;
+                case "tag_player":
+                    HitPlayer();
+                    break;
+                case "tag_solid":
+                    HitSolid();
+                    break;
+                default:
+                    Debug.Log("Hit something non-tagged");
+                    break;
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (nextEffect)
+        {
+            nextEffect.CallOnHit(collision);
         }
     }
 
@@ -42,7 +63,7 @@ public class ModularProjectileBase : MonoBehaviour
 
     public void HitPlayer()
     {
-
+        CleanItself();
     }
 
     public void HitSolid()

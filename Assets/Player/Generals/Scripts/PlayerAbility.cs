@@ -24,7 +24,9 @@ public class PlayerAbility : MonoBehaviour
         if (canActivate)
         {
             canActivate = false;
-            controller.rb.AddForce(new Vector3(controller.rb.velocity.x * dashPower, 0, controller.rb.velocity.z * dashPower),ForceMode.Impulse);
+            var input = controller.playerMouvementSystem.playerInput;
+            var mouvement = (controller.transform.right * input.x) + (controller.transform.forward * input.y);
+            controller.rb.AddForce(mouvement * dashPower, ForceMode.Impulse);
             controller.playerMouvementSystem.modifyFriction(0.5f);
             Invoke("ResetFriction", 0.5f);
             Invoke("ReloadAbility", cooldown);

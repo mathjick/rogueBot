@@ -18,30 +18,14 @@ public class BounceModule : BaseModule
     }
     public override void CallOnHit(Collision other)
     {
-        Debug.Log("Je bounce");
+        DispatchCollision(other);
         bounceCount--;
-        base.CallOnHit(other);
     }
-
-    public override void CallOnTriggerEnter(Collider other)
+    public void DispatchCollision(Collision other)
     {
-        if(bounceCount <= 0)
+        if (bounceCount <= 0)
         {
-            switch (other.tag)
-            {
-                case "tag_ennemie":
-                    other.GetComponent<ImpactZone>().TakeDamage(this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damagesTypes, this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damages, this.gameObject.GetComponentInParent<ModularProjectileBase>().owner);
-                    break;
-                case "tag_player":
-                    base.CallCleanItself();
-                    break;
-                case "tag_solid":
-                    base.CallCleanItself();
-                    break;
-                default:
-                    Debug.Log("Hit something non-tagged");
-                    break;
-            }
+            base.CallOnHit(other);
         }
     }
 }

@@ -8,14 +8,43 @@ public class BaseModule : MonoBehaviour
 
     public virtual void CallStart()
     {
+        if (nextModule) {
+            nextModule.CallStart();
+        }
     }
 
     public virtual void CallOnTriggerEnter(Collider other)
     {
+        if(nextModule)
+        {
+            nextModule.CallOnTriggerEnter(other);
+        }
     }
 
     public virtual void CallOnHit(Collision other)
     {
+        if (nextModule)
+        {
+            nextModule.CallOnHit(other);
+        }
+        else
+        {
+            switch (other.collider.tag)
+            {
+                case "tag_ennemie":
+                    other.collider.GetComponent<ImpactZone>().TakeDamage(this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damagesTypes, this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damages, this.gameObject.GetComponentInParent<ModularProjectileBase>().owner);
+                    break;
+                case "tag_player":
+                    Debug.Log("Hit the player");
+                    break;
+                case "tag_solid":
+                    this.CallCleanItself();
+                    break;
+                default:
+                    Debug.Log("Hit something non-tagged");
+                    break;
+            }
+        }
     }
 
     public virtual void CallCleanItself()

@@ -17,14 +17,14 @@ public class BounceModule : BaseModule
     }
     public override void CallOnHit(Collision other)
     {
-        DispatchCollision(other);
-        bounceCount--;
-    }
-    public void DispatchCollision(Collision other)
-    {
         if (bounceCount <= 0)
         {
             base.CallOnHit(other);
         }
+        else
+        {
+            base.HitEffect(other);
+        }
+        bounceCount--;
     }
 }

@@ -18,7 +18,7 @@ public class PlayerCamera : MonoBehaviour
 
     public void Look(InputValue val)
     {
-        if(Mathf.Abs(val.Get<Vector2>().x) <= 1 && Mathf.Abs(val.Get<Vector2>().y) <= 1)
+        if(Mathf.Abs(val.Get<Vector2>().x) <= 0.1 && Mathf.Abs(val.Get<Vector2>().y) <= 0.1)
         {
         }
         else

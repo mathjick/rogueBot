@@ -47,6 +47,14 @@ public class BaseModule : MonoBehaviour
         }
     }
 
+    public virtual void HitEffect(Collision other)
+    {
+        if (nextModule)
+        {
+            nextModule.HitEffect(other);
+        }
+    }
+
     public virtual void CallCleanItself()
     {
         if (this.gameObject.GetComponentInParent<ModularProjectileBase>())

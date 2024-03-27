@@ -53,7 +53,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5089041844966463965, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
       propertyPath: m_Name
-      value: Module_Dropped
+      value: Module_Grenade
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6021193288038778173, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
+      propertyPath: moduleToAddToInventory
+      value: 
+      objectReference: {fileID: 8689210428848932662}
+    m_RemovedComponents:
+    - {fileID: 6164625215500892443, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
+--- !u!1 &6901846585745492745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5692148639252607890, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
+  m_PrefabInstance: {fileID: 1240420509062379675}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6484919906879577377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901846585745492745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f2e5b9fb3e63c47988c9160ac125db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagesTypes: 02000000
+  damages: 10
+--- !u!114 &8689210428848932662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901846585745492745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3d7082bd3709c49b5c05667549c848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextModule: {fileID: 0}
+  explosionPrefab: {fileID: 7171933674768868981, guid: b2e378248797afa4186f6684878cd092, type: 3}
+  sizeFactor: 1.5
+  gravityFactor: 0.5
+  player: {fileID: 0}
+  damageData: {fileID: 6484919906879577377}

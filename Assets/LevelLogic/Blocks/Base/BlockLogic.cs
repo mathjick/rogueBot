@@ -20,6 +20,7 @@ public class BlockLogic : MonoBehaviour
     public BlockDifficulty blockDifficulty;
     public BlockType blockType;
     public GameObject[] doors;
+    public int pullPower = 10;
     [SerializeField] private UnityEvent OnEnterRoom;
     [SerializeField] private UnityEvent OnEnterRoomFirstTime;
     [SerializeField] private UnityEvent OnExitRoom;
@@ -86,7 +87,7 @@ public class BlockLogic : MonoBehaviour
     {
         if(this.playerInRoom != null)
         {
-            playerInRoom.rb.AddForce((this.transform.position - this.playerInRoom.transform.position)*5,ForceMode.Impulse);
+            playerInRoom.rb.AddForce((this.transform.position - this.playerInRoom.transform.position).normalized * pullPower, ForceMode.Impulse);
             Debug.Log("Pull PLayer");
         }
     }

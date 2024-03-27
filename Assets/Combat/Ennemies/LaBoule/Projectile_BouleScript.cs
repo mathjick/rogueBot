@@ -20,6 +20,10 @@ public class Projectile_BouleScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.collider.tag == "tag_solid")
+        {
+            Destroy(this.gameObject);
+        }
         if (collision.gameObject.GetComponent<ImpactZone>())
         {
             collision.gameObject.GetComponent<ImpactZone>().TakeDamage(damageData.damagesTypes,damageData.damages,sourceOfDamage);

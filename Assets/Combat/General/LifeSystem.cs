@@ -60,4 +60,14 @@ public class LifeSystem : MonoBehaviour
             OnDeath.Invoke();
         }
     }
+
+    public void Diseapear(float timeToDiseapear)
+    {
+        Invoke("DestroyGameobject", timeToDiseapear);
+    }
+
+    public void DestroyGameobject()
+    {
+        Destroy(gameObject);
+    }
 }

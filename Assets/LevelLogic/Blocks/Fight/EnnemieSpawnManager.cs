@@ -27,6 +27,7 @@ public class EnnemieSpawnManager : MonoBehaviour
         {
             GameObject newEnnemi = Instantiate(RollForEnnemie(), RollForSpawnPoint().position, RollForSpawnPoint().rotation);
             newEnnemi.GetComponent<IaBase>().Spawner = this;
+            newEnnemi.GetComponent<LifeSystem>().lastSourceOfDamage = PlayerController.instance.gameObject;
             EnnemiesAlive.Add(newEnnemi);
             nbrOfSpawn--;
         }

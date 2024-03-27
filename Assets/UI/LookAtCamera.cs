@@ -17,6 +17,16 @@ public class LookAtCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        objectToRotate.rotation = Quaternion.Slerp(objectToRotate.rotation, camera.transform.rotation, 3f * Time.deltaTime);    
+        if (camera)
+        {
+            objectToRotate.rotation = Quaternion.Slerp(objectToRotate.rotation, camera.transform.rotation, 3f * Time.deltaTime);
+        }
+        else
+        {
+            if (PlayerController.instance)
+            {
+                camera = PlayerController.instance.playerView;
+            }
+        }
     }
 }

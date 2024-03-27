@@ -31,7 +31,7 @@ public class IA_Boule : IaBase
                 }
                 if(Vector3.Distance(transform.position, lifeSystem.lastSourceOfDamage.transform.position) > distanceToApproche)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, lifeSystem.lastSourceOfDamage.transform.position, 0.1f);
+                    transform.position = Vector3.MoveTowards(transform.position, lifeSystem.lastSourceOfDamage.transform.position, 0.2f);
                     transform.LookAt(lifeSystem.lastSourceOfDamage.transform);
                 }
             }
@@ -42,7 +42,8 @@ public class IA_Boule : IaBase
     {
         //instansiate projectile and launch at player
         GameObject newProjectile = Instantiate(projectile, projectileSummonPoint.transform.position, projectileSummonPoint.transform.rotation);
-        newProjectile.GetComponent<Rigidbody>().AddForce((lifeSystem.lastSourceOfDamage.transform.position - transform.position - new Vector3(0,2,0)).normalized * 1000);
+        Vector3 direction = ((lifeSystem.lastSourceOfDamage.transform.position + (lifeSystem.lastSourceOfDamage.GetComponent<Rigidbody>().velocity * 0.5f ) ) - transform.position - new Vector3(0, 2, 0)).normalized * 2000;
+        newProjectile.GetComponent<Rigidbody>().AddForce(direction);
         newProjectile.GetComponent<Projectile_BouleScript>().sourceOfDamage = gameObject;
     }
 

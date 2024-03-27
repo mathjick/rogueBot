@@ -299,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 6457443897468362321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.086304, y: 17.194391, z: -11.78587}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2502975793917365779}
@@ -428,6 +428,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 4424311769432605729}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6574296361857269976}
+        m_TargetAssemblyTypeName: LifeSystem, Assembly-CSharp
+        m_MethodName: Diseapear
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1772713673253019766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,8 +483,8 @@ MonoBehaviour:
   lifeSystem: {fileID: 6574296361857269976}
   projectile: {fileID: 7373683308321032716, guid: 6eff2686906235148868784153771b44, type: 3}
   projectileSummonPoint: {fileID: 2766602896870980257}
-  distanceToShot: 30
-  distanceToApproche: 10
+  distanceToShot: 50
+  distanceToApproche: 30
 --- !u!54 &1168853614429523203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -469,7 +493,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6457443897468362321}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 50
   m_Drag: 1
   m_AngularDrag: 1
   m_UseGravity: 0

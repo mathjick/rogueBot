@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{034d34d8-c312-4e3a-bce3-5967a2b2d81e}">
 		<property name="color">
-			<value>Red</value>
+			<value>Yellow</value>
 		</property>
 		<property name="name">
 			<value>LAD_Idle</value>
@@ -62,11 +62,18 @@
 	<object class="EventAutomatableProperties" id="{784980df-71a2-456b-9231-d80de01c187d}" />
 	<object class="MarkerTrack" id="{8f03e122-f4fb-4a2e-8059-1dcb3aa2dc74}" />
 	<object class="GroupTrack" id="{0983014a-0d75-4d51-b63e-635a8a99ab47}">
+		<relationship name="modules">
+			<destination>{389ab7dd-a62f-47de-b497-975004899a56}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{8497142e-ae92-4122-a33c-2cf2b04f2521}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{c4df6848-f822-469a-b093-34dddb587245}" />
+	<object class="Timeline" id="{c4df6848-f822-469a-b093-34dddb587245}">
+		<relationship name="modules">
+			<destination>{389ab7dd-a62f-47de-b497-975004899a56}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{c1579b4d-003a-4a16-b797-26652487569b}">
 		<relationship name="effectChain">
 			<destination>{2964e037-4a7c-4500-bca2-f2048bdb2f8a}</destination>
@@ -84,6 +91,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{fe478b93-5c2a-4940-8ceb-418dafb494e5}" />
+	<object class="SingleSound" id="{389ab7dd-a62f-47de-b497-975004899a56}">
+		<property name="length">
+			<value>35</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{48216d2e-1515-48cb-b7c8-1de7ec4e920d}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{8497142e-ae92-4122-a33c-2cf2b04f2521}">
 		<property name="name">
 			<value>Audio 1</value>
@@ -108,11 +123,55 @@
 	<object class="MixerBusFader" id="{5aae14e2-2fd1-4693-9b45-36d11c900aec}" />
 	<object class="MixerBusEffectChain" id="{e8daf5c0-61ab-4292-a77b-15629b29deb2}">
 		<relationship name="effects">
+			<destination>{7d8e248e-479d-4964-9a21-ba0101a43e42}</destination>
 			<destination>{ad05f42c-b821-4365-90da-cf06883f783d}</destination>
+			<destination>{b63a7da2-6495-49e6-9266-d33e483a5425}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b85e6752-43c7-4486-823d-d03874808f2b}" />
 	<object class="MixerBusFader" id="{d9cfb114-ddfa-469e-b094-b86c33c33efc}" />
 	<object class="SpatialiserEffect" id="{a1dea8a7-d01f-4369-97a1-7cad5e916b5b}" />
+	<object class="TremoloEffect" id="{7d8e248e-479d-4964-9a21-ba0101a43e42}">
+		<property name="frequency">
+			<value>14.5</value>
+		</property>
+		<property name="depth">
+			<value>0.409999996</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{3b6c72e4-d04b-474b-b948-a9d5e26bcad3}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{ad05f42c-b821-4365-90da-cf06883f783d}" />
+	<object class="MultibandEqEffect" id="{b63a7da2-6495-49e6-9266-d33e483a5425}">
+		<property name="filterTypeA">
+			<value>9</value>
+		</property>
+		<property name="filterTypeB">
+			<value>9</value>
+		</property>
+		<property name="frequencyA">
+			<value>742.869751</value>
+		</property>
+		<property name="frequencyB">
+			<value>3978.93701</value>
+		</property>
+		<property name="gainA">
+			<value>-8.27586365</value>
+		</property>
+		<property name="gainB">
+			<value>-9.82758713</value>
+		</property>
+	</object>
+	<object class="LFOModulator" id="{3b6c72e4-d04b-474b-b948-a9d5e26bcad3}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>frequency</value>
+		</property>
+		<property name="rate">
+			<value>0.13499999</value>
+		</property>
+		<property name="depth">
+			<value>7.5</value>
+		</property>
+	</object>
 </objects>

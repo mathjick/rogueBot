@@ -97,5 +97,5 @@ MonoBehaviour:
   playerWeapon: {fileID: 0}
   damageData: {fileID: 1872880197344445158}
   projectilePrefab: {fileID: 7749752667786575973, guid: 6d6ba07ca5105cc40b8fbe8fa753e14d, type: 3}
-  RPM: 180
+  RPM: 360
   projectileSpeed: 4000

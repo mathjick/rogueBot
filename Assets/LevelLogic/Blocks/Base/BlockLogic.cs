@@ -43,7 +43,7 @@ public class BlockLogic : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "player")
+        if (other.tag == "tag_player")
         {
             playerInRoom = other.gameObject.GetComponent<PlayerController>() ? other.gameObject.GetComponent<PlayerController>() : other.gameObject.GetComponentInParent<PlayerController>();
             if (firstEnter)
@@ -60,7 +60,7 @@ public class BlockLogic : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.tag == "player")
+        if (other.tag == "tag_player")
         {
             ExitRoom();
         }

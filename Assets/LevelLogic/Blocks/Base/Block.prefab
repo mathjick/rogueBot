@@ -2030,7 +2030,7 @@ GameObject:
   - component: {fileID: 7915586554449270559}
   - component: {fileID: 1672434685202135282}
   - component: {fileID: 6378224026355142422}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Block
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -2081,6 +2081,7 @@ MonoBehaviour:
   - {fileID: 6066307049463826261}
   - {fileID: 3978412272121615945}
   - {fileID: 5908831877675101319}
+  pullPower: 10
   OnEnterRoom:
     m_PersistentCalls:
       m_Calls: []

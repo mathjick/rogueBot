@@ -32,6 +32,7 @@ public class ModularProjectileBase : MonoBehaviour
             switch (other.tag)
             {
                 case "tag_ennemie":
+                    Debug.Log("Hit ennemi");
                     HitEnnemi(other);
                     break;
                 case "tag_player":

@@ -3,7 +3,37 @@ guid: 7ddb5274a91506547acca321315f9a69
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Screen
+    second: {fileID: 2100000, guid: 6ba0ab8b8a9e89648a7b654953c725d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Black
+    second: {fileID: 2100000, guid: 86ca9fe7e3228cc4babd48115c07069b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_DarkBlue
+    second: {fileID: 2100000, guid: 272e0692fe898c8468c719bdbc41cd0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_DarkGray
+    second: {fileID: 2100000, guid: edf66d9959db9c04580f2e575891ab3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Gray
+    second: {fileID: 2100000, guid: 24827d8793b6f16468c6ee0981fe4598, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WP
+    second: {fileID: 2100000, guid: cd1697a87172dfb4b854a2844c9ba819, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

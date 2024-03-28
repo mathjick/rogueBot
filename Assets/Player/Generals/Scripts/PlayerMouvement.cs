@@ -14,6 +14,7 @@ public class PlayerMouvement : MonoBehaviour
     public Vector2 _mouvementMultiplyer;
 
     public float groundFriction;
+    public float groundFrictionWhenImmobile;
     public float airFriction;
     private float frictionModifier = 1;
 
@@ -66,8 +67,22 @@ public class PlayerMouvement : MonoBehaviour
         }
         _mouvement = playerController.playerTransform.forward * playerInput.y * _mouvementMultiplyer.x + playerController.playerTransform.right * playerInput.x * _mouvementMultiplyer.y;
         var _aimedVelocity = new Vector3(_mouvement.x * Time.deltaTime, playerController.rb.velocity.y, _mouvement.z * Time.deltaTime);
-        playerController.rb.velocity = velocityMode == 0 ? Vector3.Lerp(playerController.rb.velocity, _aimedVelocity, groundFriction * frictionModifier) : Vector3.Lerp(playerController.rb.velocity, _aimedVelocity, airFriction * frictionModifier);
         playerController.rb.velocity += _gravityMode == 0 ? gravity * Time.deltaTime : holdJumpGravity * Time.deltaTime;
+        if(velocityMode == 0)
+        {
+            if(playerInput.x > 0.1 || playerInput.x < -0.1 || playerInput.y > 0.1 || playerInput.y < -0.1)
+            {
+                playerController.rb.velocity = Vector3.Lerp(playerController.rb.velocity, _aimedVelocity, groundFriction * frictionModifier);
+            }
+            else
+            {
+                playerController.rb.velocity = Vector3.Lerp(playerController.rb.velocity, _aimedVelocity, groundFrictionWhenImmobile * frictionModifier);
+            }
+        }
+        else
+        {
+            playerController.rb.velocity = Vector3.Lerp(playerController.rb.velocity, _aimedVelocity, airFriction * frictionModifier);
+        }
         var ClampGround  = new Vector3(Mathf.Clamp(playerController.rb.velocity.x, -velocityMax.x, velocityMax.x), Mathf.Clamp(playerController.rb.velocity.y, -velocityMax.y, velocityMax.y), Mathf.Clamp(playerController.rb.velocity.z, -velocityMax.z, velocityMax.z));
         var ClampAir = new Vector3(Mathf.Clamp(playerController.rb.velocity.x, -holdJumpVelocityMax.x, holdJumpVelocityMax.x), Mathf.Clamp(playerController.rb.velocity.y, -holdJumpVelocityMax.y, holdJumpVelocityMax.y), Mathf.Clamp(playerController.rb.velocity.z, -holdJumpVelocityMax.z, holdJumpVelocityMax.z));
         playerController.rb.velocity = velocityMode == 0 ? ClampGround : ClampAir;

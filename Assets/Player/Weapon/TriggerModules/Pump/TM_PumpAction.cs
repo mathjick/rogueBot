@@ -4,7 +4,6 @@ public class TM_PumpAction : TriggerModule
 {
     #region Parameters
     public GameObject projectilePrefab;
-    public float RPM;
     public int projectileSpeed;
     public int pelletCount;
     public float spread;
@@ -37,8 +36,10 @@ public class TM_PumpAction : TriggerModule
         isHolding = false;
     }
 
-    public void Shoot()
+    public override void Shoot()
     {
+        base.Shoot();
+
         RaycastHit hit;
         for (int i = 0; i < pelletCount; i++)
         {

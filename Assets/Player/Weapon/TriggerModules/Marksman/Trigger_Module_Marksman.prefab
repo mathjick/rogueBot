@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8368514080915832104, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_text
+      value: Marksman Trigger Module
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 388659252033107057, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}

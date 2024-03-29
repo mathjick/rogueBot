@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 486163715071191699, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
+      propertyPath: m_text
+      value: Grenade Effect Module
+      objectReference: {fileID: 0}
     - target: {fileID: 5089041844966463961, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -15,6 +15,7 @@ public class PickUpModule : MonoBehaviour
             }
             else
             {
+                other.GetComponent<PlayerInventory>().EquipModule(0);
                 moduleToAddToInventory.transform.SetParent(other.transform);
                 Destroy(gameObject);
             }

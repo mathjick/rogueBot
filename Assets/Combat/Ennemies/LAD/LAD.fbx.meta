@@ -3,7 +3,37 @@ guid: 7ddb5274a91506547acca321315f9a69
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Emissive_WeakPoint
+    second: {fileID: 2100000, guid: 9cbb6aeddeda30a4896e5292369351f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Metal_Black
+    second: {fileID: 2100000, guid: 3828fb8d65bbcc34191c85d9519b28ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Metal_DarkBlue
+    second: {fileID: 2100000, guid: 8e793322b55ab7b41a2aa31398c79d84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Metal_DarkGray
+    second: {fileID: 2100000, guid: 1f9cdd764d6d91c4e89aef969dfa5a0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Metal_Gray
+    second: {fileID: 2100000, guid: 2ba2925b61e41ad458ce5af19fc1b346, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Screen_Black
+    second: {fileID: 2100000, guid: a4ca1983bc2b97147bfaa8d70f85623f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

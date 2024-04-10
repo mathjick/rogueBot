@@ -3,7 +3,52 @@ guid: 4394e26a980a3054099768f92f2837b5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 7c7b820dea275e342b04cf8895db953a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackRubber
+    second: {fileID: 2100000, guid: fdb42375ff81d7541bd2a369e9353003, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EffectModule_Emissive
+    second: {fileID: 2100000, guid: eef0fef3cab4b7e4588ee8e455720139, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EffectModule_Metal
+    second: {fileID: 2100000, guid: 5792c1b625aa685419d788ecb6bd8985, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ElectricBlue
+    second: {fileID: 2100000, guid: dd068113eadeeee4998eee205609e938, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey
+    second: {fileID: 2100000, guid: 5614770fa47f5ab46a84017382a89b30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightGrey
+    second: {fileID: 2100000, guid: 85df286a0d713034e80e0627ba0bc10d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TriggerModule_Emissive
+    second: {fileID: 2100000, guid: da56ef344e54d5048bdcc22facdbc615, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TriggerModule_Metal
+    second: {fileID: 2100000, guid: 09748251bde50aa46bdc0407efe9f209, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

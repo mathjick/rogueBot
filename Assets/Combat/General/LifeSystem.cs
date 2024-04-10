@@ -30,7 +30,10 @@ public class LifeSystem : MonoBehaviour
     public void Start()
     {
         lifePoints = maxLifePoints;
-        PvNBr.text = lifePoints.ToString();
+        if (PvNBr)
+        {
+            PvNBr.text = lifePoints.ToString();
+        }
     }
     public void TakeDamage(DamageTypes[] damageTypes, float damages, GameObject sourceOfDamage)
     {

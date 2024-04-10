@@ -747,15 +747,16 @@ MonoBehaviour:
   rpm: 480
   spread: 2
   dischargeDamage: {fileID: 6780570330008257151}
-  dischargeCooldown: 10
+  dischargeCooldown: 20
   dischargeChargeTime: 2
   dischargeRenderer: {fileID: 4804909889848464335}
   barrageDamage: {fileID: 8740362630459355474}
   barrageRpmMultiplyer: 2
-  barrageCooldown: 9
+  barrageCooldown: 20
+  barrageTime: 5
   bombDamage: {fileID: 1720207951168867615}
   bombPrefab: {fileID: 4165450377017074782, guid: ce4d5c8465b720b40a487af8f06f359a, type: 3}
-  bombCooldown: 8
+  bombCooldown: 20
   timeBetweenBombs: 0.2
   bombSpawnPoints:
   - {fileID: 3792523377209302893}

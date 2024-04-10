@@ -62,6 +62,7 @@ public class IA_LAD : MonoBehaviour
     public DamageData barrageDamage;
     public float barrageRpmMultiplyer = 2;
     public float barrageCooldown = 10;
+    public float barrageTime = 5;
     private float barrageTimer;
 
     [Space(3)]
@@ -75,6 +76,14 @@ public class IA_LAD : MonoBehaviour
     public List<GameObject> bombSpawnPoints;
     private float bombTimer;
 
+    private void Start()
+    {
+        calmTimer = calmTime;
+        timeBeforeNextShot = 60f / rpm;
+        dischargeTimer = dischargeCooldown;
+        barrageTimer = barrageCooldown;
+        bombTimer = bombCooldown;
+    }
     public void SwitchState(LADState newState)
     {
         currentState = newState;
@@ -94,7 +103,7 @@ public class IA_LAD : MonoBehaviour
                 break;
             case LADState.Shoot:
                 timeBeforeNextShot -= Time.deltaTime;
-                calmTime -= Time.deltaTime;
+                calmTimer -= Time.deltaTime;
                 shootLogic();
                 break;
             case LADState.Discharge:
@@ -110,6 +119,7 @@ public class IA_LAD : MonoBehaviour
             default:
                 break;
         }
+        barrageTimer -= Time.deltaTime;
         dischargeTimer -= Time.deltaTime;
         bombTimer -= Time.deltaTime;
     }
@@ -194,6 +204,7 @@ public class IA_LAD : MonoBehaviour
             else if (barrageTimer <= 0)
             {
                 this.SwitchState(LADState.Barrage);
+                Invoke("interruptBarrage", barrageTime);
                 barrageTimer = barrageCooldown;
                 rpmModifier = barrageRpmMultiplyer;
             }
@@ -223,6 +234,7 @@ public class IA_LAD : MonoBehaviour
             lifeSystem.TakeDamage(dischargeDamage.damagesTypes, dischargeDamage.damages, gameObject);
         }
         dischargeRenderer.enabled = false;
+        this.SwitchState(LADState.Shoot);
     }
 
     public void EnterDischargeZone(Collider other)
@@ -273,6 +285,12 @@ public class IA_LAD : MonoBehaviour
         }
     }
 
+    public void interruptBarrage()
+    {
+        this.SwitchState(LADState.Shoot);
+        rpmModifier = 1;
+    }
+
     #endregion
 
     #region BombRain
@@ -280,8 +298,11 @@ public class IA_LAD : MonoBehaviour
     public void BombRain()
     {
         GameObject bomb = Instantiate(bombPrefab, bombSpawnPoints[currentBombSpawnPoint].transform.position, bombSpawnPoints[currentBombSpawnPoint].transform.rotation);
-        bomb.GetComponent<DamageData>().damagesTypes = bombDamage.damagesTypes;
-        bomb.GetComponent<DamageData>().damages = bombDamage.damages;
+        if (bomb.GetComponent<DamageData>())
+        {
+            bomb.GetComponent<DamageData>().damagesTypes = bombDamage.damagesTypes;
+            bomb.GetComponent<DamageData>().damages = bombDamage.damages;
+        }
         currentBombSpawnPoint++;
         if (currentBombSpawnPoint >= bombSpawnPoints.Count)
         {
@@ -291,7 +312,7 @@ public class IA_LAD : MonoBehaviour
         }
         else
         {
-            Invoke("InvokeBomb", timeBetweenBombs);
+            Invoke("BombRain", timeBetweenBombs);
         }
     }
 

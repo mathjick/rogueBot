@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{40e54321-d0d2-4909-aaaf-332a4cea1df2}">
+		<property name="assetPath">
+			<value>rogue bot lad shots Kick2.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.34135416666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{12217ae5-0e77-4f04-a1f6-898cf44d92df}</destination>
+		</relationship>
+	</object>
+</objects>

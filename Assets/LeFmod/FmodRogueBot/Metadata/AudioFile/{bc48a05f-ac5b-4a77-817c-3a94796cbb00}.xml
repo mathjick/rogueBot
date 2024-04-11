@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{3c7ff2c7-cb8e-442e-b0f3-c386eca2399b}">
+	<object class="AudioFile" id="{bc48a05f-ac5b-4a77-817c-3a94796cbb00}">
 		<property name="assetPath">
-			<value>rogue bot lad shots Tail2.ogg</value>
+			<value>LAD Hint Bomb.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.34135416666666668</value>
+			<value>1.115375</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{12217ae5-0e77-4f04-a1f6-898cf44d92df}</destination>

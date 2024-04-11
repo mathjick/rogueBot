@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{247457ab-bba6-4dec-b7eb-ec65fd30ffb6}">
+		<property name="name">
+			<value>LAD_Attack</value>
+		</property>
+		<relationship name="folder">
+			<destination>{71d0305b-1d3c-42e7-8a3b-644f7b1c6f59}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{b130b269-5444-44d9-b564-1576e91fdd7c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{b130b269-5444-44d9-b564-1576e91fdd7c}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>BombRain</value>
+			<value>BulletBarrage</value>
+			<value>Invoke</value>
+			<value>Shockwave</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

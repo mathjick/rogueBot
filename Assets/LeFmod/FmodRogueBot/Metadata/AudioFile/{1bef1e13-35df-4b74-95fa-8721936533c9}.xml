@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{7a26c639-2ac0-4742-aaa3-48e531f611dd}">
+	<object class="AudioFile" id="{1bef1e13-35df-4b74-95fa-8721936533c9}">
 		<property name="assetPath">
-			<value>rogue bot lad shots Tail3.ogg</value>
+			<value>LAD BOMB BOMBRAIN1.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

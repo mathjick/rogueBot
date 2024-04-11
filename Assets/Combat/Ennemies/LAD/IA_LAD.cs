@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum LADState
 {
@@ -11,6 +13,13 @@ public enum LADState
 public enum LADWeakPoint
 {
     None, Core, Back
+}
+
+[System.Serializable]
+public struct WeakPointPair
+{
+    public BoxCollider collider;
+    public LADWeakPoint weakPoint;
 }
 public class IA_LAD : MonoBehaviour
 {
@@ -23,6 +32,7 @@ public class IA_LAD : MonoBehaviour
     public GameObject turretCore;
     public GameObject turretBarrels;
     public int currentBombSpawnPoint = 0;
+    public List<WeakPointPair> pairs;
 
     [Space(3)]
     [Header("---------------- General ----------------")]
@@ -76,6 +86,15 @@ public class IA_LAD : MonoBehaviour
     public List<GameObject> bombSpawnPoints;
     private float bombTimer;
 
+    [Space(3)]
+    [Header("---------------- EventCallBacks ----------------")]
+    [Space(1)]
+
+    public UnityEvent OnShoot;
+    public UnityEvent OnDischarge;
+    public UnityEvent OnBarrage;
+    public UnityEvent OnBombRain;
+
     private void Start()
     {
         calmTimer = calmTime;
@@ -87,6 +106,31 @@ public class IA_LAD : MonoBehaviour
     public void SwitchState(LADState newState)
     {
         currentState = newState;
+        if(newState == LADState.Shoot)
+        {
+            RevealWeakPoint(LADWeakPoint.None);
+        }
+        switch (newState)
+        {
+            case LADState.Idle:
+                break;
+            case LADState.Shoot:
+                OnShoot.Invoke();
+                break;
+            case LADState.Discharge:
+                OnDischarge.Invoke();
+                break;
+            case LADState.Barrage:
+                OnBarrage.Invoke();
+                break;
+            case LADState.Call:
+                break;
+            case LADState.BombRain:
+                OnBombRain.Invoke();
+                break;
+            default:
+                break;
+        }
     }
 
     public void ActivateLAD()
@@ -126,18 +170,15 @@ public class IA_LAD : MonoBehaviour
 
     private void RevealWeakPoint(LADWeakPoint weakPointToReveal)
     {
-        if(weakPointToReveal != this.revealedWeakPoint)
+        foreach (WeakPointPair pair in pairs)
         {
-              switch (weakPointToReveal)
+            if (pair.weakPoint == weakPointToReveal)
             {
-                case LADWeakPoint.Core:
-                    break;
-                case LADWeakPoint.Back:
-                    break;
-                case LADWeakPoint.None:
-                    break;
-                default:
-                    break;
+                pair.collider.enabled = true;
+            }
+            else
+            {
+                pair.collider.enabled = false;
             }
         }
     }
@@ -199,10 +240,12 @@ public class IA_LAD : MonoBehaviour
             if (dischargeTimer <= 0)
             {
                 ActivateDischarge();
+                RevealWeakPoint(LADWeakPoint.Back);
                 dischargeTimer = dischargeCooldown;
             }
             else if (barrageTimer <= 0)
             {
+                RevealWeakPoint(LADWeakPoint.Core);
                 this.SwitchState(LADState.Barrage);
                 Invoke("interruptBarrage", barrageTime);
                 barrageTimer = barrageCooldown;
@@ -210,6 +253,7 @@ public class IA_LAD : MonoBehaviour
             }
             else if (bombTimer <= 0)
             {
+                RevealWeakPoint(LADWeakPoint.Core);
                 this.SwitchState(LADState.BombRain);
                 BombRain();
             }

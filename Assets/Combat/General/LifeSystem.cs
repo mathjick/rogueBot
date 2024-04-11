@@ -52,7 +52,10 @@ public class LifeSystem : MonoBehaviour
         }
         trueDamageTaken = Mathf.CeilToInt(trueDamageTaken);
         lifePoints -= (int)trueDamageTaken;
-        PvNBr.text = lifePoints.ToString();
+        if (PvNBr)
+        {
+            PvNBr.text = lifePoints.ToString();
+        }
         CheckForDeath();
     }
 

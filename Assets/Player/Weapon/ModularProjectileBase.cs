@@ -58,7 +58,10 @@ public class ModularProjectileBase : MonoBehaviour
 
     public void HitEnnemi(Collider other)
     {
-        other.GetComponent<ImpactZone>().TakeDamage(damageData.damagesTypes,damageData.damages,owner);
+        if (other.GetComponent<ImpactZone>())
+        {
+            other.GetComponent<ImpactZone>().TakeDamage(damageData.damagesTypes, damageData.damages, owner);
+        }
         CleanItself();
     }
 

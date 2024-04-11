@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5632003767416388798}
   - component: {fileID: 8206921850473688965}
   - component: {fileID: 1755767352291539008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34145,7 +34145,7 @@ GameObject:
   - component: {fileID: 8876868966714927191}
   - component: {fileID: 6563202375340324470}
   - component: {fileID: 5292827745771143469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BombLAD
   m_TagString: Untagged
   m_Icon: {fileID: 0}

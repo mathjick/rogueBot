@@ -50,6 +50,8 @@ public class IA_LAD : MonoBehaviour
     public List<GameObject> barrels;
     public float rpm = 60;
     public float spread = 1;
+    public float barrelRotationSpeed = 0.5f;
+    public float coreRotationSpeed = 0.5f;
     private float rpmModifier = 1;
     private int currentBarrel = 0;
     private float timeBeforeNextShot;
@@ -73,6 +75,8 @@ public class IA_LAD : MonoBehaviour
     public float barrageRpmMultiplyer = 2;
     public float barrageCooldown = 10;
     public float barrageTime = 5;
+    public float barrageBarrelRotationSpeed = 0.5f;
+    public float barrageCoreRotationSpeed = 0.5f;
     private float barrageTimer;
 
     [Space(3)]
@@ -206,8 +210,8 @@ public class IA_LAD : MonoBehaviour
 
     private void shootLogic()
     {
-        TurnCore(0.5f);
-        TurnBarrels(0.5f);
+        TurnCore(coreRotationSpeed);
+        TurnBarrels(barrelRotationSpeed);
         if (timeBeforeNextShot <= 0)
         {
             this.shootBase();
@@ -308,8 +312,8 @@ public class IA_LAD : MonoBehaviour
     }
     private void BarrageLogic()
     {
-        TurnCore(0.25f);
-        TurnBarrels(0.25f);
+        TurnCore(barrageCoreRotationSpeed);
+        TurnBarrels(barrageBarrelRotationSpeed);
         if (timeBeforeNextShot <= 0)
         {
             this.shootMultiple(5);

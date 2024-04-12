@@ -98,6 +98,8 @@ public class IA_LAD : MonoBehaviour
     public UnityEvent StartBarrageCallBack;
     public UnityEvent EndBarrageCallBack;
     public UnityEvent DischargeCallBack;
+    public UnityEvent SwitchWeakPointCallBack;
+    public FMODUnity.StudioEventEmitter hintEvent;
 
     private void Start()
     {
@@ -106,6 +108,7 @@ public class IA_LAD : MonoBehaviour
         dischargeTimer = dischargeCooldown;
         barrageTimer = barrageCooldown;
         bombTimer = bombCooldown;
+        hintEvent.SetParameter("LAD_Attack", 0);
     }
     public void SwitchState(LADState newState)
     {
@@ -181,6 +184,7 @@ public class IA_LAD : MonoBehaviour
                 pair.collider.enabled = false;
             }
         }
+        SwitchWeakPointCallBack?.Invoke();
     }
 
     private void TurnCore(float rotationSpeed)
@@ -240,22 +244,27 @@ public class IA_LAD : MonoBehaviour
             if (dischargeTimer <= 0)
             {
                 RevealWeakPoint(LADWeakPoint.Back);
-                ActivateDischarge();
-
+                hintEvent.SetParameter("LAD_Attack", 3);
+                hintEvent.Play();
+                Invoke("ActivateDischarge", 1f);
                 calmTimer = calmTime;
             }
             else if (barrageTimer <= 0)
             {
                 RevealWeakPoint(LADWeakPoint.Core);
                 StartBarrageCallBack?.Invoke();
-                Barrage();
+                hintEvent.SetParameter("LAD_Attack", 1);
+                hintEvent.Play();
+                Invoke("Barrage", 1f);
                 calmTimer = calmTime;
             }
             else if (bombTimer <= 0)
             {
                 RevealWeakPoint(LADWeakPoint.Core);
                 BombRainCallBack?.Invoke();
-                BombRain();
+                hintEvent.SetParameter("LAD_Attack", 0);
+                hintEvent.Play();
+                Invoke("BombRain",1f);
                 calmTimer = calmTime;
             }
             

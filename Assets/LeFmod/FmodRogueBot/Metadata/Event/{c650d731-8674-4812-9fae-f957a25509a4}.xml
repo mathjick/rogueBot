@@ -59,7 +59,11 @@
 			<destination>{e8982f2e-8e5f-4e24-8fa3-8bcd8ff57512}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{19c41e04-979c-4c8c-9e04-15d32f366cb5}" />
+	<object class="EventAutomatableProperties" id="{19c41e04-979c-4c8c-9e04-15d32f366cb5}">
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{663cdf42-7359-4916-b492-4509a6afd5c7}" />
 	<object class="GroupTrack" id="{00219ecc-1c44-46a5-92ac-6179deb57d5f}">
 		<relationship name="modules">
@@ -148,7 +152,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{b4380f22-7b37-4ff9-b6b0-3b0f3e583d90}" />
 	<object class="MixerBusFader" id="{a097a2b0-fb0e-4fa2-a00b-02044ca712fd}" />
-	<object class="SpatialiserEffect" id="{5e49f1da-ca05-401a-93fc-36fd13b78459}" />
+	<object class="SpatialiserEffect" id="{5e49f1da-ca05-401a-93fc-36fd13b78459}">
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="RandomizerModulator" id="{f33515c3-85e0-44f8-8a20-2f4e5f950579}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>pitch</value>

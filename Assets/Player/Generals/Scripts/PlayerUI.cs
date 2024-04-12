@@ -4,8 +4,17 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum UIType
+{
+    General,
+    Death
+}
+
 public class PlayerUI : MonoBehaviour
 {
+    public GameObject generalUI;
+    public GameObject deathUI;
+    [Space(5)]
     public TextMeshProUGUI hpUI;
     public GameObject bossUI;
     public Slider bossHPSlider;
@@ -38,5 +47,18 @@ public class PlayerUI : MonoBehaviour
         bossHPSlider.value = bossLifeSystem.lifePoints;
     }
 
-
+    public void SwapUITo(UIType uiToSwapTo)
+    {
+        switch (uiToSwapTo)
+        {
+            case UIType.General:
+                generalUI.SetActive(true);
+                deathUI.SetActive(false);
+                break;
+            case UIType.Death:
+                generalUI.SetActive(false);
+                deathUI.SetActive(true);
+                break;
+        }
+    }
 }

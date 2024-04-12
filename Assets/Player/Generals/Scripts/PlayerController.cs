@@ -1,5 +1,7 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public PlayerInventory playerInventory;
     public PlayerUI playerUI;
     public bool isGrounded;
+    public bool blockInput = false;
 
     // Start is called before the first frame update
     void Start()
@@ -45,27 +48,55 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputValue val)
     {
-        playerMouvementSystem.Move(val);
+        if (!blockInput)
+        {
+            playerMouvementSystem.Move(val);
+        }
     }
 
     public void OnLook(InputValue val)
     {
-        playerCameraSystem.Look(val);
+        if (!blockInput)
+        {
+            playerCameraSystem.Look(val);
+        }
     }
 
     public void OnJump(InputValue val)
     {
-        playerMouvementSystem.Jump(val);
+        if (!blockInput)
+        {
+            playerMouvementSystem.Jump(val);
+        }
     }
 
     public void OnAbility(InputValue val)
     {
-        playerAbility.Activate();
+        if (!blockInput)
+        {
+            playerAbility.Activate();
+        }
     }
 
     public void OnPrimaryTrigger(InputValue val)
     {
-        playerInventory.HoldTrigger(val);
+        if (!blockInput)
+        {
+            playerInventory.HoldTrigger(val);
+        }
     }
 
+    public void OnInteract()
+    {
+        if (blockInput)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    public void OnDeath()
+    {
+        blockInput = true;
+        playerUI.SwapUITo(UIType.Death);
+    }
 }

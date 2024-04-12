@@ -55,6 +55,14 @@ public class BaseModule : MonoBehaviour
         }
     }
 
+    public virtual void CallOnShot()
+    {
+        if (nextModule)
+        {
+            nextModule.CallOnShot();
+        }
+    }
+
     public virtual void CallCleanItself()
     {
         if (this.gameObject.GetComponentInParent<ModularProjectileBase>())

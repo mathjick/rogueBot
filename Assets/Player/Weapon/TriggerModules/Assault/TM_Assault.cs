@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TM_Assault : TriggerModule
 {
@@ -10,6 +11,7 @@ public class TM_Assault : TriggerModule
     #region Variables
     private float timer = 0;
     private bool isHolding = false;
+
     #endregion
 
     public void FixedUpdate()
@@ -49,6 +51,7 @@ public class TM_Assault : TriggerModule
             if (playerWeapon.inventory.moduleEquiped)
             {
                 projectile.GetComponent<ModularProjectileBase>().nextEffect = playerWeapon.inventory.moduleEquiped.attachToProjectile(projectile.GetComponent<ModularProjectileBase>());
+                playerWeapon.inventory.moduleEquiped.CallOnShot();
             }
             projectile.GetComponent<Rigidbody>().AddForce((hit.point - playerWeapon.projectileLaunchAnchor.transform.position).normalized * projectileSpeed);
         }

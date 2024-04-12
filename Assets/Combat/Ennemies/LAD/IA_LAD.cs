@@ -90,10 +90,10 @@ public class IA_LAD : MonoBehaviour
     [Header("---------------- EventCallBacks ----------------")]
     [Space(1)]
 
-    public UnityEvent OnShoot;
-    public UnityEvent OnDischarge;
-    public UnityEvent OnBarrage;
-    public UnityEvent OnBombRain;
+    public UnityEvent BombRainCallBack;
+    public UnityEvent StartBarrageCallBack;
+    public UnityEvent EndBarrageCallBack;
+    public UnityEvent DischargeCallBack;
 
     private void Start()
     {
@@ -115,18 +115,14 @@ public class IA_LAD : MonoBehaviour
             case LADState.Idle:
                 break;
             case LADState.Shoot:
-                OnShoot.Invoke();
                 break;
             case LADState.Discharge:
-                OnDischarge.Invoke();
                 break;
             case LADState.Barrage:
-                OnBarrage.Invoke();
                 break;
             case LADState.Call:
                 break;
             case LADState.BombRain:
-                OnBombRain.Invoke();
                 break;
             default:
                 break;
@@ -239,25 +235,26 @@ public class IA_LAD : MonoBehaviour
         {
             if (dischargeTimer <= 0)
             {
-                ActivateDischarge();
                 RevealWeakPoint(LADWeakPoint.Back);
-                dischargeTimer = dischargeCooldown;
+                ActivateDischarge();
+
+                calmTimer = calmTime;
             }
             else if (barrageTimer <= 0)
             {
                 RevealWeakPoint(LADWeakPoint.Core);
-                this.SwitchState(LADState.Barrage);
-                Invoke("interruptBarrage", barrageTime);
-                barrageTimer = barrageCooldown;
-                rpmModifier = barrageRpmMultiplyer;
+                StartBarrageCallBack?.Invoke();
+                Barrage();
+                calmTimer = calmTime;
             }
             else if (bombTimer <= 0)
             {
                 RevealWeakPoint(LADWeakPoint.Core);
-                this.SwitchState(LADState.BombRain);
+                BombRainCallBack?.Invoke();
                 BombRain();
+                calmTimer = calmTime;
             }
-            calmTimer = calmTime;
+            
         }
     }
 
@@ -268,6 +265,7 @@ public class IA_LAD : MonoBehaviour
     {
         this.SwitchState(LADState.Discharge);
         dischargeRenderer.enabled = true;
+        dischargeTimer = dischargeCooldown;
         Invoke("Discharge", dischargeChargeTime);
     }
 
@@ -278,6 +276,7 @@ public class IA_LAD : MonoBehaviour
             lifeSystem.TakeDamage(dischargeDamage.damagesTypes, dischargeDamage.damages, gameObject);
         }
         dischargeRenderer.enabled = false;
+        DischargeCallBack?.Invoke();
         this.SwitchState(LADState.Shoot);
     }
 
@@ -300,6 +299,13 @@ public class IA_LAD : MonoBehaviour
 
     #region Barrage
 
+    private void Barrage()
+    {
+        this.SwitchState(LADState.Barrage);
+        Invoke("interruptBarrage", barrageTime);
+        barrageTimer = barrageCooldown;
+        rpmModifier = barrageRpmMultiplyer;
+    }
     private void BarrageLogic()
     {
         TurnCore(0.25f);
@@ -331,6 +337,7 @@ public class IA_LAD : MonoBehaviour
 
     public void interruptBarrage()
     {
+        EndBarrageCallBack?.Invoke();
         this.SwitchState(LADState.Shoot);
         rpmModifier = 1;
     }
@@ -341,6 +348,7 @@ public class IA_LAD : MonoBehaviour
 
     public void BombRain()
     {
+        this.SwitchState(LADState.BombRain);
         GameObject bomb = Instantiate(bombPrefab, bombSpawnPoints[currentBombSpawnPoint].transform.position, bombSpawnPoints[currentBombSpawnPoint].transform.rotation);
         if (bomb.GetComponent<DamageData>())
         {

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7127367341475163592}
   - component: {fileID: 1173789056486336561}
   - component: {fileID: 7489720536901103990}
+  - component: {fileID: 5418937200183104130}
   m_Layer: 9
   m_Name: Explosion_GrenadeModule
   m_TagString: Untagged
@@ -62,3 +63,52 @@ MonoBehaviour:
   player: {fileID: 0}
   fuzeTime: 1
   explosionCollider: {fileID: 1173789056486336561}
+  ExplodeCallBack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5418937200183104130}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  IgniteCallBack:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5418937200183104130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7171933674768868981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1331144369
+      Data2: 1113275787
+      Data3: 1771505033
+      Data4: 1271340443
+    Path: event:/Character/Weapon/Grenade/GRE_Explosion
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

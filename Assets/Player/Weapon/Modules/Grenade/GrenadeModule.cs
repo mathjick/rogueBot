@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GrenadeModule : BaseModule
 {
@@ -9,6 +10,7 @@ public class GrenadeModule : BaseModule
     public float gravityFactor;
     public GameObject player;
     public DamageData damageData;
+    public UnityEvent ShootCallBack;
     public override void CallStart()
     {
         if (this.gameObject.GetComponentInParent<ModularProjectileBase>())
@@ -50,5 +52,11 @@ public class GrenadeModule : BaseModule
             newModule.nextModule = buffer;
         }
         return newModule;
+    }
+
+    public override void CallOnShot()
+    {
+        ShootCallBack?.Invoke();
+        base.CallOnShot();
     }
 }

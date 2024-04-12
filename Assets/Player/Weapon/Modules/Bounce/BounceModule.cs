@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BounceModule : BaseModule
 {
     public PhysicMaterial bounceMaterial;
     public int bounceCount;
+    public UnityEvent FinalBounceCallBack;
+    public UnityEvent NormalBounceCallBack;
+    public UnityEvent ShootCallBack;
 
     public override void CallStart()
     {
@@ -19,12 +23,20 @@ public class BounceModule : BaseModule
     {
         if (bounceCount <= 0)
         {
+            FinalBounceCallBack?.Invoke();
             base.CallOnHit(other);
         }
         else
         {
+            NormalBounceCallBack?.Invoke();
             base.HitEffect(other);
         }
         bounceCount--;
+    }
+
+    public override void CallOnShot()
+    {
+        ShootCallBack?.Invoke();
+        base.CallOnShot();
     }
 }

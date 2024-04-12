@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerMouvement : MonoBehaviour
@@ -36,6 +37,12 @@ public class PlayerMouvement : MonoBehaviour
     private bool _flagTouchGround;
     private int _gravityMode = 0;
     public int velocityMode = 0;
+
+    [Space(1)]
+    [Header("---------------- CallBack ----------------")]
+    [Space(1)]
+
+    public UnityEvent DoubleJumpCallBack;
     // Start is called before the first frame update
     void Start()
     {
@@ -107,6 +114,10 @@ public class PlayerMouvement : MonoBehaviour
             if (_jumpsLeft > 0)
             {
                 _jumpsLeft--;
+                if(_jumpsLeft < jumps)
+                {
+                    DoubleJumpCallBack?.Invoke();
+                }
                 ExecuteJump();
             }
             else

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerInventory : MonoBehaviour
@@ -11,6 +12,12 @@ public class PlayerInventory : MonoBehaviour
     public TriggerModule triggerModuleEquipped;
     public BaseModule moduleEquiped;
     public List<BaseModule> modulesStocked;
+
+    [Space(1)]
+    [Header("---------------- CallBack ----------------")]
+    [Space(1)]
+
+    public UnityEvent EquipModuleCallBack;
 
     public void HoldTrigger(InputValue val)
     {
@@ -40,6 +47,7 @@ public class PlayerInventory : MonoBehaviour
             _target.nextModule = modulesStocked[_moduleIndice];
             modulesStocked.RemoveAt(_moduleIndice);
         }
+        EquipModuleCallBack?.Invoke();
     }
 
     public void UnEquipModule()

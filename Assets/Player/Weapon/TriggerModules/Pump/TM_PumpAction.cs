@@ -50,6 +50,11 @@ public class TM_PumpAction : TriggerModule
                 projectile.GetComponent<ModularProjectileBase>().owner = playerWeapon.inventory.gameObject;
                 projectile.GetComponent<ModularProjectileBase>().damageData.damagesTypes = this.damageData.damagesTypes;
                 projectile.GetComponent<ModularProjectileBase>().damageData.damages = this.damageData.damages;
+                if (playerWeapon.inventory.moduleEquiped)
+                {
+                    projectile.GetComponent<ModularProjectileBase>().nextEffect = playerWeapon.inventory.moduleEquiped.attachToProjectile(projectile.GetComponent<ModularProjectileBase>());
+                    playerWeapon.inventory.moduleEquiped.CallOnShot();
+                }
                 projectile.GetComponent<Rigidbody>().AddForce((hit.point - playerWeapon.projectileLaunchAnchor.transform.position).normalized * projectileSpeed);
             }
         }

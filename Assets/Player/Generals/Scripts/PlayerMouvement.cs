@@ -113,11 +113,11 @@ public class PlayerMouvement : MonoBehaviour
         {
             if (_jumpsLeft > 0)
             {
-                _jumpsLeft--;
-                if(_jumpsLeft < jumps)
+                if (_jumpsLeft < jumps)
                 {
                     DoubleJumpCallBack?.Invoke();
                 }
+                _jumpsLeft--;
                 ExecuteJump();
             }
             else

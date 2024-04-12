@@ -59,7 +59,11 @@
 			<destination>{e8982f2e-8e5f-4e24-8fa3-8bcd8ff57512}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{784980df-71a2-456b-9231-d80de01c187d}" />
+	<object class="EventAutomatableProperties" id="{784980df-71a2-456b-9231-d80de01c187d}">
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{8f03e122-f4fb-4a2e-8059-1dcb3aa2dc74}" />
 	<object class="GroupTrack" id="{0983014a-0d75-4d51-b63e-635a8a99ab47}">
 		<relationship name="modules">
@@ -133,7 +137,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{b85e6752-43c7-4486-823d-d03874808f2b}" />
 	<object class="MixerBusFader" id="{d9cfb114-ddfa-469e-b094-b86c33c33efc}" />
-	<object class="SpatialiserEffect" id="{a1dea8a7-d01f-4369-97a1-7cad5e916b5b}" />
+	<object class="SpatialiserEffect" id="{a1dea8a7-d01f-4369-97a1-7cad5e916b5b}">
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="TremoloEffect" id="{7d8e248e-479d-4964-9a21-ba0101a43e42}">
 		<property name="frequency">
 			<value>14.5</value>

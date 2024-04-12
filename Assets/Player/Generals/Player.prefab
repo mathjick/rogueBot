@@ -606,6 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4724207083699980596}
   - component: {fileID: 8462152947769252300}
+  - component: {fileID: 7093458530480426140}
   m_Layer: 6
   m_Name: WeaponView
   m_TagString: Untagged
@@ -671,6 +672,22 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &7093458530480426140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5167878707173951355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3ba92b4225cbd40a997cfcc120c414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originPosition: {x: 0, y: 0, z: 0}
+  originRotation: {x: 0, y: 0, z: 0, w: 0}
+  decayFactor: 0.3
+  shakeIntensity: 0.3
 --- !u!1 &6151016883848087636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,6 +1118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 605614677769541540}
+  weaponView: {fileID: 5167878707173951355}
   _lookMultiplyer: {x: 0.2, y: 0.2}
 --- !u!114 &6148226267051198774
 MonoBehaviour:

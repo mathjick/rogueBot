@@ -11,6 +11,7 @@ public class PickUpTriggerModule : MonoBehaviour
             other.GetComponent<PlayerInventory>().triggerModuleEquipped = triggerModuleToEquip;
             triggerModuleToEquip.playerWeapon = other.GetComponent<PlayerInventory>().weapon;
             triggerModuleToEquip.transform.SetParent(other.transform);
+            triggerModuleToEquip.weaponView = other.GetComponent<PlayerInventory>().playerController.playerCameraSystem.weaponView.GetComponent<Camera>();
             Destroy(gameObject);
         }
     }

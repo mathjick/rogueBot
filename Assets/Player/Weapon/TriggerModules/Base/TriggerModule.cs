@@ -13,17 +13,14 @@ public class TriggerModule : MonoBehaviour
 
     public virtual void Hold()
     {
-        Debug.Log("Hold with module");
     }
 
     public virtual void Release()
     {
-        Debug.Log("Release with module");
     }
 
     public virtual void Shoot()
     {
-        Debug.Log("Shoot!");
         weaponView.gameObject.GetComponent<CameraShake>().Shake();
     }
 }

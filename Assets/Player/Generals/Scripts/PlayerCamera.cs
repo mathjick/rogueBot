@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerCamera : MonoBehaviour
 {
     public PlayerController playerController;
+    public GameObject weaponView;
     [Space(1)]
     [Header("------------ Look Parameters ------------")]
     [Space(1)]

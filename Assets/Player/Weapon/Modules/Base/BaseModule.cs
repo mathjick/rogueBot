@@ -59,6 +59,24 @@ public class BaseModule : MonoBehaviour
         {
             nextModule.HitEffect(other);
         }
+        else
+        {
+            switch (other.collider.tag)
+            {
+                case "tag_ennemie":
+                    if (other.collider.GetComponent<ImpactZone>())
+                    {
+                        other.collider.GetComponent<ImpactZone>().TakeDamage(this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damagesTypes, this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damages, this.gameObject.GetComponentInParent<ModularProjectileBase>().owner);
+                    }
+                    break;
+                case "tag_player":
+                    break;
+                case "tag_solid":
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     public virtual void CallOnShot()

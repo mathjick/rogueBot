@@ -1566,7 +1566,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7227171078967479389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea1c1fddabf8dd46a043a88216afb91, type: 3}
+  m_Script: {fileID: 11500000, guid: b804b610b7448a94990cda30ec1ac5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hpUI: {fileID: 9205432791915482993}
@@ -1730,6 +1730,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeSystemAttached: {fileID: 2364643521974911295}
   damageTypesArmors: []
+  isWeakPoint: 0
+  HitCallBack:
+    m_PersistentCalls:
+      m_Calls: []
+  WeakPointCallBack:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7830698347346464478
 GameObject:
   m_ObjectHideFlags: 0

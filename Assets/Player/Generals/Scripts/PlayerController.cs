@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public PlayerCamera playerCameraSystem;
     public PlayerAbility playerAbility;
     public PlayerInventory playerInventory;
+    public PlayerUI playerUI;
     public bool isGrounded;
 
     // Start is called before the first frame update

@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageData: {fileID: 6909997007211495133}
-  lifespan: 10
-  magentismForce: 50
+  lifespan: 3
+  magnetismForce: 30
   sourceOfDamage: {fileID: 0}
   target: {fileID: 0}
 --- !u!114 &6909997007211495133

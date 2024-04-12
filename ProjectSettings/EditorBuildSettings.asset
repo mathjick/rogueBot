@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/D\xE9mo_Soutenance.unity"
+    path: Assets/Scenes/Demo_Soutenance.unity
     guid: 94d53846a84e4fb4b9037302325a5a85
   m_configObjects: {}

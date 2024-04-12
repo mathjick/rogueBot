@@ -41,7 +41,7 @@ public class TM_Assault : TriggerModule
         base.Shoot();
 
         RaycastHit hit;
-        Physics.Raycast(playerWeapon.inventory.playerController.playerView.transform.position,playerWeapon.inventory.playerController.playerView.transform.forward * 1000, out hit);
+        Physics.Raycast(playerWeapon.inventory.playerController.playerView.transform.position,playerWeapon.inventory.playerController.playerView.transform.forward * 1000, out hit, 10000f,9);
         if (hit.collider && hit.collider.tag != "tag_player")
         {
             var spawnSpec = playerWeapon.projectileLaunchAnchor.transform;

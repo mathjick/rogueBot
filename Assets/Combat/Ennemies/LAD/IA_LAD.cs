@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public enum LADState
 {
-    Idle, Shoot, Discharge, Barrage, Call, BombRain
+    Idle, Shoot, Discharge, Barrage, Call, BombRain, Dead
 }
 
 public enum LADWeakPoint
@@ -20,6 +20,7 @@ public struct WeakPointPair
 {
     public BoxCollider collider;
     public LADWeakPoint weakPoint;
+    public Light light;
 }
 public class IA_LAD : MonoBehaviour
 {
@@ -110,27 +111,30 @@ public class IA_LAD : MonoBehaviour
     }
     public void SwitchState(LADState newState)
     {
-        currentState = newState;
-        if(newState == LADState.Shoot)
+        if(currentState != LADState.Dead)
         {
-            RevealWeakPoint(LADWeakPoint.None);
-        }
-        switch (newState)
-        {
-            case LADState.Idle:
-                break;
-            case LADState.Shoot:
-                break;
-            case LADState.Discharge:
-                break;
-            case LADState.Barrage:
-                break;
-            case LADState.Call:
-                break;
-            case LADState.BombRain:
-                break;
-            default:
-                break;
+            currentState = newState;
+            if (newState == LADState.Shoot)
+            {
+                RevealWeakPoint(LADWeakPoint.None);
+            }
+            switch (newState)
+            {
+                case LADState.Idle:
+                    break;
+                case LADState.Shoot:
+                    break;
+                case LADState.Discharge:
+                    break;
+                case LADState.Barrage:
+                    break;
+                case LADState.Call:
+                    break;
+                case LADState.BombRain:
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
@@ -176,10 +180,12 @@ public class IA_LAD : MonoBehaviour
             if (pair.weakPoint == weakPointToReveal)
             {
                 pair.collider.enabled = true;
+                pair.light.enabled = true;
             }
             else
             {
                 pair.collider.enabled = false;
+                pair.light.enabled = false;
             }
         }
         SwitchWeakPointCallBack?.Invoke();
@@ -206,6 +212,11 @@ public class IA_LAD : MonoBehaviour
         {
             turretBarrels.transform.Rotate(-rotationSpeed, 0, 0);
         }
+    }
+
+    public void Dead()
+    {
+        SwitchState(LADState.Dead);
     }
 
     #region Shoot

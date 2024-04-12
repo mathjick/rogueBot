@@ -5,7 +5,6 @@ public class TM_Assault : TriggerModule
 {
     #region Parameters
     public GameObject projectilePrefab;
-    public float RPM;
     public int projectileSpeed;
     #endregion
     #region Variables
@@ -37,8 +36,10 @@ public class TM_Assault : TriggerModule
         isHolding = false;
     }
 
-    public void Shoot()
+    public override void Shoot()
     {
+        base.Shoot();
+
         RaycastHit hit;
         Physics.Raycast(playerWeapon.inventory.playerController.playerView.transform.position,playerWeapon.inventory.playerController.playerView.transform.forward * 1000, out hit);
         if (hit.collider && hit.collider.tag != "tag_player")

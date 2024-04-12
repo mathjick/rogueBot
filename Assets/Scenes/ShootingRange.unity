@@ -123,6 +123,32 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &78068579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5167878707173951355, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
+  m_PrefabInstance: {fileID: 1542606993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &78068581 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8462152947769252300, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
+  m_PrefabInstance: {fileID: 1542606993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &78068582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78068579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3ba92b4225cbd40a997cfcc120c414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originPosition: {x: 0, y: 0, z: 0}
+  originRotation: {x: 0, y: 0, z: 0, w: 0}
+  decayFactor: 0
+  shakeIntensity: 0
 --- !u!1001 &110028500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -292,6 +318,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5627512150459702205, guid: c658716167d9c8e4f8efe7507d285773, type: 3}
+      propertyPath: weaponView
+      value: 
+      objectReference: {fileID: 78068581}
     - target: {fileID: 7315460877034698819, guid: c658716167d9c8e4f8efe7507d285773, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -528,6 +558,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8894596620558738858, guid: 0539a76701c027046ac674c17521b6b1, type: 3}
+      propertyPath: weaponView
+      value: 
+      objectReference: {fileID: 78068581}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0539a76701c027046ac674c17521b6b1, type: 3}
 --- !u!1 &660898927
@@ -634,6 +668,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3943967755562950049, guid: b2be4673d2c115b4ab34643d8b972acd, type: 3}
+      propertyPath: weaponView
+      value: 
+      objectReference: {fileID: 78068581}
     - target: {fileID: 7475649656027793851, guid: b2be4673d2c115b4ab34643d8b972acd, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1592,6 +1630,27 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4685702449583221292, guid: 4b49d2c3831079e49b914dc09b7f1525, type: 3}
   m_PrefabInstance: {fileID: 703620379}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1673370897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6151016883848087636, guid: 9f96c42171df0a8488522a45e9a581b9, type: 3}
+  m_PrefabInstance: {fileID: 1542606993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1673370901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673370897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3ba92b4225cbd40a997cfcc120c414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originPosition: {x: 0, y: 0, z: 0}
+  originRotation: {x: 0, y: 0, z: 0, w: 0}
+  decayFactor: 0
+  shakeIntensity: 0
 --- !u!1 &1831654810
 GameObject:
   m_ObjectHideFlags: 0

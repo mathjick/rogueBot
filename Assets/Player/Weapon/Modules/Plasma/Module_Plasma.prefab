@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextModule: {fileID: 0}
-  sizeFactor: 5
+  sizeFactor: 15
   slowDownFactor: 0.3
   ShootCallBack:
     m_PersistentCalls:

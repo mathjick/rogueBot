@@ -16348,12 +16348,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2438880894839057418, guid: 166eadec82101fc43bcce88746a05695, type: 3}
+      propertyPath: SpawnSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438880894839057418, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: nbrOfSpawn
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2438880894839057418, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: maxEnnemies
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2740984313280750562, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: m_LocalPosition.x

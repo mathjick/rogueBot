@@ -271,7 +271,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853522175849378716}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -893,7 +893,7 @@ MonoBehaviour:
   barrageBarrelRotationSpeed: 0.5
   barrageCoreRotationSpeed: 0.5
   bombDamage: {fileID: 1720207951168867615}
-  bombPrefab: {fileID: 4165450377017074782, guid: ce4d5c8465b720b40a487af8f06f359a, type: 3}
+  bombPrefab: {fileID: 4165450377017074782, guid: fed4526fc35514b49af24b26c80b954b, type: 3}
   bombCooldown: 20
   timeBetweenBombs: 0.5
   bombSpawnPoints:
@@ -2424,8 +2424,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.004732383, y: 0.01, z: 0.004749425}
-  m_Center: {x: 0.0026338093, y: 9.066702e-19, z: -0.0002821683}
+  m_Size: {x: 0.0064187483, y: 0.01, z: 0.004749425}
+  m_Center: {x: 0.0017906261, y: 9.066718e-19, z: -0.00028216842}
 --- !u!114 &7833903372697552809
 MonoBehaviour:
   m_ObjectHideFlags: 0

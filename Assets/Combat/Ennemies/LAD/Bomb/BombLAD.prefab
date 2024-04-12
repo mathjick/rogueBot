@@ -34096,7 +34096,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3566486489735630619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d642cf44761854695eecd769e33f96, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e9ce91b46a7c8644939d9dc8409662b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onTriggerEnter:
@@ -34257,7 +34257,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4165450377017074782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f76a61f293a5f741acfc15c15aa43fa, type: 3}
+  m_Script: {fileID: 11500000, guid: d76a0830a82e89447accb67746a00ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fuzeTime: 5

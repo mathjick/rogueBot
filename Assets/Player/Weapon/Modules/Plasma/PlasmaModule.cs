@@ -9,6 +9,7 @@ public class PlasmaModule : BaseModule
     public float slowDownFactor;
     public UnityEvent ShootCallBack;
     public UnityEvent StartCallBack;
+    public UnityEvent CleanCallBack;
 
     public override void CallStart()
     {
@@ -26,5 +27,11 @@ public class PlasmaModule : BaseModule
     {
         ShootCallBack?.Invoke();
         base.CallOnShot();
+    }
+
+    public override void CallCleanItself()
+    {
+        CleanCallBack?.Invoke();
+        base.CallCleanItself();
     }
 }

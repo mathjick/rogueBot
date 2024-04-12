@@ -99,7 +99,6 @@ public class IA_LAD : MonoBehaviour
     public UnityEvent EndBarrageCallBack;
     public UnityEvent DischargeCallBack;
     public UnityEvent SwitchWeakPointCallBack;
-    public FMODUnity.StudioEventEmitter hintEvent;
 
     private void Start()
     {
@@ -108,7 +107,6 @@ public class IA_LAD : MonoBehaviour
         dischargeTimer = dischargeCooldown;
         barrageTimer = barrageCooldown;
         bombTimer = bombCooldown;
-        hintEvent.SetParameter("LAD_Attack", 0);
     }
     public void SwitchState(LADState newState)
     {
@@ -244,8 +242,6 @@ public class IA_LAD : MonoBehaviour
             if (dischargeTimer <= 0)
             {
                 RevealWeakPoint(LADWeakPoint.Back);
-                hintEvent.SetParameter("LAD_Attack", 3);
-                hintEvent.Play();
                 Invoke("ActivateDischarge", 1f);
                 calmTimer = calmTime;
             }
@@ -253,8 +249,6 @@ public class IA_LAD : MonoBehaviour
             {
                 RevealWeakPoint(LADWeakPoint.Core);
                 StartBarrageCallBack?.Invoke();
-                hintEvent.SetParameter("LAD_Attack", 1);
-                hintEvent.Play();
                 Invoke("Barrage", 1f);
                 calmTimer = calmTime;
             }
@@ -262,8 +256,6 @@ public class IA_LAD : MonoBehaviour
             {
                 RevealWeakPoint(LADWeakPoint.Core);
                 BombRainCallBack?.Invoke();
-                hintEvent.SetParameter("LAD_Attack", 0);
-                hintEvent.Play();
                 Invoke("BombRain",1f);
                 calmTimer = calmTime;
             }

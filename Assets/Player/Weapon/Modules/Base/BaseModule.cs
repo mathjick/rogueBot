@@ -32,16 +32,22 @@ public class BaseModule : MonoBehaviour
             switch (other.collider.tag)
             {
                 case "tag_ennemie":
-                    other.collider.GetComponent<ImpactZone>().TakeDamage(this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damagesTypes, this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damages, this.gameObject.GetComponentInParent<ModularProjectileBase>().owner);
+                    if (other.collider.GetComponent<ImpactZone>())
+                    {
+                        other.collider.GetComponent<ImpactZone>().TakeDamage(this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damagesTypes, this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damages, this.gameObject.GetComponentInParent<ModularProjectileBase>().owner);
+                        this.CallCleanItself();
+                    }
+                    else
+                    {
+                        this.CallCleanItself();
+                    }
                     break;
                 case "tag_player":
-                    Debug.Log("Hit the player");
                     break;
                 case "tag_solid":
                     this.CallCleanItself();
                     break;
                 default:
-                    Debug.Log("Hit something non-tagged");
                     break;
             }
         }

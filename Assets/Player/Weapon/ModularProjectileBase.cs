@@ -32,7 +32,6 @@ public class ModularProjectileBase : MonoBehaviour
             switch (other.tag)
             {
                 case "tag_ennemie":
-                    Debug.Log("Hit ennemi");
                     HitEnnemi(other);
                     break;
                 case "tag_player":
@@ -42,7 +41,6 @@ public class ModularProjectileBase : MonoBehaviour
                     HitSolid();
                     break;
                 default:
-                    Debug.Log("Hit something non-tagged");
                     break;
             }
         }

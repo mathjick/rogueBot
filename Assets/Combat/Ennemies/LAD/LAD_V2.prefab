@@ -1494,7 +1494,7 @@ GameObject:
   - component: {fileID: 1009564157528918857}
   m_Layer: 0
   m_Name: Model_B
-  m_TagString: tag_solid
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

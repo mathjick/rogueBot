@@ -243,7 +243,7 @@ public class IA_LAD : MonoBehaviour
         projectile.GetComponent<DamageData>().damagesTypes = projectileDamage.damagesTypes;
         projectile.GetComponent<DamageData>().damages = projectileDamage.damages;
         projectile.GetComponent<LAD_MissileScript>().target = target;
-        projectile.GetComponent<Rigidbody>().AddForce(barrels[currentBarrel].transform.forward * 1000);
+        projectile.GetComponent<Rigidbody>().AddForce(barrels[currentBarrel].transform.right * -1 * 1000);
     }
 
     private void checkForSpecial()
@@ -345,7 +345,7 @@ public class IA_LAD : MonoBehaviour
             projectile.GetComponent<DamageData>().damagesTypes = projectileDamage.damagesTypes;
             projectile.GetComponent<DamageData>().damages = projectileDamage.damages;
             projectile.GetComponent<LAD_MissileScript>().target = target;
-            projectile.GetComponent<Rigidbody>().AddForce(barrels[currentBarrel].transform.forward * 2000);
+            projectile.GetComponent<Rigidbody>().AddForce(barrels[currentBarrel].transform.right * -1 * 2000);
             //make a random between -spread and spread
             projectile.GetComponent<Rigidbody>().AddForce(barrels[currentBarrel].transform.up * 500 * Random.Range(-spread, spread));
         }

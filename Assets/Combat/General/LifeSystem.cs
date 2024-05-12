@@ -26,6 +26,7 @@ public class LifeSystem : MonoBehaviour
     public GameObject lastSourceOfDamage;
 
     [SerializeField] private UnityEvent OnDeath;
+    [SerializeField] private UnityEvent OnDamage;
 
     public void Start()
     {
@@ -51,6 +52,10 @@ public class LifeSystem : MonoBehaviour
             }
         }
         trueDamageTaken = Mathf.CeilToInt(trueDamageTaken);
+        if(trueDamageTaken > 0)
+        {
+            OnDamage.Invoke();
+        }
         lifePoints -= (int)trueDamageTaken;
         if (PvNBr)
         {

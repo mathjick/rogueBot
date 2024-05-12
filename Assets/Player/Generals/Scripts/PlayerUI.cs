@@ -20,6 +20,7 @@ public class PlayerUI : MonoBehaviour
     public Slider bossHPSlider;
     public LifeSystem playerLifeSystem;
     public LifeSystem bossLifeSystem;
+    public Image DamageScreen;
 
     public void Start()
     {
@@ -36,6 +37,10 @@ public class PlayerUI : MonoBehaviour
             {
                 bossUI.SetActive(false);
             }
+        }
+        if(DamageScreen.color.a > 0)
+        {
+            DamageScreen.color = new Color(DamageScreen.color.r, DamageScreen.color.g, DamageScreen.color.b, DamageScreen.color.a - Time.deltaTime);
         }
     }
 
@@ -60,5 +65,10 @@ public class PlayerUI : MonoBehaviour
                 deathUI.SetActive(true);
                 break;
         }
+    }
+
+    public void DamageUIEffect()
+    {
+        DamageScreen.color = new Color(DamageScreen.color.r, DamageScreen.color.g, DamageScreen.color.b, 0.5f);
     }
 }

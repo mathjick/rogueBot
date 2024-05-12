@@ -1296,6 +1296,10 @@ MonoBehaviour:
     weakPoint: 2
     light: {fileID: 611610213331786204}
   calmTime: 5
+  damageZoneHpTreshold: 0.5
+  damageThresholdPassed:
+    m_PersistentCalls:
+      m_Calls: []
   projectilePrefab: {fileID: 7373683308321032716, guid: faa864bd0d2bf6b48906573a70f917d9, type: 3}
   projectileDamage: {fileID: 2688876770944071907}
   barrels:

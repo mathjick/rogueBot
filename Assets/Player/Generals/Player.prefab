@@ -1843,6 +1843,7 @@ MonoBehaviour:
   playerAbility: {fileID: 3110761786520066476}
   playerInventory: {fileID: 6148226267051198774}
   playerUI: {fileID: 5157597381320932444}
+  lifeSystem: {fileID: 2364643521974911295}
   isGrounded: 0
   blockInput: 0
 --- !u!114 &5157597381320932444

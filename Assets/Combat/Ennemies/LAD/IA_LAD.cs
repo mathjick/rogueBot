@@ -40,6 +40,9 @@ public class IA_LAD : MonoBehaviour
     [Space(1)]
 
     public float calmTime = 5;
+    [Range(0, 1)]
+    public float damageZoneHpTreshold = 0.5f;
+    public Animation damageThresholdAnimation;
     private float calmTimer;
 
     [Space(3)]
@@ -146,6 +149,10 @@ public class IA_LAD : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GetComponent<LifeSystem>().lifePoints < (GetComponent<LifeSystem>().maxLifePoints * damageZoneHpTreshold))
+        {
+            damageThresholdAnimation.Play();
+        }
         switch (currentState)
         {
             case LADState.Idle:

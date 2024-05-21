@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 6574296361857269976}
   - component: {fileID: 1772713673253019766}
   - component: {fileID: 4247050711361472628}
+  - component: {fileID: 2364306436754320730}
   - component: {fileID: 1168853614429523203}
   m_Layer: 7
   m_Name: LaBoule
@@ -516,6 +517,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2364306436754320730}
+        m_TargetAssemblyTypeName: EnnemieBounty, Assembly-CSharp
+        m_MethodName: DropBounty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1212028377191489357}
         m_TargetAssemblyTypeName: LifeSystem, Assembly-CSharp
         m_MethodName: 
@@ -528,6 +541,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1772713673253019766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,6 +584,19 @@ MonoBehaviour:
   projectileSummonPoint: {fileID: 2766602896870980257}
   distanceToShot: 50
   distanceToApproche: 30
+--- !u!114 &2364306436754320730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457443897468362321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d97a2ca4f355764eb9adc703eef05e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bountyList: []
 --- !u!54 &1168853614429523203
 Rigidbody:
   m_ObjectHideFlags: 0

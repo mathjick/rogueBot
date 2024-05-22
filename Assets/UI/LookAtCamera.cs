@@ -19,7 +19,12 @@ public class LookAtCamera : MonoBehaviour
     {
         if (camera)
         {
-            objectToRotate.rotation = Quaternion.Slerp(objectToRotate.rotation, camera.transform.rotation, 3f * Time.deltaTime);
+            Vector3 target = new Vector3(
+                objectToRotate.position.x - (camera.transform.position.x - objectToRotate.position.x),
+                objectToRotate.transform.position.y,
+                objectToRotate.position.z - (camera.transform.position.z - objectToRotate.position.z));
+            objectToRotate.LookAt(target);
+            //objectToRotate.rotation = Quaternion.LookRotation()
         }
         else
         {

@@ -495,20 +495,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 7938705377588572486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fafbb0e4a9524f449a7537177797d0c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d615d90c27a8964c8ab3ae402c87860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  lifeSystem: {fileID: 5560670147623461967}
-  projectileToShoot: {fileID: 2423125804244186870, guid: 38b911a2c3b446d4d9db202696fdf53a, type: 3}
-  projectileSpawnPoint: {fileID: 6008800327587827220}
-  canonAnchor: {fileID: 2620488588110548205}
-  navMeshAgent: {fileID: 3626817076225806391}
+  lifeSystem: {fileID: 0}
+  projectileToShoot: {fileID: 0}
+  projectileSpawnPoint: {fileID: 0}
+  canonAnchor: {fileID: 0}
+  navMeshAgent: {fileID: 0}
   spawnEffect: {fileID: 0}
   deathEffect: {fileID: 0}
-  maxAttackRange: 50
-  minAttackRange: 30
-  attackRate: 2
+  maxAttackRange: 0
+  minAttackRange: 0
+  attackRate: 0
   attackWarmup: 0
   playerToFocus: {fileID: 0}
 --- !u!114 &5560670147623461967

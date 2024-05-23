@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309809868825234880}
-  m_Mesh: {fileID: 369689273696691656, guid: 5062e7291b46250448885b3930589ef0, type: 3}
+  m_Mesh: {fileID: 369689273696691656, guid: 2f415ab81d5c31645afcee2101bbf82b, type: 3}
 --- !u!23 &308363924055629797
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7634294656948735893, guid: 5062e7291b46250448885b3930589ef0, type: 3}
+  - {fileID: 2100000, guid: 01829f1d34561304798102d1be8c1ca9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,7 +124,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518512458802881688}
-  m_Mesh: {fileID: -7152587309189073877, guid: 5062e7291b46250448885b3930589ef0, type: 3}
+  m_Mesh: {fileID: -7152587309189073877, guid: 2f415ab81d5c31645afcee2101bbf82b, type: 3}
 --- !u!23 &2095201451662105328
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -307789190261914529, guid: 5062e7291b46250448885b3930589ef0, type: 3}
+  - {fileID: 2100000, guid: 1cc1d8ddd2702d949a47f17654fb8798, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -208,7 +208,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2620488588110548205}
-  m_Mesh: {fileID: 4835976235590754908, guid: 5062e7291b46250448885b3930589ef0, type: 3}
+  m_Mesh: {fileID: 4835976235590754908, guid: 2f415ab81d5c31645afcee2101bbf82b, type: 3}
 --- !u!23 &7434670545882258044
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -307789190261914529, guid: 5062e7291b46250448885b3930589ef0, type: 3}
+  - {fileID: 2100000, guid: 085a7523548e09140ad6f11458ff936a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -325,7 +325,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7654835762245937279}
-  m_Mesh: {fileID: 2959467708922500008, guid: 5062e7291b46250448885b3930589ef0, type: 3}
+  m_Mesh: {fileID: 2959467708922500008, guid: 2f415ab81d5c31645afcee2101bbf82b, type: 3}
 --- !u!23 &4703551106638986033
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -346,7 +346,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3675423277977938779, guid: 5062e7291b46250448885b3930589ef0, type: 3}
+  - {fileID: 2100000, guid: 3a3dab5661c69b345a8dee8248da53b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -408,7 +408,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7818456576359328390}
-  m_Mesh: {fileID: 7036116145549807840, guid: 5062e7291b46250448885b3930589ef0, type: 3}
+  m_Mesh: {fileID: 7036116145549807840, guid: 2f415ab81d5c31645afcee2101bbf82b, type: 3}
 --- !u!23 &3275579727574477166
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -429,7 +429,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -307789190261914529, guid: 5062e7291b46250448885b3930589ef0, type: 3}
+  - {fileID: 2100000, guid: 1cc1d8ddd2702d949a47f17654fb8798, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -499,17 +499,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  lifeSystem: {fileID: 0}
-  projectileToShoot: {fileID: 0}
-  projectileSpawnPoint: {fileID: 0}
-  canonAnchor: {fileID: 0}
-  navMeshAgent: {fileID: 0}
+  lifeSystem: {fileID: 5560670147623461967}
+  projectileToShoot: {fileID: 2423125804244186870, guid: 294c4d69bfdc11a42a48cdc87fe2af88, type: 3}
+  projectileSpawnPoint: {fileID: 6008800327587827220}
+  canonAnchor: {fileID: 2620488588110548205}
+  navMeshAgent: {fileID: 3626817076225806391}
   spawnEffect: {fileID: 0}
   deathEffect: {fileID: 0}
-  maxAttackRange: 0
-  minAttackRange: 0
-  attackRate: 0
-  attackWarmup: 0
+  maxAttackRange: 50
+  minAttackRange: 30
+  attackRate: 2
+  attackWarmup: 0.5
   playerToFocus: {fileID: 0}
 --- !u!114 &5560670147623461967
 MonoBehaviour:
@@ -524,8 +524,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   immune: 0
-  lifePoints: 0
-  maxLifePoints: 0
+  lifePoints: 30
+  maxLifePoints: 30
   damageTypesArmors: []
   PvNBr: {fileID: 0}
   lastSourceOfDamage: {fileID: 0}

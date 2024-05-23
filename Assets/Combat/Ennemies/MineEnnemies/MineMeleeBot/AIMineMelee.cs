@@ -9,6 +9,8 @@ public class AIMineMelee : MonoBehaviour
 
     public GameObject playerToFocus;
 
+    public LifeSystem ls;
+
     private void Start()
     {
         if (PlayerController.instance)
@@ -27,8 +29,14 @@ public class AIMineMelee : MonoBehaviour
                 playerToFocus = PlayerController.instance.gameObject;
             }
         }*/
-
-        Move();
+        if (ls.lifePoints > 0)
+        {
+            Move();
+        }
+        else
+        {
+            agent.Stop();
+        }
     }
 
     private void FixedUpdate()

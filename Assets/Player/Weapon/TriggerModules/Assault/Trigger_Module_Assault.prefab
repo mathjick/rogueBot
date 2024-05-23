@@ -108,3 +108,6 @@ MonoBehaviour:
   weaponView: {fileID: 0}
   projectilePrefab: {fileID: 7749752667786575973, guid: 6d6ba07ca5105cc40b8fbe8fa753e14d, type: 3}
   projectileSpeed: 4000
+  ls:
+    serializedVersion: 2
+    m_Bits: 129

@@ -43,7 +43,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isGrounded = Physics.Raycast(playerTransform.position, Vector3.down, 1.1f,9);
+        int layer = 17;
+        LayerMask ls = 1 << layer;
+        isGrounded = Physics.Raycast(playerTransform.position, Vector3.down, 1.1f, ls);
         this.playerMouvementSystem.velocityMode = isGrounded ? 0 : 1;
     }
 

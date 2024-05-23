@@ -85,4 +85,9 @@ public class LifeSystem : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void ChangeCollider(LayerMask layerMask)
+    {
+
+    }
 }

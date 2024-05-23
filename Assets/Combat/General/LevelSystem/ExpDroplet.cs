@@ -18,7 +18,7 @@ public class ExpDroplet : MonoBehaviour
     {
         if (collision.collider.CompareTag("tag_solid"))
         {
-            this.GetComponent<Rigidbody>().useGravity = false;
+            this.GetComponent<Rigidbody>().isKinematic = true;
         }
     }
 }

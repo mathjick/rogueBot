@@ -25,7 +25,7 @@ public class DamagingZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("tag_player"))
         {
             PlayerController player = other.GetComponent<PlayerController>();
             if (!playersInZone.Contains(player))
@@ -37,7 +37,7 @@ public class DamagingZone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("tag_player"))
         {
             PlayerController player = other.GetComponent<PlayerController>();
             if (playersInZone.Contains(player))

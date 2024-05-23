@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4296734633578756591}
   - component: {fileID: 4296734633578756588}
   - component: {fileID: 4296734633578756589}
-  - component: {fileID: 2743689489979268399}
   - component: {fileID: 632637655075219503}
+  - component: {fileID: 4556784656507697117}
+  - component: {fileID: -7485859119424139537}
   m_Layer: 0
   m_Name: DamagingZone
   m_TagString: Untagged
@@ -99,20 +100,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2743689489979268399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4296734633578756578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0717235f419455640a29cb184ec65f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TickRate: 0.5
-  damageData: {fileID: 632637655075219503}
 --- !u!114 &632637655075219503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,3 +114,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagesTypes: 01000000
   damages: 2
+--- !u!114 &4556784656507697117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296734633578756578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1fdaf9eac6656342a0785c171610c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TickRate: 0.5
+  damageData: {fileID: 632637655075219503}
+--- !u!111 &-7485859119424139537
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296734633578756578}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 3df258b8493731b4c8e943f56a1cbdd3, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3df258b8493731b4c8e943f56a1cbdd3, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

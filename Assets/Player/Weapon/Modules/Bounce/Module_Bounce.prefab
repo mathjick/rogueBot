@@ -284,6 +284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Module_Bounce
       objectReference: {fileID: 0}
+    - target: {fileID: 5089041844966463967, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a449516b0f1018641a8712117676ffd2, type: 2}
     - target: {fileID: 6021193288038778173, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
       propertyPath: moduleToAddToInventory
       value: 

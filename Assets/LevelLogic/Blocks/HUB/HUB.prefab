@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 549197045}
   - component: {fileID: 549197044}
   - component: {fileID: 549197043}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ PrefabInstance:
       objectReference: {fileID: 13400000, guid: be04520ccb085384e8eb0142cb18b4f9, type: 2}
     - target: {fileID: 4660610141317709874, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: m_Name
-      value: Hub
+      value: HUB
       objectReference: {fileID: 0}
     - target: {fileID: 4660610141317709875, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: m_RootOrder
@@ -544,6 +544,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: be04520ccb085384e8eb0142cb18b4f9, type: 2}
+    - target: {fileID: 4660610143348479693, guid: 166eadec82101fc43bcce88746a05695, type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 7955903178386381806, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: m_Enabled
       value: 0

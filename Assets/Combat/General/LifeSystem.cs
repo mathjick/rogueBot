@@ -38,30 +38,34 @@ public class LifeSystem : MonoBehaviour
     }
     public void TakeDamage(DamageTypes[] damageTypes, float damages, GameObject sourceOfDamage)
     {
-        lastSourceOfDamage = sourceOfDamage;
-        var trueDamageTaken = damages;
-        if (damageTypesArmors.Length > 0)
+        if (lifePoints > 0)
         {
-            foreach (var armor in this.damageTypesArmors)
+            lastSourceOfDamage = sourceOfDamage;
+            var trueDamageTaken = damages;
+            if (damageTypesArmors.Length > 0)
             {
-                if (damageTypes.Contains<DamageTypes>(armor.damageType))
+                foreach (var armor in this.damageTypesArmors)
                 {
-                    trueDamageTaken -= trueDamageTaken * armor.percentReduction;
-                    trueDamageTaken -= armor.flatReduction;
+                    if (damageTypes.Contains<DamageTypes>(armor.damageType))
+                    {
+                        trueDamageTaken -= trueDamageTaken * armor.percentReduction;
+                        trueDamageTaken -= armor.flatReduction;
+                    }
                 }
             }
+            trueDamageTaken = Mathf.CeilToInt(trueDamageTaken);
+            if (trueDamageTaken > 0)
+            {
+                OnDamage.Invoke();
+            }
+            lifePoints -= (int)trueDamageTaken;
+            if (PvNBr)
+            {
+                PvNBr.text = lifePoints.ToString();
+            }
+            CheckForDeath();
         }
-        trueDamageTaken = Mathf.CeilToInt(trueDamageTaken);
-        if(trueDamageTaken > 0)
-        {
-            OnDamage.Invoke();
-        }
-        lifePoints -= (int)trueDamageTaken;
-        if (PvNBr)
-        {
-            PvNBr.text = lifePoints.ToString();
-        }
-        CheckForDeath();
+       
     }
 
     public void CheckForDeath()
@@ -80,5 +84,10 @@ public class LifeSystem : MonoBehaviour
     public void DestroyGameobject()
     {
         Destroy(gameObject);
+    }
+
+    public void ChangeCollider(LayerMask layerMask)
+    {
+
     }
 }

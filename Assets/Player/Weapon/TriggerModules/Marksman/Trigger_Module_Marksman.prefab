@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger_Module_Marksman
       objectReference: {fileID: 0}
+    - target: {fileID: 7400264267591625274, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c8057878f47f404d891cd6078fd302f, type: 2}
     - target: {fileID: 7400264267591625276, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -96,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerWeapon: {fileID: 0}
   damageData: {fileID: 2001469278782567198}
-  projectilePrefab: {fileID: 7749752667786575973, guid: 6d6ba07ca5105cc40b8fbe8fa753e14d, type: 3}
   RPM: 60
+  weaponView: {fileID: 0}
+  projectilePrefab: {fileID: 7749752667786575973, guid: 6d6ba07ca5105cc40b8fbe8fa753e14d, type: 3}
   projectileSpeed: 6000

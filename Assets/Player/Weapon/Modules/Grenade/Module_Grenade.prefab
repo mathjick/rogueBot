@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Module_Grenade
       objectReference: {fileID: 0}
+    - target: {fileID: 5089041844966463967, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb45edd3b8201bd44a7e3aadf65f1dbc, type: 2}
     - target: {fileID: 6021193288038778173, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
       propertyPath: moduleToAddToInventory
       value: 
@@ -71,6 +75,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5692148639252607890, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
   m_PrefabInstance: {fileID: 1240420509062379675}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1868451294543156438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901846585745492745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1800926740
+      Data2: 1197726252
+      Data3: -484202079
+      Data4: 1620994581
+    Path: event:/Character/Weapon/Grenade/GRE_Shoot
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &6484919906879577377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,34 +153,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1868451294543156438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6901846585745492745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1800926740
-      Data2: 1197726252
-      Data3: -484202079
-      Data4: 1620994581
-    Path: event:/Character/Weapon/Grenade/GRE_Shoot
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20

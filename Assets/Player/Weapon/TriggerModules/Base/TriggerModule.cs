@@ -19,6 +19,14 @@ public class TriggerModule : MonoBehaviour
     {
     }
 
+    public virtual RaycastHit Raycast(LayerMask ls)
+    {
+        RaycastHit hit;
+        Physics.Raycast(playerWeapon.inventory.playerController.playerView.transform.position, playerWeapon.inventory.playerController.playerView.transform.forward * 1000, out hit, 10000f, ls);
+
+        return hit;
+    }
+
     public virtual void Shoot()
     {
         weaponView.gameObject.GetComponent<CameraShake>().Shake();

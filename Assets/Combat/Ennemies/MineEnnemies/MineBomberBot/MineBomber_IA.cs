@@ -126,6 +126,7 @@ public class MineBomber_IA : MonoBehaviour
             {
                 GameObject _newProjectile = Instantiate(projectileToShoot, projectileSpawnPoint.transform.position, canonAnchor.transform.rotation);
                 _newProjectile.GetComponent<Rigidbody>().AddForce(canonAnchor.transform.right * 1000);
+                _newProjectile.GetComponent<MineBomberGrenadeScript>().LitFuze();
                 attackTimer = attackRate;
             }
         }

@@ -5,7 +5,8 @@ using UnityEngine;
 public class MineBomberGrenadeScript : MonoBehaviour
 {
     public float fuzeTime;
-    public float explosionRange;
+    public DamageData damageData;
+    public TriggerRelay triggerRelay;
     private List<LifeSystem> entityInExplosionRange = new List<LifeSystem>();
    
 
@@ -16,26 +17,24 @@ public class MineBomberGrenadeScript : MonoBehaviour
 
     public void Explode()
     {
-
+        foreach (LifeSystem entity in entityInExplosionRange)
+        {
+            entity.TakeDamage(damageData.damagesTypes,damageData.damages,this.gameObject);
+        }
+        Destroy(this.gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void actualizeEntityInRange()
     {
-        if (other.GetComponent<LifeSystem>() && !entityInExplosionRange.Contains(other.GetComponent<LifeSystem>()))
+        entityInExplosionRange.Clear();
+        foreach (Collider col in triggerRelay.collidersIn)
         {
-            entityInExplosionRange.Add(other.GetComponent<LifeSystem>());
+            LifeSystem ls = col.GetComponent<LifeSystem>();
+            if (ls)
+            {
+                entityInExplosionRange.Add(ls);
+            }
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.GetComponent<LifeSystem>() && entityInExplosionRange.Contains(other.GetComponent<LifeSystem>()))
-        {
-            entityInExplosionRange.Remove(other.GetComponent<LifeSystem>());
-        }
-    }
-
-    private void OnDrawGizmos()
-    {
-    }
 }

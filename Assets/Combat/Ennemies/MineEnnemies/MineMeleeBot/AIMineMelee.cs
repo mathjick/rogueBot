@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum MineMelee_States
+{
+    Idle, Move, Attack, Dead
+}
+
 public class AIMineMelee : MonoBehaviour
 {
     public NavMeshAgent agent;

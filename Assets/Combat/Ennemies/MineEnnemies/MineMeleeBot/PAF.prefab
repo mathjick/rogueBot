@@ -199,7 +199,8 @@ Transform:
   m_LocalPosition: {x: -3.799796e-10, y: -0.027249971, z: 0.03331491}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5810233122115631953}
   m_Father: {fileID: 2071565967045250821}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -434,7 +435,7 @@ NavMeshAgent:
   m_AgentTypeID: -1372625422
   m_Radius: 1.8
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 120
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -457,9 +458,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767346960dc998c4690d3efe230ce095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Spawner: {fileID: 0}
+  state: 0
   agent: {fileID: 5012790351151878669}
   playerToFocus: {fileID: 0}
   ls: {fileID: 5012790351151878664}
+  damageTrigger: {fileID: 1969703972511590039}
+  spawnEffect: {fileID: 0}
+  deathEffect: {fileID: 0}
+  jumpMaxRange: 20
+  jumpMinRange: 10
+  speedMultiplyer: 100
 --- !u!114 &5012790351151878670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,6 +814,95 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8120696523404379452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5810233122115631953}
+  - component: {fileID: 8655126770946585657}
+  - component: {fileID: 1969703972511590039}
+  m_Layer: 7
+  m_Name: Blade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5810233122115631953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8120696523404379452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1233346820699272805}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8655126770946585657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8120696523404379452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.01}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1969703972511590039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8120696523404379452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9ce91b46a7c8644939d9dc8409662b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5012790351151878658}
+        m_TargetAssemblyTypeName: AIMineMelee, Assembly-CSharp
+        m_MethodName: UpdateLifesystemInTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggerExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5012790351151878658}
+        m_TargetAssemblyTypeName: AIMineMelee, Assembly-CSharp
+        m_MethodName: UpdateLifesystemInTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  collidersIn: []
 --- !u!1 &8654294882314766355
 GameObject:
   m_ObjectHideFlags: 0

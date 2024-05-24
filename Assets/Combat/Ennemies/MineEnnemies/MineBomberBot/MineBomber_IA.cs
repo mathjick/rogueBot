@@ -9,7 +9,7 @@ public enum MineBomber_States
 {
     Idle,Move,Attack,Dead
 }
-public class MineBomber_IA : MonoBehaviour
+public class MineBomber_IA : IaBase
 {
     [Header("--- setup ---")]
     //logic
@@ -150,5 +150,11 @@ public class MineBomber_IA : MonoBehaviour
                     break;
             }
         }
+    }
+
+    override public void Dead()
+    {
+        state = MineBomber_States.Dead;
+        base.Dead();
     }
 }

@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 5012790351151878658}
   - component: {fileID: 5012790351151878670}
   - component: {fileID: 5012790351151878664}
+  - component: {fileID: 7646169709752832715}
   m_Layer: 7
   m_Name: PAF
   m_TagString: tag_ennemie
@@ -468,6 +469,8 @@ MonoBehaviour:
   deathEffect: {fileID: 0}
   jumpMaxRange: 20
   jumpMinRange: 10
+  damageData: {fileID: 7646169709752832715}
+  attackRate: 0.5
   speedMultiplyer: 100
 --- !u!114 &5012790351151878670
 MonoBehaviour:
@@ -514,6 +517,20 @@ MonoBehaviour:
   OnDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7646169709752832715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5012790351151878659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f2e5b9fb3e63c47988c9160ac125db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagesTypes: 00000000
+  damages: 10
 --- !u!1 &5379895474178561132
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +842,7 @@ GameObject:
   - component: {fileID: 5810233122115631953}
   - component: {fileID: 8655126770946585657}
   - component: {fileID: 1969703972511590039}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,8 +875,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04, y: 0.04, z: 0.01}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.06, y: 0.05, z: 0.05}
+  m_Center: {x: 0, y: -0.01, z: 0}
 --- !u!114 &1969703972511590039
 MonoBehaviour:
   m_ObjectHideFlags: 0

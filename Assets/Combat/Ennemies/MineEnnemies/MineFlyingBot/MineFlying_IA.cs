@@ -44,95 +44,108 @@ public class MineFlying_IA : IaBase
 
     public void Update()
     {
-        if(playerToFocus && state != MineFlying_States.MoveClose && Vector3.Distance(playerToFocus.transform.position,transform.position) > maxAttackRange)
+        if (state != MineFlying_States.Dead)
         {
-            ChangeState(MineFlying_States.MoveClose);
-        }
-        if (playerToFocus && state != MineFlying_States.MoveClose && Vector3.Distance(playerToFocus.transform.position, transform.position) < minAttackRange)
-        {
-            ChangeState(MineFlying_States.MoveAway);
-        }
-        if (playerToFocus && state != MineFlying_States.Attack && Vector3.Distance(playerToFocus.transform.position, transform.position) < maxAttackRange && Vector3.Distance(playerToFocus.transform.position, transform.position) > minAttackRange)
-        {
-            ChangeState(MineFlying_States.Attack);
+            if (playerToFocus && state != MineFlying_States.MoveClose && Vector3.Distance(playerToFocus.transform.position, transform.position) > maxAttackRange)
+            {
+                ChangeState(MineFlying_States.MoveClose);
+            }
+            if (playerToFocus && state != MineFlying_States.MoveClose && Vector3.Distance(playerToFocus.transform.position, transform.position) < minAttackRange)
+            {
+                ChangeState(MineFlying_States.MoveAway);
+            }
+            if (playerToFocus && state != MineFlying_States.Attack && Vector3.Distance(playerToFocus.transform.position, transform.position) < maxAttackRange && Vector3.Distance(playerToFocus.transform.position, transform.position) > minAttackRange)
+            {
+                ChangeState(MineFlying_States.Attack);
+            }
         }
     }
 
     public void FixedUpdate()
     {
-        rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, Time.deltaTime * 2);
-        if (playerToFocus)
+        if (state != MineFlying_States.Dead)
         {
-            gameObject.transform.LookAt(playerToFocus.transform);
-        }
-        switch (state)
-        {
-            case MineFlying_States.Idle:
-                break;
-            case MineFlying_States.MoveClose:
-                Move(Time.deltaTime);
-                break;
-            case MineFlying_States.MoveAway:
-                Move(Time.deltaTime);
-                break;
-            case MineFlying_States.Attack:
-                Attack(Time.deltaTime);
-                break;
+            rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, Time.deltaTime * 2);
+            if (playerToFocus)
+            {
+                gameObject.transform.LookAt(playerToFocus.transform);
+            }
+            switch (state)
+            {
+                case MineFlying_States.Idle:
+                    break;
+                case MineFlying_States.MoveClose:
+                    Move(Time.deltaTime);
+                    break;
+                case MineFlying_States.MoveAway:
+                    Move(Time.deltaTime);
+                    Attack(Time.deltaTime);
+                    break;
+                case MineFlying_States.Attack:
+                    Attack(Time.deltaTime);
+                    break;
+            }
         }
     }
 
     public void Move(float _deltaTime)
     {
-        if (playerToFocus)
+        if (state != MineFlying_States.Dead)
         {
-            Vector3 baseDirection = (playerToFocus.transform.position - transform.position);
-            if (state == MineFlying_States.MoveAway)
+            if (playerToFocus)
             {
-                baseDirection *= -1;
+                Vector3 baseDirection = (playerToFocus.transform.position - transform.position);
+                if (state == MineFlying_States.MoveAway)
+                {
+                    baseDirection *= -1;
+                }
+                if (directionSystem.CheckDirection(DirectionModuleStates.Up) && baseDirection.y > 0)
+                {
+                    baseDirection.y = 0;
+                }
+                if (directionSystem.CheckDirection(DirectionModuleStates.Down) && baseDirection.y < 0)
+                {
+                    baseDirection.y = 0;
+                }
+                if (directionSystem.CheckDirection(DirectionModuleStates.Left) && baseDirection.x < 0)
+                {
+                    baseDirection.x = 0;
+                }
+                if (directionSystem.CheckDirection(DirectionModuleStates.Right) && baseDirection.x > 0)
+                {
+                    baseDirection.x = 0;
+                }
+                if (directionSystem.CheckDirection(DirectionModuleStates.Front) && baseDirection.z > 0)
+                {
+                    baseDirection.z = 0;
+                }
+                if (directionSystem.CheckDirection(DirectionModuleStates.Back) && baseDirection.z < 0)
+                {
+                    baseDirection.z = 0;
+                }
+                rb.velocity = baseDirection.normalized * moveSpeed;
             }
-            if (directionSystem.CheckDirection(DirectionModuleStates.Up) && baseDirection.y > 0)
-            {
-                baseDirection.y = 0;
-            }
-            if (directionSystem.CheckDirection(DirectionModuleStates.Down) && baseDirection.y < 0)
-            {
-                baseDirection.y = 0;
-            }
-            if (directionSystem.CheckDirection(DirectionModuleStates.Left) && baseDirection.x < 0)
-            {
-                baseDirection.x = 0;
-            }
-            if (directionSystem.CheckDirection(DirectionModuleStates.Right) && baseDirection.x > 0)
-            {
-                baseDirection.x = 0;
-            }
-            if (directionSystem.CheckDirection(DirectionModuleStates.Front) && baseDirection.z > 0)
-            {
-                baseDirection.z = 0;
-            }
-            if (directionSystem.CheckDirection(DirectionModuleStates.Back) && baseDirection.z < 0)
-            {
-                baseDirection.z = 0;
-            }
-            rb.velocity = baseDirection.normalized * moveSpeed;
         }
     }
 
     public void Attack(float _deltaTime)
     {
-        if (attackTimer <= 0)
+        if (state != MineFlying_States.Dead)
         {
-            GameObject _projectile = Instantiate(projectileToShoot, projectileSpawnPoint.transform.position, projectileSpawnPoint.transform.rotation);
-            Vector3 _predictedVector = ((playerToFocus.transform.position + (playerToFocus.GetComponent<Rigidbody>().velocity * 0.8f)) - transform.position).normalized * 2000;
-            Vector3 _randomVector = new Vector3(Random.Range(-100, 100), Random.Range(-100, 100), Random.Range(-100, 100));
-            _randomVector = _randomVector.normalized * 2000;
+            if (attackTimer <= 0)
+            {
+                GameObject _projectile = Instantiate(projectileToShoot, projectileSpawnPoint.transform.position, projectileSpawnPoint.transform.rotation);
+                Vector3 _predictedVector = ((playerToFocus.transform.position + (playerToFocus.GetComponent<Rigidbody>().velocity * 0.8f)) - transform.position).normalized * 2000;
+                Vector3 _randomVector = new Vector3(Random.Range(-100, 100), Random.Range(-100, 100), Random.Range(-100, 100));
+                _randomVector = _randomVector.normalized * 2000;
 
-            _projectile.GetComponent<Rigidbody>().AddForce(Vector3.Lerp(_predictedVector,_randomVector,randomFactor));
-            attackTimer = attackRate;
-        }
-        else
-        {
-            attackTimer -= _deltaTime;
+                _projectile.GetComponent<Rigidbody>().AddForce(Vector3.Lerp(_predictedVector, _randomVector, randomFactor));
+                attackTimer = attackRate;
+            }
+            else
+            {
+                attackTimer -= _deltaTime;
+            }
         }
     }
 
@@ -158,6 +171,7 @@ public class MineFlying_IA : IaBase
     override public void Dead()
     {
         ChangeState(MineFlying_States.Dead);
+        rb.useGravity = true;
         base.Dead();
     }
 }

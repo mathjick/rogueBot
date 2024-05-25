@@ -609,7 +609,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189935ec516003a40b84a30f7d2af4e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bountyList: []
+  bountyList:
+  - bounty: {fileID: 0}
+    chanceToDrop: 0
   expValue: 3
   expOrb: {fileID: 6210751855959635356, guid: 745ab3906fd60c14e8ecc1325c71a52e, type: 3}
 --- !u!54 &1168853614429523203

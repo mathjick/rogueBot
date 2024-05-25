@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6351913255887720576}
   - component: {fileID: 8905996317380770470}
   - component: {fileID: 8949418599572098805}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Up
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,9 +75,9 @@ GameObject:
   - component: {fileID: 2551979547648414590}
   - component: {fileID: 2197528770312209465}
   - component: {fileID: 1219662355085174233}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftWing
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 4828518529129907554}
   m_Layer: 14
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,9 +253,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8965303404540394310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DetectionZones
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,9 +292,9 @@ GameObject:
   - component: {fileID: 48013273153475920}
   - component: {fileID: 390773456669286332}
   - component: {fileID: 5849521400702340270}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,9 +354,9 @@ GameObject:
   - component: {fileID: 3345290209330160730}
   - component: {fileID: 612461308097900921}
   - component: {fileID: 1753948603868379224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,9 +442,9 @@ GameObject:
   - component: {fileID: 1645744910344279941}
   - component: {fileID: 9056342661844676520}
   - component: {fileID: 6176651948170864184}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightWing
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,9 +560,9 @@ GameObject:
   - component: {fileID: 9144638669569103367}
   - component: {fileID: 5534089909651575250}
   - component: {fileID: 6808556183500642656}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Propulsor
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,9 +642,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4765247974948045807}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileSpawn
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -675,9 +675,9 @@ GameObject:
   - component: {fileID: 9054477278397801613}
   - component: {fileID: 5156414561664993612}
   - component: {fileID: 2443705476428131595}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Down
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -737,9 +737,9 @@ GameObject:
   - component: {fileID: 7160729461022527491}
   - component: {fileID: 3161077772929542110}
   - component: {fileID: 7048859568045064382}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 5797199311836474505}
   m_Layer: 14
   m_Name: Front
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -861,7 +861,7 @@ GameObject:
   - component: {fileID: 2017305413170040094}
   - component: {fileID: 12229183379523543}
   - component: {fileID: 8166757398618825669}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftRotor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,9 +948,10 @@ GameObject:
   - component: {fileID: 5346409994298708478}
   - component: {fileID: 4762429911857274508}
   - component: {fileID: 1610730334963506451}
-  m_Layer: 0
+  - component: {fileID: 4077545036460385279}
+  m_Layer: 7
   m_Name: MineFlyingBot
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1019,7 +1020,31 @@ MonoBehaviour:
   lastSourceOfDamage: {fileID: 0}
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8158449413608316420}
+        m_TargetAssemblyTypeName: MineFlying_IA, Assembly-CSharp
+        m_MethodName: Dead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4077545036460385279}
+        m_TargetAssemblyTypeName: corpseBehavior, Assembly-CSharp
+        m_MethodName: deathLayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamage:
     m_PersistentCalls:
       m_Calls: []
@@ -1045,7 +1070,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8231229739819996923}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -1088,6 +1113,19 @@ MonoBehaviour:
   bountyList: []
   expValue: 0
   expOrb: {fileID: 0}
+--- !u!114 &4077545036460385279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8231229739819996923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071673fd981741d4b80316f15cc8cda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ls: {fileID: 7330616059141892293}
 --- !u!1 &8515094396622622658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,9 +1139,9 @@ GameObject:
   - component: {fileID: 6725738341798567052}
   - component: {fileID: 4497988680111903277}
   - component: {fileID: 8522491587975505853}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1223,7 +1261,7 @@ GameObject:
   - component: {fileID: 2721375247383450146}
   - component: {fileID: 1576413435431091007}
   - component: {fileID: 3649622494959193317}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightRotor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

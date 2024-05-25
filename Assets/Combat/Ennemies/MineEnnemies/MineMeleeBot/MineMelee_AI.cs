@@ -59,7 +59,7 @@ public class MineMelee_AI : IaBase
 
     private void FixedUpdate()
     {
-        if(playerToFocus && Vector3.Distance(playerToFocus.transform.position,this.transform.position) < jumpMaxRange && Vector3.Distance(playerToFocus.transform.position, this.transform.position) > jumpMinRange)
+        if(state != MineMelee_States.Dead && playerToFocus && Vector3.Distance(playerToFocus.transform.position,this.transform.position) < jumpMaxRange && Vector3.Distance(playerToFocus.transform.position, this.transform.position) > jumpMinRange)
         {
             ChangeState(MineMelee_States.Jump);
         }
@@ -105,6 +105,7 @@ public class MineMelee_AI : IaBase
             case MineMelee_States.Attack:
                 break;
             case MineMelee_States.Dead:
+                agent.isStopped = true;
                 break;
             case MineMelee_States.Jump:
                 Jump();

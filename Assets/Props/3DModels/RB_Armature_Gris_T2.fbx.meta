@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: fa7e6c015e843bb419966a5788dc16f9
+guid: eba1c2d85ee16d94e82afc83b5b42dcb
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TuyauxBeigeClair
-    second: {fileID: 2100000, guid: 645a3bf5757178449ba9001255b7a475, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TuyauxBeigeFonce
-    second: {fileID: 2100000, guid: 750a1023a9e539f40990e597364e0fe7, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

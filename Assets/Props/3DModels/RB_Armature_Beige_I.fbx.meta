@@ -3,7 +3,12 @@ guid: ceec5187b40aef24499e8909a9f94898
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TuyauxBeigeClair
+    second: {fileID: 2100000, guid: 645a3bf5757178449ba9001255b7a475, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

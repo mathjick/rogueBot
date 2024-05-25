@@ -3,7 +3,42 @@ guid: 07dfe8b1a36d98a4daefca27b23fd0cf
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TerminalBeige
+    second: {fileID: 2100000, guid: 76f1fa509a35c2a428ac91039cd68dc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TerminalBeigeOrange
+    second: {fileID: 2100000, guid: 98fe3f8df5eb6a04f8972f2be790c811, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TerminalBleu
+    second: {fileID: 2100000, guid: a9962fb2ec9436f41a39555406cbdd07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TerminalJaune
+    second: {fileID: 2100000, guid: ceb030c2708dc54498d6d012ceac9a2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TerminalNoirPasComplet
+    second: {fileID: 2100000, guid: 24f8949d23901024fb90c573132dc397, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TerminalRouge
+    second: {fileID: 2100000, guid: 7c6e78a4207e71c4183c2accac4995d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TerminalVert
+    second: {fileID: 2100000, guid: ce8c171c468c00646b4d8a63bb34f6c2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

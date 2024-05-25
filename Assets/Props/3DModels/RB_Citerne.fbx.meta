@@ -3,7 +3,22 @@ guid: 31fa3263a276baa438bf0ef74fb4329f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CiterneGrisClair
+    second: {fileID: 2100000, guid: dbd3368f514d19542b26a4ebecf4013d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CiterneGrisFonce
+    second: {fileID: 2100000, guid: 8391f5d89d91ba44787eb7e0ed8090d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CiterneNoir
+    second: {fileID: 2100000, guid: e65694f2bd4a5d545b6c4ba58e1b9216, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

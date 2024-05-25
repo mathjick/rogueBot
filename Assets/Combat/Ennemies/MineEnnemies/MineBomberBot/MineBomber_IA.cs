@@ -99,7 +99,7 @@ public class MineBomber_IA : IaBase
             {
                 NavMeshHit hit;
                 Vector3 oppositeSide = transform.position - (playerToFocus.transform.position - transform.position);
-                NavMesh.SamplePosition(oppositeSide, out hit, 100, 1);
+                NavMesh.SamplePosition(oppositeSide * 1.5f, out hit, 100, 1);
                 navMeshAgent.SetDestination(hit.position);
             }
         }
@@ -154,7 +154,7 @@ public class MineBomber_IA : IaBase
 
     override public void Dead()
     {
-        state = MineBomber_States.Dead;
+        ChangeState(MineBomber_States.Dead);
         base.Dead();
     }
 }

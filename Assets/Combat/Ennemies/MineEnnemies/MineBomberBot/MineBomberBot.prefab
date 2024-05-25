@@ -498,6 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d615d90c27a8964c8ab3ae402c87860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Spawner: {fileID: 0}
   state: 0
   lifeSystem: {fileID: 5560670147623461967}
   projectileToShoot: {fileID: 2423125804244186870, guid: 294c4d69bfdc11a42a48cdc87fe2af88, type: 3}
@@ -531,7 +532,19 @@ MonoBehaviour:
   lastSourceOfDamage: {fileID: 0}
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 414595959264066216}
+        m_TargetAssemblyTypeName: MineBomber_IA, Assembly-CSharp
+        m_MethodName: Dead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamage:
     m_PersistentCalls:
       m_Calls: []

@@ -8,7 +8,7 @@ public enum MineMelee_States
     Idle, Move, Attack, Dead, Jump
 }
 
-public class AIMineMelee : IaBase
+public class MineMelee_AI : IaBase
 {
     [Header("--- setup ---")]
     //logic
@@ -132,7 +132,7 @@ public class AIMineMelee : IaBase
 
     override public void Dead()
     {
-        state = MineMelee_States.Dead;
+        ChangeState(MineMelee_States.Dead);
         base.Dead();
     }
 }

@@ -155,6 +155,7 @@ public class MineBomber_IA : IaBase
     override public void Dead()
     {
         ChangeState(MineBomber_States.Dead);
+        navMeshAgent.isStopped = true;
         base.Dead();
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9055114507683206323}
   - component: {fileID: 7686201486758201351}
   - component: {fileID: 5983895487370847614}
+  - component: {fileID: 515404087549959291}
   m_Layer: 8
   m_Name: MineBomberGrenade
   m_TagString: tag_ennemie
@@ -101,9 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940f8b7881a1e1c4b911e88b87e539f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuzeTime: 1
-  explosionRange: 10
-  damageData: {fileID: 0}
+  fuzeTime: 4
+  damageData: {fileID: 515404087549959291}
   triggerRelay: {fileID: 3741100352889677215}
 --- !u!135 &7686201486758201351
 SphereCollider:
@@ -134,6 +134,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &515404087549959291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2423125804244186870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f2e5b9fb3e63c47988c9160ac125db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagesTypes: 02000000
+  damages: 50
 --- !u!1 &5739871102298285922
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +241,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5739871102298285922}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

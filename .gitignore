@@ -98,9 +98,6 @@ fmod_editor.log
 /Assets/LeFmod/FmodRogueBot/Metadata/ParameterPreset/*.meta
 /Assets/Player/Generals/Scripts/*.meta
 /Assets/Combat/Ennemies/*.meta
-/Assets/Combat/Ennemies/MineEnnemies/*.meta
-/Assets/Combat/Ennemies/MineEnnemies/MineBomberBot/*.meta
-/Assets/Combat/Ennemies/MineEnnemies/MineFlyingBot/*.meta
 /Assets/Combat/General/*.meta
 /Assets/Combat/General/LevelSystem/*.meta
 /Assets/LevelLogic/*.meta

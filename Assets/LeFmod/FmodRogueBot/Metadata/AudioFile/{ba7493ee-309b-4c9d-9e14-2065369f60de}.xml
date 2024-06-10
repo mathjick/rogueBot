@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ba7493ee-309b-4c9d-9e14-2065369f60de}">
+		<property name="assetPath">
+			<value>PewHit Hurt.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.58172916666666663</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{12217ae5-0e77-4f04-a1f6-898cf44d92df}</destination>
+		</relationship>
+	</object>
+</objects>

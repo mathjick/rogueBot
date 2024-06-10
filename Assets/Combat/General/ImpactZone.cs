@@ -39,5 +39,7 @@ public class ImpactZone : MonoBehaviour
             Debug.Log("Normal Hit " + this.gameObject.name);
             HitCallBack.Invoke();
         }
+        DamagePopup.Create(this.transform.position, trueDamageTaken, false);
+        Debug.Log(this.transform.position);
     }
 }

@@ -11,7 +11,10 @@ public class LookAtCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (camera == null)
+        {
+            camera = FindFirstObjectByType<Camera>();
+        }
     }
 
     // Update is called once per frame

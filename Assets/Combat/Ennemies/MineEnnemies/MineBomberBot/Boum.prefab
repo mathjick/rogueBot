@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 765117285052938883}
   - component: {fileID: 1549329224812852808}
   - component: {fileID: 6835377266168478449}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boum
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 7093708343369425745}
   - component: {fileID: 8835102279217254866}
   - component: {fileID: 7132494518247175254}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BOUM_RightLeg
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,9 +213,9 @@ GameObject:
   - component: {fileID: 2236460025039336716}
   - component: {fileID: 1458087209919699523}
   - component: {fileID: 3001333722707155448}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BOUM_CannonHinge
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -333,9 +333,9 @@ GameObject:
   - component: {fileID: 4780559779998248568}
   - component: {fileID: 4520581623740288401}
   - component: {fileID: 4908061916932304138}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BOUM_Exhaust
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,9 +453,9 @@ GameObject:
   - component: {fileID: 3656391233173995803}
   - component: {fileID: 1135378480757104847}
   - component: {fileID: 7572469777916872295}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BOUM_Cannon
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -575,9 +575,9 @@ GameObject:
   - component: {fileID: 4872438182631508533}
   - component: {fileID: 7644687563109332035}
   - component: {fileID: 8811145040974671044}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BOUM_Glasses
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -694,9 +694,9 @@ GameObject:
   - component: {fileID: 5539778073050549916}
   - component: {fileID: 7512622256502289109}
   - component: {fileID: 4466311401112511730}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BOUM_Body
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -817,9 +817,9 @@ GameObject:
   - component: {fileID: 4187428630441321392}
   - component: {fileID: 7380732578644330958}
   - component: {fileID: 3275453196259241333}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BOUM_LeftLeg
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -932,9 +932,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4168538524691431255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileSpawnPoint
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

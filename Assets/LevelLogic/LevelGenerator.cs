@@ -207,7 +207,6 @@ public class LevelGenerator : MonoBehaviour
 
     public void GenerateBlock(BlockPercentGeneration _block, UsedTile _place, (int, int) _coordinateCode)
     {
-        Debug.Log("Generating block " + _block.block.name + " at " + _coordinateCode.Item1 + " " + _coordinateCode.Item2 + " " + PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].isUsed);
         GameObject newBlock = Instantiate(_block.block, _place.position.position, _place.position.rotation);
         newBlock.name = " BlockGenerated " + _coordinateCode.Item1 + " " + _coordinateCode.Item2;
         PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].blockLocked = newBlock;

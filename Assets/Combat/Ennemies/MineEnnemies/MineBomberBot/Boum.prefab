@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 765117285052938883}
   - component: {fileID: 1549329224812852808}
   - component: {fileID: 6835377266168478449}
+  - component: {fileID: 7896825306039378965}
   m_Layer: 7
   m_Name: Boum
   m_TagString: tag_ennemie
@@ -81,6 +82,32 @@ MonoBehaviour:
   OnDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7896825306039378965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132274209826480185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d615d90c27a8964c8ab3ae402c87860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawner: {fileID: 0}
+  state: 0
+  lifeSystem: {fileID: 6835377266168478449}
+  projectileToShoot: {fileID: 7402936603855251669, guid: 070e2646634a211498941d1399b793fe, type: 3}
+  projectileSpawnPoint: {fileID: 7291728074551067259}
+  canonAnchor: {fileID: 2048965343892247121}
+  navMeshAgent: {fileID: 1549329224812852808}
+  spawnEffect: {fileID: 0}
+  deathEffect: {fileID: 0}
+  maxAttackRange: 40
+  minAttackRange: 25
+  attackRate: 2
+  attackWarmup: 1
+  playerToFocus: {fileID: 0}
 --- !u!1 &330287518263908261
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,7 +974,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7291728074551067259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.042, z: 0.042}
+  m_LocalPosition: {x: 0, y: -0.0452, z: 0.042}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

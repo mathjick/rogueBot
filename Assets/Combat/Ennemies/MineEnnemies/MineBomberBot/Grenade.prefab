@@ -93,7 +93,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927737301915081815}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -112,10 +112,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTriggerEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 952975996977789066}
+        m_TargetAssemblyTypeName: MineBomberGrenadeScript, Assembly-CSharp
+        m_MethodName: actualizeEntityInRange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTriggerExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 952975996977789066}
+        m_TargetAssemblyTypeName: MineBomberGrenadeScript, Assembly-CSharp
+        m_MethodName: actualizeEntityInRange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   collidersIn: []
 --- !u!1 &2177908517427432374
 GameObject:
@@ -296,6 +320,7 @@ GameObject:
   - component: {fileID: 7402936603855251664}
   - component: {fileID: 7402936603855251666}
   - component: {fileID: 7402936603855251667}
+  - component: {fileID: 952975996977789066}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Untagged
@@ -364,3 +389,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagesTypes: 02000000
   damages: 50
+--- !u!114 &952975996977789066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7402936603855251669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940f8b7881a1e1c4b911e88b87e539f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuzeTime: 5
+  damageData: {fileID: 7402936603855251667}
+  triggerRelay: {fileID: 315146895396798471}

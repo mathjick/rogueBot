@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 773970246}
   - component: {fileID: 773970245}
   - component: {fileID: 773970244}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (7)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 903235370}
   - component: {fileID: 903235369}
   - component: {fileID: 903235368}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (20)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -1387,7 +1387,7 @@ GameObject:
   - component: {fileID: 1115064257}
   - component: {fileID: 1115064256}
   - component: {fileID: 1115064255}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (23)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -1731,7 +1731,7 @@ GameObject:
   - component: {fileID: 1253200071}
   - component: {fileID: 1253200070}
   - component: {fileID: 1253200069}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (8)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -2563,7 +2563,7 @@ GameObject:
   - component: {fileID: 1281775234}
   - component: {fileID: 1281775233}
   - component: {fileID: 1281775232}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (21)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -2907,7 +2907,7 @@ GameObject:
   - component: {fileID: 1503158402}
   - component: {fileID: 1503158401}
   - component: {fileID: 1503158400}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (15)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -3282,7 +3282,7 @@ GameObject:
   - component: {fileID: 1678840621}
   - component: {fileID: 1678840620}
   - component: {fileID: 1678840619}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (6)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -4145,7 +4145,7 @@ GameObject:
   - component: {fileID: 1982440093}
   - component: {fileID: 1982440092}
   - component: {fileID: 1982440091}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (22)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -5068,7 +5068,7 @@ GameObject:
   - component: {fileID: 2130958809}
   - component: {fileID: 2130958808}
   - component: {fileID: 2130958807}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (5)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}

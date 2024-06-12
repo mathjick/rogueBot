@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 76190812}
   - component: {fileID: 76190811}
   - component: {fileID: 76190810}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (2)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -1178,7 +1178,7 @@ GameObject:
   - component: {fileID: 266260315}
   - component: {fileID: 266260314}
   - component: {fileID: 266260313}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Torus (1)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -12867,7 +12867,7 @@ GameObject:
   - component: {fileID: 387232305}
   - component: {fileID: 387232304}
   - component: {fileID: 387232303}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (14)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -13751,7 +13751,7 @@ GameObject:
   - component: {fileID: 489927082}
   - component: {fileID: 489927081}
   - component: {fileID: 489927080}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (19)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -14095,7 +14095,7 @@ GameObject:
   - component: {fileID: 822673064}
   - component: {fileID: 822673063}
   - component: {fileID: 822673062}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Torus (2)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -25784,7 +25784,7 @@ GameObject:
   - component: {fileID: 882880690}
   - component: {fileID: 882880689}
   - component: {fileID: 882880688}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (17)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -26128,7 +26128,7 @@ GameObject:
   - component: {fileID: 904538954}
   - component: {fileID: 904538953}
   - component: {fileID: 904538952}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (13)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -27012,7 +27012,7 @@ GameObject:
   - component: {fileID: 1006458268}
   - component: {fileID: 1006458267}
   - component: {fileID: 1006458266}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (3)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -27844,7 +27844,7 @@ GameObject:
   - component: {fileID: 1018213398}
   - component: {fileID: 1018213397}
   - component: {fileID: 1018213396}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (18)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -28188,7 +28188,7 @@ GameObject:
   - component: {fileID: 1822506965}
   - component: {fileID: 1822506964}
   - component: {fileID: 1822506963}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Torus
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -39877,7 +39877,7 @@ GameObject:
   - component: {fileID: 1967702291}
   - component: {fileID: 1967702290}
   - component: {fileID: 1967702289}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (16)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -40221,7 +40221,7 @@ GameObject:
   - component: {fileID: 2087051725}
   - component: {fileID: 2087051724}
   - component: {fileID: 2087051723}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (4)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}

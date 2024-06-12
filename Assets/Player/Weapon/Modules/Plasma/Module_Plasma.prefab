@@ -105,7 +105,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideMaxDistance: 150
 --- !u!114 &3232833230898817568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextModule: {fileID: 0}
-  sizeFactor: 15
-  slowDownFactor: 0.3
+  sizeFactor: 10
+  slowDownFactor: 0.6
   ShootCallBack:
     m_PersistentCalls:
       m_Calls:

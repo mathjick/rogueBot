@@ -34,7 +34,7 @@ public class BaseModule : MonoBehaviour
                 case "tag_ennemie":
                     if (other.collider.GetComponent<ImpactZone>())
                     {
-                        other.collider.GetComponent<ImpactZone>().TakeDamage(this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damagesTypes, this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damages, this.gameObject.GetComponentInParent<ModularProjectileBase>().owner);
+                        other.collider.GetComponent<ImpactZone>().TakeDamage(this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damagesTypes, this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damages, this.gameObject.GetComponentInParent<ModularProjectileBase>().owner, other.collider.ClosestPoint(transform.position));
                         this.CallCleanItself();
                     }
                     else
@@ -66,7 +66,7 @@ public class BaseModule : MonoBehaviour
                 case "tag_ennemie":
                     if (other.collider.GetComponent<ImpactZone>())
                     {
-                        other.collider.GetComponent<ImpactZone>().TakeDamage(this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damagesTypes, this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damages, this.gameObject.GetComponentInParent<ModularProjectileBase>().owner);
+                        other.collider.GetComponent<ImpactZone>().TakeDamage(this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damagesTypes, this.gameObject.GetComponentInParent<ModularProjectileBase>().damageData.damages, this.gameObject.GetComponentInParent<ModularProjectileBase>().owner, other.collider.ClosestPoint(transform.position));
                     }
                     break;
                 case "tag_player":
@@ -78,6 +78,7 @@ public class BaseModule : MonoBehaviour
             }
         }
     }
+
 
     public virtual void CallOnShot()
     {

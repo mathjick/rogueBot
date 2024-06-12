@@ -1,17 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.TextCore.Text;
 
 [System.Serializable] public struct FontParameters
 {
+    public TMP_FontAsset font;
     public Color fontColor;
     public int fontSize;
 }
 
 public class DamagePopup : MonoBehaviour
 {
+    public AnimationCurve opacityCurve;
+    public AnimationCurve scaleCurve;
+    public AnimationCurve heightCurve;
+
+    private TextMeshProUGUI tmp;
+
+    private float timer = 0f;
+
+    private Vector3 origin;
+
+    private void Awake()
+    {
+        tmp = this.GetComponentInChildren<TextMeshProUGUI>();
+        origin = transform.position;
+    }
+
+    private void Update()
+    {
+        tmp.color = new Color(1, 1, 1, opacityCurve.Evaluate(timer));
+        transform.localScale = Vector3.one * scaleCurve.Evaluate(timer);
+        transform.position = origin + new Vector3(0, 1 + heightCurve.Evaluate(timer), 0);
+        timer += Time.deltaTime;
+    }
+
+
+    /*
     public static DamagePopup Create(Vector3 pos, float damageAmount, bool isCrit)
     {
         GameObject go = Instantiate(GameAssets.instance.damagePopupPrefab, pos, Quaternion.identity);
@@ -99,5 +127,5 @@ public class DamagePopup : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
+    }*/
 }

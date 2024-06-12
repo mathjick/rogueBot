@@ -11,6 +11,8 @@ public class TriggerModule : MonoBehaviour
 
     public Camera weaponView;
 
+    public LayerMask ls;
+
     public virtual void Hold()
     {
     }

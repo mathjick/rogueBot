@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1223029754703530821, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: triggerModuleToEquip
       value: 
-      objectReference: {fileID: 3943967755562950049}
+      objectReference: {fileID: 218545460791008067}
     - target: {fileID: 7400264267591625272, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: m_Name
       value: Trigger_Module_Marksman
@@ -68,7 +68,7 @@ PrefabInstance:
       value: Marksman Trigger Module
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 388659252033107057, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+    - {fileID: 5583069630158437337, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
 --- !u!114 &2001469278782567198 stripped
 MonoBehaviour:
@@ -86,7 +86,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7985584433234985079, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
   m_PrefabInstance: {fileID: 75948651957871495}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3943967755562950049
+--- !u!114 &218545460791008067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,5 +102,8 @@ MonoBehaviour:
   damageData: {fileID: 2001469278782567198}
   RPM: 60
   weaponView: {fileID: 0}
-  projectilePrefab: {fileID: 7749752667786575973, guid: 6d6ba07ca5105cc40b8fbe8fa753e14d, type: 3}
-  projectileSpeed: 6000
+  ls:
+    serializedVersion: 2
+    m_Bits: 131201
+  projectilePrefab: {fileID: 72854198061432573, guid: a3a8663e624da2f4188357f81cf4c87f, type: 3}
+  projectileSpeed: 4000

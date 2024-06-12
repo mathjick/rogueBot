@@ -73,6 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 388659252033107057, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+    - {fileID: 5583069630158437337, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
 --- !u!114 &2207765230645106744 stripped
 MonoBehaviour:
@@ -106,7 +107,10 @@ MonoBehaviour:
   damageData: {fileID: 2207765230645106744}
   RPM: 60
   weaponView: {fileID: 0}
-  projectilePrefab: {fileID: 7749752667786575973, guid: 6d6ba07ca5105cc40b8fbe8fa753e14d, type: 3}
+  ls:
+    serializedVersion: 2
+    m_Bits: 131201
+  projectilePrefab: {fileID: 72854198061432573, guid: a3a8663e624da2f4188357f81cf4c87f, type: 3}
   projectileSpeed: 2000
   pelletCount: 10
   spread: 0.0001

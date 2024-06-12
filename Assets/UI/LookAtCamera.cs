@@ -2,30 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookAtCamera : MonoBehaviour
+public class LookAtusedCamera : MonoBehaviour
 {
 
-    public Camera camera;
+    public Camera usedCamera;
     public Transform objectToRotate;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (camera == null)
+        if (usedCamera == null)
         {
-            camera = FindFirstObjectByType<Camera>();
+            usedCamera = FindFirstObjectByType<Camera>();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (camera)
+        if (usedCamera)
         {
             Vector3 target = new Vector3(
-                objectToRotate.position.x - (camera.transform.position.x - objectToRotate.position.x),
+                objectToRotate.position.x - (usedCamera.transform.position.x - objectToRotate.position.x),
                 objectToRotate.transform.position.y,
-                objectToRotate.position.z - (camera.transform.position.z - objectToRotate.position.z));
+                objectToRotate.position.z - (usedCamera.transform.position.z - objectToRotate.position.z));
             objectToRotate.LookAt(target);
             //objectToRotate.rotation = Quaternion.LookRotation()
         }
@@ -33,7 +33,7 @@ public class LookAtCamera : MonoBehaviour
         {
             if (PlayerController.instance)
             {
-                camera = PlayerController.instance.playerView;
+                usedCamera = PlayerController.instance.playerView;
             }
         }
     }

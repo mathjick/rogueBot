@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 72175782}
   - component: {fileID: 72175781}
   - component: {fileID: 72175780}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (26)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 106119708}
   - component: {fileID: 106119707}
   - component: {fileID: 106119706}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (12)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -1190,7 +1190,7 @@ GameObject:
   - component: {fileID: 157960178}
   - component: {fileID: 157960177}
   - component: {fileID: 157960176}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (9)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -2022,7 +2022,7 @@ GameObject:
   - component: {fileID: 175343360}
   - component: {fileID: 175343359}
   - component: {fileID: 175343358}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (11)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -2854,7 +2854,7 @@ GameObject:
   - component: {fileID: 239327833}
   - component: {fileID: 239327832}
   - component: {fileID: 239327831}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Torus (4)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -14543,7 +14543,7 @@ GameObject:
   - component: {fileID: 250873533}
   - component: {fileID: 250873532}
   - component: {fileID: 250873531}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (25)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -14887,7 +14887,7 @@ GameObject:
   - component: {fileID: 433496213}
   - component: {fileID: 433496212}
   - component: {fileID: 433496211}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Torus (3)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -26576,7 +26576,7 @@ GameObject:
   - component: {fileID: 525157771}
   - component: {fileID: 525157770}
   - component: {fileID: 525157769}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (24)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -26920,7 +26920,7 @@ GameObject:
   - component: {fileID: 538670515}
   - component: {fileID: 538670514}
   - component: {fileID: 538670513}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (28)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -27264,7 +27264,7 @@ GameObject:
   - component: {fileID: 961828865}
   - component: {fileID: 961828864}
   - component: {fileID: 961828863}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube (27)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -27608,7 +27608,7 @@ GameObject:
   - component: {fileID: 1054582477}
   - component: {fileID: 1054582476}
   - component: {fileID: 1054582475}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder (10)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -28440,7 +28440,7 @@ GameObject:
   - component: {fileID: 1555846900}
   - component: {fileID: 1555846899}
   - component: {fileID: 1555846898}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Torus (5)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -40129,7 +40129,7 @@ GameObject:
   - component: {fileID: 1557768581}
   - component: {fileID: 1557768580}
   - component: {fileID: 1557768579}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Torus (6)
   m_TagString: tag_solid
   m_Icon: {fileID: 0}
@@ -51828,12 +51828,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4368031603076842296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.20549996, y: 14.24, z: -0.19529994}
-  m_LocalScale: {x: 0.010000001, y: 1, z: 0.010000001}
+  m_LocalPosition: {x: -20.549992, y: -10.76, z: -19.529995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7399515574111542063}
-  m_RootOrder: 14
+  m_Father: {fileID: 7399515573223067118}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4388383577781511610
 GameObject:
@@ -51859,12 +51859,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388383577781511610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.047499996, y: 27.630001, z: -0.0033000398}
-  m_LocalScale: {x: 0.010000001, y: 1, z: 0.010000001}
+  m_LocalPosition: {x: -4.7499995, y: 2.630001, z: -0.33000398}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7399515574111542063}
-  m_RootOrder: 15
+  m_Father: {fileID: 7399515573223067118}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8663051642108241327
 GameObject:
@@ -51890,12 +51890,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8663051642108241327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.17619999, y: 14.24, z: 0.2219}
-  m_LocalScale: {x: 0.010000001, y: 1, z: 0.010000001}
+  m_LocalPosition: {x: 17.619997, y: -10.76, z: 22.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7399515574111542063}
-  m_RootOrder: 13
+  m_Father: {fileID: 7399515573223067118}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2746505342312369629
 PrefabInstance:
@@ -52074,6 +52074,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 166eadec82101fc43bcce88746a05695, type: 3}
+--- !u!4 &7399515573223067118 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4660610141317709875, guid: 166eadec82101fc43bcce88746a05695, type: 3}
+  m_PrefabInstance: {fileID: 2746505342312369629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7399515574111542032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4660610143348479693, guid: 166eadec82101fc43bcce88746a05695, type: 3}

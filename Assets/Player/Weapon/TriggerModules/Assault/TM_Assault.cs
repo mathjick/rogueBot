@@ -13,7 +13,7 @@ public class TM_Assault : TriggerModule
 
     #endregion
 
-    public LayerMask ls;
+    
 
     public void FixedUpdate()
     {
@@ -44,7 +44,7 @@ public class TM_Assault : TriggerModule
 
         RaycastHit hit = base.Raycast(ls);
 
-        if (hit.collider && hit.collider.tag != "tag_player")
+        if (hit.collider /*&& hit.collider.tag != "tag_player"*/)
         {
             var spawnSpec = playerWeapon.projectileLaunchAnchor.transform;
             var projectile = Instantiate(projectilePrefab, spawnSpec.position, spawnSpec.rotation);

@@ -16,7 +16,7 @@ public class Test : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             bool isCrit = Random.Range(0, 100) < 30;
-            DamagePopup.Create(Input.mousePosition, 300, isCrit);
+            //DamagePopup.Create(Input.mousePosition, 300, isCrit);
         }
     }
 }

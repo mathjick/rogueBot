@@ -58,7 +58,8 @@ public class ModularProjectileBase : MonoBehaviour
     {
         if (other.GetComponent<ImpactZone>())
         {
-            other.GetComponent<ImpactZone>().TakeDamage(damageData.damagesTypes, damageData.damages, owner);
+            Debug.Log("takeDamage");
+            other.GetComponent<ImpactZone>().TakeDamage(damageData.damagesTypes, damageData.damages, owner, other.ClosestPoint(transform.position));
         }
         CleanItself();
     }

@@ -1443,7 +1443,7 @@ GameObject:
   - component: {fileID: 2759025179697473635}
   m_Layer: 6
   m_Name: PlayerView
-  m_TagString: tag_player
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

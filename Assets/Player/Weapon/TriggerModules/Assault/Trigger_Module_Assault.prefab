@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1223029754703530821, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: triggerModuleToEquip
       value: 
-      objectReference: {fileID: 5627512150459702205}
+      objectReference: {fileID: 2230877111593696845}
     - target: {fileID: 7400264267591625272, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: m_Name
       value: Trigger_Module_Assault
@@ -72,7 +72,7 @@ PrefabInstance:
       value: Assault Trigger Module
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 388659252033107057, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+    - {fileID: 5583069630158437337, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
 --- !u!114 &1872880197344445158 stripped
 MonoBehaviour:
@@ -90,7 +90,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7985584433234985079, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
   m_PrefabInstance: {fileID: 231576717724684927}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5627512150459702205
+--- !u!114 &2230877111593696845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,10 +104,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerWeapon: {fileID: 0}
   damageData: {fileID: 1872880197344445158}
-  RPM: 360
+  RPM: 240
   weaponView: {fileID: 0}
-  projectilePrefab: {fileID: 7749752667786575973, guid: 6d6ba07ca5105cc40b8fbe8fa753e14d, type: 3}
-  projectileSpeed: 4000
   ls:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 131201
+  projectilePrefab: {fileID: 72854198061432573, guid: a3a8663e624da2f4188357f81cf4c87f, type: 3}
+  projectileSpeed: 4000

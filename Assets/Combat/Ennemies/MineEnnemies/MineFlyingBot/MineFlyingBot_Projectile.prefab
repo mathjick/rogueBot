@@ -123,11 +123,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6103226262256794376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ccccf50c14973f42874b7a65f160ad2, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ccefad1e59a7074aa89c779e897f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageData: {fileID: 121878759206707729}
-  desintegrateTime: 2
+  desintegrateTime: 0
 --- !u!54 &2592008366332721433
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -3,7 +3,6 @@ using UnityEngine;
 public class TM_Marksman : TriggerModule
 {
     #region Parameters
-    public GameObject projectilePrefab;
     public int projectileSpeed;
     #endregion
     #region Variables

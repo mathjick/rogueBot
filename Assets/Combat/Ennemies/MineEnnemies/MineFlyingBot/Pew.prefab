@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6622274527416571406}
   - component: {fileID: 8249794813000367968}
   - component: {fileID: 5319262616457179517}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_LeftRotor
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: 1911018762681063907}
   - component: {fileID: 4979589270122854956}
   - component: {fileID: 4979589270122854957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_RightGear
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,9 +215,9 @@ GameObject:
   - component: {fileID: 4219477606166127946}
   - component: {fileID: 7289046068011004876}
   - component: {fileID: 7289046068011004875}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_RightWing
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,9 +335,9 @@ GameObject:
   - component: {fileID: 6805901072722800185}
   - component: {fileID: 6805901072722800186}
   - component: {fileID: 6805901072722800187}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_LeftGear
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,9 +454,9 @@ GameObject:
   - component: {fileID: 7511205166538776918}
   - component: {fileID: 7511205166538776919}
   - component: {fileID: 7511205166538776920}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_Cams
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -575,9 +575,9 @@ GameObject:
   - component: {fileID: 2603955095467205347}
   - component: {fileID: 2636995483763357623}
   - component: {fileID: 2636995483763357624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_CannonMouth
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -695,9 +695,9 @@ GameObject:
   - component: {fileID: 4131621103937030892}
   - component: {fileID: 5487451512464856940}
   - component: {fileID: 5487451512464856941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_Propulsors
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -813,9 +813,9 @@ GameObject:
   - component: {fileID: 2997309269539660921}
   - component: {fileID: 1973702390467933149}
   - component: {fileID: 3020498878232666281}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_RightRotor
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -885,6 +885,52 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2932618060160136830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552418234439207578}
+  - component: {fileID: 1028548597803944527}
+  m_Layer: 18
+  m_Name: LifebarDetectionCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1552418234439207578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2932618060160136830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5304493091281259385}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1028548597803944527
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2932618060160136830}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.4, z: 0}
 --- !u!1 &4816187416595730883
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4816187416595730883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.999658, y: 1, z: 14.030466}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -918,6 +964,7 @@ Transform:
   - {fileID: 3045695398057030015}
   - {fileID: 5736665624978069890}
   - {fileID: 5785653411632861108}
+  - {fileID: 1552418234439207578}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -939,6 +986,7 @@ MonoBehaviour:
   damageTypesArmors: []
   PvNBr: {fileID: 0}
   lastSourceOfDamage: {fileID: 0}
+  entityName: Pew
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -958,9 +1006,9 @@ GameObject:
   - component: {fileID: 6727159365842337307}
   - component: {fileID: 5736665624978069891}
   - component: {fileID: 5736665624978069892}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_LeftWing
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1078,9 +1126,9 @@ GameObject:
   - component: {fileID: 5696714342982242095}
   - component: {fileID: 7192414786791313521}
   - component: {fileID: 7192414786791313522}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_Body
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1202,9 +1250,9 @@ GameObject:
   - component: {fileID: 2304260871130413874}
   - component: {fileID: 9083833532814635408}
   - component: {fileID: 9083833532814635409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_Light
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1321,9 +1369,9 @@ GameObject:
   - component: {fileID: 6776261383814394940}
   - component: {fileID: 7725846898743494853}
   - component: {fileID: 7725846898743494854}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CH_Pew_Cannon
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

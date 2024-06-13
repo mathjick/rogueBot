@@ -3,7 +3,6 @@ using UnityEngine;
 public class TM_PumpAction : TriggerModule
 {
     #region Parameters
-    public GameObject projectilePrefab;
     public int projectileSpeed;
     public int pelletCount;
     public float spread;

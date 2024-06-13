@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9012923023427793304}
   - component: {fileID: 5193386609723468678}
   m_Layer: 9
-  m_Name: Fire Bullet
+  m_Name: Base Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,7 +207,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.15
+  m_Time: 0.05
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.3
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 7421233726277603698}
   - component: {fileID: 7421233726277603699}
   m_Layer: 9
-  m_Name: YellowCenterProjectile
+  m_Name: Center Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

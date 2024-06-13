@@ -11,10 +11,20 @@ public class PlayerCamera : MonoBehaviour
     [Header("------------ Look Parameters ------------")]
     [Space(1)]
     public Vector2 _lookMultiplyer;
+    public GameObject _lookBufferDummy;
+    public GameObject _playerBufferDummy;
+    public Quaternion _recoilApplied = Quaternion.identity;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Update()
+    {
+        _recoilApplied = Quaternion.Lerp(_recoilApplied, Quaternion.identity, 0.1f);
+        playerController.playerView.transform.rotation = _lookBufferDummy.transform.rotation;
+        playerController.playerTransform.rotation = _playerBufferDummy.transform.rotation;
     }
 
     public void Look(InputValue val)
@@ -24,17 +34,19 @@ public class PlayerCamera : MonoBehaviour
         }
         else
         {
-            playerController.playerTransform.Rotate(new Vector3(0, val.Get<Vector2>().x * _lookMultiplyer.x, 0));
-            playerController.playerView.transform.Rotate(new Vector3(-val.Get<Vector2>().y * _lookMultiplyer.y, 0, 0));
-            playerController.playerView.transform.localRotation = Quaternion.Euler(playerController.playerView.transform.localRotation.eulerAngles.x, 0, 0);
-            if (playerController.playerView.transform.rotation.eulerAngles.x > 180 && playerController.playerView.transform.rotation.eulerAngles.x < 280)
+            _playerBufferDummy.transform.Rotate(new Vector3(0, val.Get<Vector2>().x * _lookMultiplyer.x, 0));
+            _lookBufferDummy.transform.Rotate(new Vector3(-val.Get<Vector2>().y * _lookMultiplyer.y, 0, 0));
+            _lookBufferDummy.transform.localRotation = Quaternion.Euler(_lookBufferDummy.transform.localRotation.eulerAngles.x, 0, 0);
+            
+            if (_lookBufferDummy.transform.rotation.eulerAngles.x > 180 && _lookBufferDummy.transform.rotation.eulerAngles.x < 280)
             {
-                playerController.playerView.transform.rotation = Quaternion.Euler(-80, playerController.playerView.transform.rotation.eulerAngles.y, playerController.playerView.transform.rotation.eulerAngles.z);
+                _lookBufferDummy.transform.rotation = Quaternion.Euler(-80, _lookBufferDummy.transform.rotation.eulerAngles.y, _lookBufferDummy.transform.rotation.eulerAngles.z);
             }
-            if (playerController.playerView.transform.rotation.eulerAngles.x > 80 && playerController.playerView.transform.rotation.eulerAngles.x < 180)
+            if (_lookBufferDummy.transform.rotation.eulerAngles.x > 80 && _lookBufferDummy.transform.rotation.eulerAngles.x < 180)
             {
-                playerController.playerView.transform.rotation = Quaternion.Euler(80, playerController.playerView.transform.rotation.eulerAngles.y, playerController.playerView.transform.rotation.eulerAngles.z);
+                _lookBufferDummy.transform.rotation = Quaternion.Euler(80, _lookBufferDummy.transform.rotation.eulerAngles.y, _lookBufferDummy.transform.rotation.eulerAngles.z);
             }
+            
         }
     }
 }

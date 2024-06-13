@@ -6,31 +6,28 @@ Shader "CellShading" {
              _HighlightCol ("Highlight Color", Color) = (0,0,0,1)
              _Levels ("Level", Int) = 2
         }
+
         SubShader {
         Tags { "RenderType" = "Opaque" }
         CGPROGRAM
-          #pragma surface surf SimpleLambert
+        #pragma surface surf SimpleLambert
   
         sampler2D _Ramp;
         float3 _HighlightCol;
         float3 _ShadowCol;
         int _Levels;
 
-          half4 LightingSimpleLambert (SurfaceOutput s, half3 lightDir, half atten) {
-              half NdotL = dot (s.Normal, lightDir);
-              half4 c;
-
-              half diff = NdotL * 0.5 + 0.5;
-              half diff2 = floor((NdotL * 0.5 + 0.5)*_Levels)/max(1, _Levels - 1);
-
-
-             half3 ramp = lerp(_ShadowCol, _HighlightCol, round(diff2)); 
-             // half3 ramp = tex2D (_Ramp, float2(diff, diff)).rgb;
-
-              c.rgb = s.Albedo * _LightColor0.rgb * ramp * atten;
-              c.a = s.Alpha;
-              return c;
-          }
+        half4 LightingSimpleLambert (SurfaceOutput s, half3 lightDir, half atten) {
+            half NdotL = dot (s.Normal, lightDir);
+            half4 c;
+            half diff = NdotL * 0.5 + 0.5;
+            half diff2 = round((NdotL * 0.5 + 0.5)*_Levels)/max(1,_Levels);
+            half3 ramp = lerp(_ShadowCol, _HighlightCol,diff2);
+            // half3 ramp = tex2D (_Ramp, float2(diff, diff)).rgb;
+            c.rgb = s.Albedo * _LightColor0.rgb * ramp * atten;
+            c.a = s.Alpha;
+            return c;
+        }
   
         struct Input {
             float2 uv_MainTex;

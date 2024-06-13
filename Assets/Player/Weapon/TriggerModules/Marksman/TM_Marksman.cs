@@ -22,7 +22,7 @@ public class TM_Marksman : TriggerModule
     public override void Hold()
     {
         isHolding = true;
-        if(timer <= 0)
+        if(timer <= 0 && actualNumberOfRounds > 0)
         {
             timer = 60f / RPM;
             Shoot();
@@ -37,7 +37,7 @@ public class TM_Marksman : TriggerModule
     public override void Shoot()
     {
         base.Shoot();
-
+        actualNumberOfRounds--;
         RaycastHit hit;
         Physics.Raycast(playerWeapon.inventory.playerController.playerView.transform.position, playerWeapon.inventory.playerController.playerView.transform.forward * 1000, out hit);
         if (hit.collider && hit.collider.tag != "tag_player")

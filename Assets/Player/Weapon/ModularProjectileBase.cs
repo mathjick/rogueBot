@@ -23,6 +23,7 @@ public class ModularProjectileBase : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        overlapCollider.enabled = false;
         if (nextEffect)
         {
             nextEffect.CallOnTriggerEnter(other);

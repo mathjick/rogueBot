@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3814511851520112379, guid: 54b745d84420de94784b0b36e0dba5db, type: 3}
       propertyPath: m_Name
-      value: Damage Pop-Up - Crit
+      value: Damage Pop-Up - Crit Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5073029401893060031, guid: 54b745d84420de94784b0b36e0dba5db, type: 3}
       propertyPath: m_Pivot.x
@@ -103,5 +103,9 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2100000, guid: c1eb02bb85923e2469115f63e63d7f76, type: 2}
+    - target: {fileID: 8028240516032136418, guid: 54b745d84420de94784b0b36e0dba5db, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54b745d84420de94784b0b36e0dba5db, type: 3}

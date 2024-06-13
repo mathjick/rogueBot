@@ -23,7 +23,6 @@ public class ModularProjectileBase : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        overlapCollider.enabled = false;
         if (nextEffect)
         {
             nextEffect.CallOnTriggerEnter(other);
@@ -57,6 +56,7 @@ public class ModularProjectileBase : MonoBehaviour
 
     public void HitEnnemi(Collider other)
     {
+        overlapCollider.enabled = false;
         if (other.GetComponent<ImpactZone>())
         {
             Debug.Log("takeDamage");

@@ -1176,6 +1176,7 @@ MonoBehaviour:
     originSuitable: 1
     classicSuitable: 1
   maxNbrBlocks: 8
+  chaosFactor: 0.7
 --- !u!1 &1526766294
 GameObject:
   m_ObjectHideFlags: 0

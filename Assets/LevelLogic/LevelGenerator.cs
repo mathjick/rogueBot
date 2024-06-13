@@ -36,8 +36,11 @@ public class BlockPercentGeneration
 public class LevelGenerator : MonoBehaviour
 {
     public List<TileRow> PossibleSpawnPoints = new List<TileRow>();
-    public List<BlockPercentGeneration> PossibleBlocks;
+    public List<BlockPercentGeneration> BaseBlocks;
+    public List<BlockPercentGeneration> BlockToGenerateAfter;
     public int maxNbrBlocks;
+    [Range(0,1)]
+    public float chaosFactor;
 
     public void GenerateWholeLevel()
     {
@@ -83,6 +86,15 @@ public class LevelGenerator : MonoBehaviour
             }
             if (possibleSpawnPlaces.Count > 0)
             {
+                int _nbrOfBlockToRemove = (int)(possibleSpawnPlaces.Count * chaosFactor);
+                if( possibleSpawnPlaces.Count - _nbrOfBlockToRemove > 1)
+                {
+                    for (int i = 0; i < _nbrOfBlockToRemove; i++)
+                    {
+                        int _randomIndex = UnityEngine.Random.Range(0, possibleSpawnPlaces.Count);
+                        possibleSpawnPlaces.RemoveAt(_randomIndex);
+                    }
+                }
                 while(possibleSpawnPlaces.Count > 0 && _generating)
                 {
                     //pick a random possible spawn place
@@ -142,7 +154,7 @@ public class LevelGenerator : MonoBehaviour
         if (_place.isOrigin)
         {
             // Take all block suitable for Spawn
-            foreach (BlockPercentGeneration _block in PossibleBlocks)
+            foreach (BlockPercentGeneration _block in BaseBlocks)
             {
                 if (_block.originSuitable)
                 {
@@ -152,7 +164,7 @@ public class LevelGenerator : MonoBehaviour
         }
         else
         {
-            foreach (BlockPercentGeneration _block in PossibleBlocks)
+            foreach (BlockPercentGeneration _block in BaseBlocks)
             {
                 if (_block.classicSuitable)
                 {

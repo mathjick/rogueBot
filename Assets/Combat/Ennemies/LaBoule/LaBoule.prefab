@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 4718854710854108185}
   - component: {fileID: 6196785331020903284}
   - component: {fileID: 1218442300847446873}
+  - component: {fileID: 7489985239792188212}
   m_Layer: 7
   m_Name: Canvas
   m_TagString: tag_ennemie
@@ -330,6 +331,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7489985239792188212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424311769432605729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee5256d2e3dfbb4d89c8fd342d7785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6457443897468362321
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,15 +4,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class DamagePopUpGenerator : MonoBehaviour
 {
     public static DamagePopUpGenerator instance;
 
-    public GameObject damagePopUpPrefab;
+    [Header("Pop-Up Prefabs -")]
+    public GameObject normalHitPrefab;
+    public GameObject critPrefab;
 
-    public FontParameters normalFont;
-    public FontParameters critFont;
-
+    [Header("Random Spawn Bounds -")]
+    public Vector3 tr;
+    public float[] yBounds = new float[2];
     public float yMin;
     public float yMax;
     public float xMin;
@@ -39,22 +42,20 @@ public class DamagePopUpGenerator : MonoBehaviour
 
     public void CreatePopUp(Vector3 position, string text, bool isCrit)
     {
-        var popup = Instantiate(damagePopUpPrefab, position + new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0), Quaternion.identity);
-        var temp = popup.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        temp.text = text;
-        if(isCrit)
+        GameObject popup;
+        var randPos = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0);
+        if (isCrit)
         {
-            temp.font = critFont.font;
-            temp.fontSize = critFont.fontSize;
-            temp.faceColor = critFont.fontColor;
+            popup = Instantiate(critPrefab, position + randPos, Quaternion.identity);
+            var temp = popup.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            temp.text = text + "!";
         }
         else
         {
-            temp.font = normalFont.font;
-            temp.fontSize = normalFont.fontSize;
-            temp.faceColor = normalFont.fontColor;
+            popup = Instantiate(normalHitPrefab, position + randPos, Quaternion.identity);
+            var temp = popup.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            temp.text = text;
         }
-
         Destroy(popup, 1f);
     }
 }

@@ -339,7 +339,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeSystemAttached: {fileID: 6835377266168478449}
-  damageTypesArmors: []
+  damageTypesArmors:
+  - damageType: 0
+    percentReduction: -1
+    flatReduction: 0
   isWeakPoint: 1
   HitCallBack:
     m_PersistentCalls:

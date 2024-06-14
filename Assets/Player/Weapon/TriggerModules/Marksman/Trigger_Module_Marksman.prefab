@@ -101,6 +101,9 @@ MonoBehaviour:
   playerWeapon: {fileID: 0}
   damageData: {fileID: 2001469278782567198}
   RPM: 60
+  RoundsPerMag: 8
+  actualNumberOfRounds: 8
+  reloadTime: 5
   weaponView: {fileID: 0}
   ls:
     serializedVersion: 2

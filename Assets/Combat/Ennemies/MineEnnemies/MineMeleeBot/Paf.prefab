@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &148887513058064856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3470436147494454524}
+  - component: {fileID: 8411915262510401404}
+  m_Layer: 18
+  m_Name: LifebarDetectionCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3470436147494454524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148887513058064856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6974960193166990486}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8411915262510401404
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148887513058064856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.8, z: 1}
 --- !u!1 &383008423079401627
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +57,7 @@ GameObject:
   - component: {fileID: 383008423079401626}
   - component: {fileID: 383008423079401625}
   - component: {fileID: 383008423079401624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DamageZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,9 +124,9 @@ GameObject:
   - component: {fileID: 279362431955798170}
   - component: {fileID: 6885304231328360543}
   - component: {fileID: 6885304231328360542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PAF_Sawblade
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,9 +244,9 @@ GameObject:
   - component: {fileID: 7771131510476773254}
   - component: {fileID: 7771131510476773253}
   - component: {fileID: 7771131510476773252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PAF_Body
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,9 +366,9 @@ GameObject:
   - component: {fileID: 2079319950979780008}
   - component: {fileID: 5971436821350650870}
   - component: {fileID: 5971436821350650869}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PAF_Hinge
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,9 +486,9 @@ GameObject:
   - component: {fileID: 5791780704492251}
   - component: {fileID: 7132507302353320394}
   - component: {fileID: 7132507302353320393}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PAF_Bottom
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,9 +606,9 @@ GameObject:
   - component: {fileID: 7384015069779041347}
   - component: {fileID: 7384015069779041346}
   - component: {fileID: 7384015069779041345}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PAF_Exhaust
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -680,9 +726,9 @@ GameObject:
   - component: {fileID: 3089736137273259968}
   - component: {fileID: 7599261017101083311}
   - component: {fileID: 7599261017101083310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PAF_Mask
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -799,9 +845,9 @@ GameObject:
   - component: {fileID: 9051297003663423371}
   - component: {fileID: 9051297003663423370}
   - component: {fileID: 9051297003663423369}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PAF_SawArms
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -919,9 +965,9 @@ GameObject:
   - component: {fileID: 2723922098353588461}
   - component: {fileID: 6200578106277141570}
   - component: {fileID: 6200578106277141569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PAF_Wheels
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1039,9 +1085,9 @@ GameObject:
   - component: {fileID: 1118773894312544118}
   - component: {fileID: 8232401929990752747}
   - component: {fileID: 8232401929990752746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PAF_Top
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1159,9 +1205,9 @@ GameObject:
   - component: {fileID: 3530287914236715748}
   - component: {fileID: 7563353599082897096}
   - component: {fileID: 7563353599082897103}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PAF_CritSpot
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1258,7 +1304,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeSystemAttached: {fileID: 7748401358767982131}
-  damageTypesArmors: []
+  damageTypesArmors:
+  - damageType: 0
+    percentReduction: -1
+    flatReduction: 0
   isWeakPoint: 1
   HitCallBack:
     m_PersistentCalls:
@@ -1278,9 +1327,9 @@ GameObject:
   - component: {fileID: 7748401358767982130}
   - component: {fileID: 7748401358767982131}
   - component: {fileID: 7748401358767982129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Paf
-  m_TagString: Untagged
+  m_TagString: tag_ennemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1300,6 +1349,7 @@ Transform:
   - {fileID: 3965591420964596547}
   - {fileID: 7563353599082897097}
   - {fileID: 2563432830003498833}
+  - {fileID: 3470436147494454524}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1343,6 +1393,7 @@ MonoBehaviour:
   damageTypesArmors: []
   PvNBr: {fileID: 0}
   lastSourceOfDamage: {fileID: 0}
+  entityName: Paf
   OnDeath:
     m_PersistentCalls:
       m_Calls: []

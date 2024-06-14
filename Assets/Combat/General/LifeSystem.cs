@@ -24,6 +24,7 @@ public class LifeSystem : MonoBehaviour
     public DamageTypesArmor[] damageTypesArmors;
     public TextMeshProUGUI PvNBr;
     public GameObject lastSourceOfDamage;
+    public string entityName;
 
     [SerializeField] private UnityEvent OnDeath;
     [SerializeField] private UnityEvent OnDamage;
@@ -66,6 +67,38 @@ public class LifeSystem : MonoBehaviour
             CheckForDeath();
         }
        
+    }
+
+    public void TakeDamage(DamageTypes[] damageTypes, float damages, GameObject sourceOfDamage, Vector3 popUpPos)
+    {
+        if (lifePoints > 0)
+        {
+            lastSourceOfDamage = sourceOfDamage;
+            var trueDamageTaken = damages;
+            if (damageTypesArmors.Length > 0)
+            {
+                foreach (var armor in this.damageTypesArmors)
+                {
+                    if (damageTypes.Contains<DamageTypes>(armor.damageType))
+                    {
+                        trueDamageTaken -= trueDamageTaken * armor.percentReduction;
+                        trueDamageTaken -= armor.flatReduction;
+                    }
+                }
+            }
+            trueDamageTaken = Mathf.CeilToInt(trueDamageTaken);
+            if (trueDamageTaken > 0)
+            {
+                OnDamage.Invoke();
+            }
+            lifePoints -= (int)trueDamageTaken;
+            if (PvNBr)
+            {
+                PvNBr.text = lifePoints.ToString();
+            }
+            CheckForDeath();
+        }
+
     }
 
     public void CheckForDeath()

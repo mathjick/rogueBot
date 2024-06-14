@@ -56,6 +56,7 @@ public class ModularProjectileBase : MonoBehaviour
 
     public void HitEnnemi(Collider other)
     {
+        overlapCollider.enabled = false;
         if (other.GetComponent<ImpactZone>())
         {
             Debug.Log("takeDamage");

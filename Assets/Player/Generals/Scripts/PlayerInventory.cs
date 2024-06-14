@@ -50,6 +50,11 @@ public class PlayerInventory : MonoBehaviour
         EquipModuleCallBack?.Invoke();
     }
 
+    public void Reload()
+    {
+        weapon.Reload();
+    }
+
     public void UnEquipModule()
     {
         if (moduleEquiped)

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
+
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 [System.Serializable]
 public class UsedTile
@@ -36,8 +39,11 @@ public class BlockPercentGeneration
 public class LevelGenerator : MonoBehaviour
 {
     public List<TileRow> PossibleSpawnPoints = new List<TileRow>();
-    public List<BlockPercentGeneration> PossibleBlocks;
+    public List<BlockPercentGeneration> BaseBlocks;
+    public List<GameObject> BlockToGenerateAfter;
     public int maxNbrBlocks;
+    [Range(0,1)]
+    public float chaosFactor;
 
     public void GenerateWholeLevel()
     {
@@ -64,8 +70,8 @@ public class LevelGenerator : MonoBehaviour
         }
 
         //second round, generate the rest and repeat until maxNbrBlocks is reached
-        bool _generating = true;
-        while (_generating)
+        bool _generatingBase = true;
+        while (_generatingBase)
         {
             List<(int,int)> possibleSpawnPlaces = new List<(int, int)>();
             for (int x = 0; x < PossibleSpawnPoints.Count; x++)
@@ -83,7 +89,16 @@ public class LevelGenerator : MonoBehaviour
             }
             if (possibleSpawnPlaces.Count > 0)
             {
-                while(possibleSpawnPlaces.Count > 0 && _generating)
+                int _nbrOfBlockToRemove = (int)(possibleSpawnPlaces.Count * chaosFactor);
+                if( possibleSpawnPlaces.Count - _nbrOfBlockToRemove > 1)
+                {
+                    for (int i = 0; i < _nbrOfBlockToRemove; i++)
+                    {
+                        int _randomIndex = UnityEngine.Random.Range(0, possibleSpawnPlaces.Count);
+                        possibleSpawnPlaces.RemoveAt(_randomIndex);
+                    }
+                }
+                while(possibleSpawnPlaces.Count > 0 && _generatingBase)
                 {
                     //pick a random possible spawn place
                     int _randomIndex = UnityEngine.Random.Range(0, possibleSpawnPlaces.Count);
@@ -96,8 +111,45 @@ public class LevelGenerator : MonoBehaviour
                     _nbrBlocks++;
                     if(_nbrBlocks >= maxNbrBlocks)
                     {
-                        _generating = false;
+                        _generatingBase = false;
                     }
+                }
+            }
+            else
+            {
+                Debug.LogError("No more possible spawn places, aborting");
+                break;
+            }
+        }
+        int _generatingAfter = BlockToGenerateAfter.Count;
+        while (_generatingAfter > 0)
+        {
+            List<(int, int)> possibleSpawnPlaces = new List<(int, int)>();
+            for (int x = 0; x < PossibleSpawnPoints.Count; x++)
+            {
+                for (int y = 0; y < PossibleSpawnPoints[x].tiles.Count; y++)
+                {
+                    if (!PossibleSpawnPoints[x].tiles[y].isUsed)
+                    {
+                        if (UsedBlockNear((x, y)))
+                        {
+                            possibleSpawnPlaces.Add((x, y));
+                        }
+                    }
+                }
+            }
+            if (possibleSpawnPlaces.Count > 0)
+            {
+                while (possibleSpawnPlaces.Count > 0 && _generatingAfter > 0)
+                {
+                    //pick a random possible spawn place
+                    if (!PossibleSpawnPoints[possibleSpawnPlaces[_generatingAfter].Item1].tiles[possibleSpawnPlaces[_generatingAfter].Item2].isUsed)
+                    {
+                        GenerateBlock(BlockToGenerateAfter[0], PossibleSpawnPoints[possibleSpawnPlaces[_generatingAfter].Item1].tiles[possibleSpawnPlaces[_generatingAfter].Item2], possibleSpawnPlaces[_generatingAfter]);
+                        _generatingAfter--;
+                    }
+                    //remove the used place from the list
+                    possibleSpawnPlaces.RemoveAt(_generatingAfter);
                 }
             }
             else
@@ -142,7 +194,7 @@ public class LevelGenerator : MonoBehaviour
         if (_place.isOrigin)
         {
             // Take all block suitable for Spawn
-            foreach (BlockPercentGeneration _block in PossibleBlocks)
+            foreach (BlockPercentGeneration _block in BaseBlocks)
             {
                 if (_block.originSuitable)
                 {
@@ -152,7 +204,7 @@ public class LevelGenerator : MonoBehaviour
         }
         else
         {
-            foreach (BlockPercentGeneration _block in PossibleBlocks)
+            foreach (BlockPercentGeneration _block in BaseBlocks)
             {
                 if (_block.classicSuitable)
                 {
@@ -207,9 +259,16 @@ public class LevelGenerator : MonoBehaviour
 
     public void GenerateBlock(BlockPercentGeneration _block, UsedTile _place, (int, int) _coordinateCode)
     {
-        Debug.Log("Generating block " + _block.block.name + " at " + _coordinateCode.Item1 + " " + _coordinateCode.Item2 + " " + PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].isUsed);
         GameObject newBlock = Instantiate(_block.block, _place.position.position, _place.position.rotation);
-        newBlock.name = " BlockGenerated " + _coordinateCode.Item1 + " " + _coordinateCode.Item2;
+        newBlock.name = newBlock.name + "-Generated X" + _coordinateCode.Item1 + " Y" + _coordinateCode.Item2;
+        PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].blockLocked = newBlock;
+        PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].isUsed = true;
+    }
+
+    public void GenerateBlock(GameObject _block, UsedTile _place, (int, int) _coordinateCode)
+    {
+        GameObject newBlock = Instantiate(_block, _place.position.position, _place.position.rotation);
+        newBlock.name = newBlock.name + "-Generated X" + _coordinateCode.Item1 + " Y" + _coordinateCode.Item2;
         PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].blockLocked = newBlock;
         PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].isUsed = true;
     }

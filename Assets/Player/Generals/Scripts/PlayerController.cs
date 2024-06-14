@@ -97,6 +97,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnReload()
+    {
+        if (!blockInput)
+        {
+            playerInventory.Reload();
+        }
+    }
+
     public void OnDeath()
     {
         blockInput = true;

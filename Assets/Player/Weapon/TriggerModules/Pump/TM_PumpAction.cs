@@ -3,7 +3,6 @@ using UnityEngine;
 public class TM_PumpAction : TriggerModule
 {
     #region Parameters
-    public GameObject projectilePrefab;
     public int projectileSpeed;
     public int pelletCount;
     public float spread;
@@ -19,7 +18,7 @@ public class TM_PumpAction : TriggerModule
         {
             timer -= Time.deltaTime;
         }
-        else if (isHolding)
+        else if (isHolding && actualNumberOfRounds > 0)
         {
             timer = 60f / RPM;
             Shoot();
@@ -39,7 +38,7 @@ public class TM_PumpAction : TriggerModule
     public override void Shoot()
     {
         base.Shoot();
-
+        actualNumberOfRounds--;
         RaycastHit hit;
         for (int i = 0; i < pelletCount; i++)
         {

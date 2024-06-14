@@ -25,4 +25,12 @@ public class PlayerWeapon : MonoBehaviour
             }
         }
     }
+
+    public void Reload()
+    {
+        if (inventory.triggerModuleEquipped)
+        {
+            inventory.triggerModuleEquipped.Reload();
+        }
+    }   
 }

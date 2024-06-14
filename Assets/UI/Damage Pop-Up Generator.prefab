@@ -44,15 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5287ee48df78f4cbf82d8e2ca8d111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePopUpPrefab: {fileID: 6791471671944314081, guid: 10b44a9dc616f944985b7524ba413675, type: 3}
-  normalFont:
-    font: {fileID: 11400000, guid: bb8f523ca012926419cf10932f4b0509, type: 2}
-    fontColor: {r: 1, g: 1, b: 1, a: 1}
-    fontSize: 36
-  critFont:
-    font: {fileID: 11400000, guid: cded13caec298484cac1b3b48db2d909, type: 2}
-    fontColor: {r: 1, g: 0.37669086, b: 0, a: 1}
-    fontSize: 48
+  normalHitPrefab: {fileID: 6618971360444484182, guid: 01e6f6bfb12f2f54e96bd16a53d7b25a, type: 3}
+  critPrefab: {fileID: 7505814833516326183, guid: 5bc1d86ed0e6524418000b42149c99df, type: 3}
+  tr: {x: 0, y: 0, z: 0}
+  yBounds:
+  - 0
+  - 0
   yMin: 2.5
   yMax: 5
   xMin: -2.5

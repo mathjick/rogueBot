@@ -7,12 +7,13 @@ using UnityEngine.TextCore.Text;
 
 [System.Serializable] public struct FontParameters
 {
-    public TMP_FontAsset font;
+    public TMP_FontAsset fontAsset;
+    public Material fontMaterial;
     public Color fontColor;
     public int fontSize;
 }
 
-public class DamagePopup : MonoBehaviour
+public class DamagePopUp : MonoBehaviour
 {
     public AnimationCurve opacityCurve;
     public AnimationCurve scaleCurve;

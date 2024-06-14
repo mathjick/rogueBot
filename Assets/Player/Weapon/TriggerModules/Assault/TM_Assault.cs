@@ -4,7 +4,6 @@ using UnityEngine.Events;
 public class TM_Assault : TriggerModule
 {
     #region Parameters
-    public GameObject projectilePrefab;
     public int projectileSpeed;
     #endregion
     #region Variables

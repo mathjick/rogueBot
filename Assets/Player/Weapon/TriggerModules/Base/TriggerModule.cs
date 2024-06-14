@@ -7,6 +7,8 @@ public class TriggerModule : MonoBehaviour
 {
     public PlayerWeapon playerWeapon;
     public DamageData damageData;
+    public GameObject projectilePrefab;
+
 
     public float RPM;
     public int RoundsPerMag;

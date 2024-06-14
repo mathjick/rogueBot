@@ -24,6 +24,7 @@ public class LifeSystem : MonoBehaviour
     public DamageTypesArmor[] damageTypesArmors;
     public TextMeshProUGUI PvNBr;
     public GameObject lastSourceOfDamage;
+    public string entityName;
 
     [SerializeField] private UnityEvent OnDeath;
     [SerializeField] private UnityEvent OnDamage;

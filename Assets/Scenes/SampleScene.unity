@@ -1168,13 +1168,14 @@ MonoBehaviour:
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
-  PossibleBlocks:
+  BaseBlocks:
   - block: {fileID: 4175247586108613422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
     chanceToGenerate: 1
     minimumToGenerate: 0
-    maximumToGenerate: 99999
+    maximumToGenerate: 999999
     originSuitable: 1
     classicSuitable: 1
+  BlockToGenerateAfter: []
   maxNbrBlocks: 8
   chaosFactor: 0.7
 --- !u!1 &1526766294

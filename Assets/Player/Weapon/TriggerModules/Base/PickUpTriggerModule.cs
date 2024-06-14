@@ -9,6 +9,7 @@ public class PickUpTriggerModule : MonoBehaviour
         if (other.GetComponent<PlayerInventory>())
         {
             other.GetComponent<PlayerInventory>().triggerModuleEquipped = triggerModuleToEquip;
+            UIAmmoDisplayManager.instance.UpdateAmmoDisplay(triggerModuleToEquip.actualNumberOfRounds);
             triggerModuleToEquip.playerWeapon = other.GetComponent<PlayerInventory>().weapon;
             triggerModuleToEquip.transform.SetParent(other.transform);
             triggerModuleToEquip.weaponView = other.GetComponent<PlayerInventory>().playerController.playerCameraSystem.weaponView.GetComponent<Camera>();

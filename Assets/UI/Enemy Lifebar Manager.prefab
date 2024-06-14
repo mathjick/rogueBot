@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7998837278344982907}
   - component: {fileID: 7998837278344982906}
   m_Layer: 0
-  m_Name: EnemyLifebarManager
+  m_Name: Enemy Lifebar Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

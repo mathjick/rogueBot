@@ -50,6 +50,7 @@ public class TriggerModule : MonoBehaviour
     /// </summary>
     public virtual void Shoot()
     {
+        UIAmmoDisplayManager.instance.UpdateAmmoDisplay(actualNumberOfRounds);
     }
 
     /// <summary>
@@ -59,6 +60,8 @@ public class TriggerModule : MonoBehaviour
     {
         Invoke("Reloaded", reloadTime);
         ReloadFeedback.Invoke();
+
+        
     }
 
     /// <summary>
@@ -67,5 +70,7 @@ public class TriggerModule : MonoBehaviour
     public virtual void Reloaded()
     {
         actualNumberOfRounds = RoundsPerMag;
+        UIAmmoDisplayManager.instance.HideReloadDisplay();
+        UIAmmoDisplayManager.instance.UpdateAmmoDisplay(actualNumberOfRounds);
     }
 }

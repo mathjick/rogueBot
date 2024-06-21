@@ -97,8 +97,11 @@
 	<object class="MixerBusPanner" id="{92d3bb71-6d7e-40e6-88d4-2386891c3763}" />
 	<object class="SingleSound" id="{97c3e978-578f-4c4e-a538-62aadd547e1b}">
 		<property name="length">
-			<value>0.92789115646258502</value>
+			<value>0.20000000000000001</value>
 		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{e9503f0c-f6d5-4b03-8a0f-55eb1fab2a84}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{82ddf3b6-ead8-48bc-a0ec-c42391c5cdac}</destination>
 		</relationship>
@@ -125,6 +128,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{268c0ef2-5043-45d7-ad2a-68e42280c23e}" />
 	<object class="MixerBusFader" id="{9dfa3b66-15c9-46d4-9726-6e74b0acd719}" />
+	<object class="FadeCurve" id="{e9503f0c-f6d5-4b03-8a0f-55eb1fab2a84}">
+		<relationship name="startPoint">
+			<destination>{da5de376-fcdf-4f39-940b-1c607bbd1512}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{abdc5473-6394-4a8a-8f2b-ee0e3fd8c245}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{8d968834-94f2-4548-baaa-b026e54dabca}">
 		<relationship name="effects">
 			<destination>{81fbf8c1-3797-4bbe-a098-ced12135ac73}</destination>
@@ -135,6 +146,25 @@
 	<object class="SpatialiserEffect" id="{f340cb65-bfe0-4422-afeb-18fc87389e87}">
 		<property name="maximumDistance">
 			<value>150</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{da5de376-fcdf-4f39-940b-1c607bbd1512}">
+		<property name="position">
+			<value>0.050000000000000003</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.186766088</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{abdc5473-6394-4a8a-8f2b-ee0e3fd8c245}">
+		<property name="position">
+			<value>0.20000000000000001</value>
+		</property>
+		<property name="value">
+			<value>0</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{81fbf8c1-3797-4bbe-a098-ced12135ac73}" />

@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2931774840677174085, guid: 54b745d84420de94784b0b36e0dba5db, type: 3}
+      propertyPath: m_Name
+      value: Crit Text
+      objectReference: {fileID: 0}
     - target: {fileID: 3814511851520112379, guid: 54b745d84420de94784b0b36e0dba5db, type: 3}
       propertyPath: m_Name
       value: Damage Pop-Up - Crit Variant
@@ -103,9 +107,13 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2100000, guid: c1eb02bb85923e2469115f63e63d7f76, type: 2}
+    - target: {fileID: 7676305993341715679, guid: 54b745d84420de94784b0b36e0dba5db, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
     - target: {fileID: 8028240516032136418, guid: 54b745d84420de94784b0b36e0dba5db, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54b745d84420de94784b0b36e0dba5db, type: 3}

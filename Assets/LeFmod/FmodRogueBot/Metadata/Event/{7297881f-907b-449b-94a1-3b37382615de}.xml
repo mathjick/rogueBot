@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{7297881f-907b-449b-94a1-3b37382615de}">
 		<property name="color">
-			<value>Red</value>
+			<value>Magenta</value>
 		</property>
 		<property name="name">
 			<value>PAF_Hit</value>

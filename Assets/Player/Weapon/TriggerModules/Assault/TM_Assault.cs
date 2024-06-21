@@ -38,7 +38,6 @@ public class TM_Assault : TriggerModule
 
     public override void Shoot()
     {
-        base.Shoot();
         actualNumberOfRounds--;
         RaycastHit hit = base.Raycast(ls);
         if (hit.collider /*&& hit.collider.tag != "tag_player"*/)
@@ -55,5 +54,6 @@ public class TM_Assault : TriggerModule
             }
             projectile.GetComponent<Rigidbody>().AddForce((hit.point - playerWeapon.projectileLaunchAnchor.transform.position).normalized * projectileSpeed);
         }
+        base.Shoot();
     }
 }

@@ -37,7 +37,6 @@ public class TM_PumpAction : TriggerModule
 
     public override void Shoot()
     {
-        base.Shoot();
         actualNumberOfRounds--;
         RaycastHit hit;
         for (int i = 0; i < pelletCount; i++)
@@ -58,5 +57,6 @@ public class TM_PumpAction : TriggerModule
                 projectile.GetComponent<Rigidbody>().AddForce((hit.point - playerWeapon.projectileLaunchAnchor.transform.position).normalized * projectileSpeed);
             }
         }
+        base.Shoot();
     }
 }

@@ -279,6 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerModuleToEquip: {fileID: 0}
+  updateAmmoMax: {fileID: 11400000, guid: d05ad348c8c7e8e499deabee31176634, type: 2}
+  updateAmmo: {fileID: 11400000, guid: c2cefb84786ca5b499d2647dcf400186, type: 2}
 --- !u!1 &7625041600753497500
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,8 +456,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerWeapon: {fileID: 0}
   damageData: {fileID: 1930768058988581017}
+  projectilePrefab: {fileID: 0}
   RPM: 60
+  RoundsPerMag: 0
+  actualNumberOfRounds: 0
+  reloadTime: 0
   weaponView: {fileID: 0}
   ls:
     serializedVersion: 2
     m_Bits: 131201
+  ReloadFeedback:
+    m_PersistentCalls:
+      m_Calls: []
+  updateAmmo: {fileID: 0}
+  updateReload: {fileID: 0}

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2314328509750873639}
   - component: {fileID: 2314328509750873624}
   - component: {fileID: 2314328509750873625}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Alpha_Bloc_l1L1H1
-  m_TagString: Untagged
+  m_TagString: tag_solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 235220019811784155}
   - component: {fileID: 5605643738832752937}
   - component: {fileID: 5801651095277671144}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: BlocFin_l1L1H0,5
-  m_TagString: Untagged
+  m_TagString: tag_solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,16 +251,8 @@ MonoBehaviour:
   m_VersionIndex: 1814
   m_IsSelectable: 1
   m_SelectedFaces: 
-  m_SelectedEdges:
-  - a: 23
-    b: 22
-  - a: 13
-    b: 15
-  - a: 16
-    b: 17
-  - a: 18
-    b: 16
-  m_SelectedVertices: 17000000160000000d0000000f00000010000000110000001200000010000000
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &2304103928596781932
 MonoBehaviour:
   m_ObjectHideFlags: 0

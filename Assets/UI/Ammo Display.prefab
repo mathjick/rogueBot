@@ -54,7 +54,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4443333012075774898}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_text: '[R] Reload'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68c3d331c929f8a43882dc31b45d6ef7, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: c4d43d44bf1360849bbf2d248de45cd6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 16ba3c7a7122af341ba529df9c8233c8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -95,7 +95,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 24
-  m_fontSizeBase: 16
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -154,15 +154,15 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.13333334
-      outSlope: 0.13333334
+      inSlope: 0.6666667
+      outSlope: 0.6666667
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1.5
-      value: 0.2
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 34
@@ -172,8 +172,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 3
       value: 0
-      inSlope: -0.13333334
-      outSlope: -0.13333334
+      inSlope: -0.6666667
+      outSlope: -0.6666667
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -181,8 +181,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  matA: {fileID: 0}
-  matB: {fileID: 0}
+  matA: {fileID: 2100000, guid: 16ba3c7a7122af341ba529df9c8233c8, type: 2}
+  matB: {fileID: 2100000, guid: c4d43d44bf1360849bbf2d248de45cd6, type: 2}
   tmp: {fileID: 0}
   timer: 0
   timerLimit: 0
@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 5856386336816937313}
   - component: {fileID: 5856386336816937312}
   - component: {fileID: 5856386336816937327}
+  - component: {fileID: 2317095005876435733}
   m_Layer: 5
   m_Name: Ammo Display
   m_TagString: Untagged
@@ -289,6 +290,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2317095005876435733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856386336816937326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa6609c09d81d0488da43fc2d2b8b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  displayThreshold: 0.1
+  reloadText: {fileID: 0}
+  currentRatio: 1
+  ammoDisplay: {fileID: 0}
 --- !u!1 &7766309712395594227
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +318,8 @@ GameObject:
   - component: {fileID: 4733768484426153989}
   - component: {fileID: 8318780560735506356}
   - component: {fileID: 1380245999525928229}
+  - component: {fileID: 1151985495425331916}
+  - component: {fileID: 8494948013834720431}
   m_Layer: 5
   m_Name: Ammo
   m_TagString: Untagged
@@ -355,7 +375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 20 / -
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68c3d331c929f8a43882dc31b45d6ef7, type: 2}
   m_sharedMaterial: {fileID: -4785518141378239100, guid: 68c3d331c929f8a43882dc31b45d6ef7, type: 2}
@@ -389,7 +409,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -424,3 +444,40 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1151985495425331916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7766309712395594227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef4cbcce74ee94438561898962a6be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8494948013834720431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7766309712395594227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8ed560739bceb42a04291a650a4b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fontAssetEvent: {fileID: 0}
+  _fontA: {fileID: 0}
+  fontB: {fileID: 0}
+  originalFontSize: 0
+  popCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  timer: 0
+  timerLimit: 0
+  isAnimating: 0

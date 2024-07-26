@@ -26,6 +26,7 @@ public class LifeSystem : MonoBehaviour
     public GameObject lastSourceOfDamage;
     public string entityName;
 
+
     [SerializeField] private UnityEvent OnDeath;
     [SerializeField] private UnityEvent OnDamage;
 
@@ -65,8 +66,11 @@ public class LifeSystem : MonoBehaviour
                 PvNBr.text = lifePoints.ToString();
             }
             CheckForDeath();
+            if (entityName == "Player")
+            {
+
+            }
         }
-       
     }
 
     public void TakeDamage(DamageTypes[] damageTypes, float damages, GameObject sourceOfDamage, Vector3 popUpPos)

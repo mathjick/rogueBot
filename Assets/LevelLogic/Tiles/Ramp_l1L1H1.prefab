@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8809087248533480503}
   - component: {fileID: 8809087248533480500}
   - component: {fileID: 8809087248533480501}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Ramp_l1L1H1
-  m_TagString: Untagged
+  m_TagString: tag_solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,12 +251,8 @@ MonoBehaviour:
   m_VersionIndex: 1682
   m_IsSelectable: 1
   m_SelectedFaces: 
-  m_SelectedEdges:
-  - a: 21
-    b: 23
-  - a: 17
-    b: 19
-  m_SelectedVertices: 15000000170000001100000013000000
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &8809087248533480502
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1166384573413640176}
   - component: {fileID: 1482589022417540651}
   - component: {fileID: 3743250482930523314}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Ramp_AngleInt
-  m_TagString: Untagged
+  m_TagString: tag_solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4096496333807997519}
   - component: {fileID: 7416111391023636794}
   - component: {fileID: 3871421988153218705}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Plateform_transionH+1full
-  m_TagString: Untagged
+  m_TagString: tag_solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

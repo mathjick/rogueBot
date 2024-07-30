@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6269719497694001134}
   - component: {fileID: 662164490808575131}
   - component: {fileID: 6512527034855895856}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Ramp transition H+1
-  m_TagString: Untagged
+  m_TagString: tag_solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

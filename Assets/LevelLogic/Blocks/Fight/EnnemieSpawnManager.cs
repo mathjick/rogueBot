@@ -33,8 +33,11 @@ public class EnnemieSpawnManager : MonoBehaviour
 
     public void LaunchWave()
     {
-        Waves[ActualWave].Invoke();
-        ActualWave++;
+        if(ActualWave < Waves.Count)
+        {
+            Waves[ActualWave].Invoke();
+            ActualWave++;
+        }
     }
 
     public void ReadyNextWave()

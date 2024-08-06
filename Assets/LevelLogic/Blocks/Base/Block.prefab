@@ -2077,10 +2077,18 @@ MonoBehaviour:
   blockDifficulty: 1
   blockType: 1
   doors:
-  - {fileID: 2210639897171315004}
-  - {fileID: 6066307049463826261}
-  - {fileID: 3978412272121615945}
-  - {fileID: 5908831877675101319}
+  - doorDirection: 0
+    door: {fileID: 2210639897171315004}
+    isLocked: 0
+  - doorDirection: 2
+    door: {fileID: 6066307049463826261}
+    isLocked: 0
+  - doorDirection: 1
+    door: {fileID: 3978412272121615945}
+    isLocked: 0
+  - doorDirection: 3
+    door: {fileID: 5908831877675101319}
+    isLocked: 0
   pullPower: 10
   OnEnterRoom:
     m_PersistentCalls:
@@ -2141,15 +2149,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e39190c5828b9845a6bd5d1a73b8912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoints: []
-  EnnemiesRollChance: []
-  maxEnnemies: 1
-  SpawnSpeed: 1
-  nbrOfSpawn: 1
+  ActualWave: 0
+  nextWaveReady: 0
   EnnemiesAlive: []
-  AllEnnemiDead:
-    m_PersistentCalls:
-      m_Calls: []
+  Waves: []
 --- !u!1 &4175247586390182514
 GameObject:
   m_ObjectHideFlags: 0

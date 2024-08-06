@@ -13,13 +13,26 @@ public enum BlockType
     Jump,Fight,Loot,Puzzle,Spawn,Boss
 }
 
+public enum DoorDirection
+{
+    North, East, South, West
+}
+
+[System.Serializable]
+public class Door
+{
+    public DoorDirection doorDirection;
+    public GameObject door;
+    public bool isLocked = false;
+}
+
 public class BlockLogic : MonoBehaviour
 {
     public int BlockId;
     public LevelManager levelManager;
     public BlockDifficulty blockDifficulty;
     public BlockType blockType;
-    public GameObject[] doors;
+    public Door[] doors;
     public int pullPower = 10;
     [SerializeField] private UnityEvent OnEnterRoom;
     [SerializeField] private UnityEvent OnEnterRoomFirstTime;
@@ -69,17 +82,24 @@ public class BlockLogic : MonoBehaviour
 
     public void OpenDoors()
     {
-        foreach (GameObject door in doors)
+        foreach (Door door in doors)
         {
-            door.SetActive(false);
+            if (!door.isLocked)
+            {
+                door.door.SetActive(false);
+            }
+            
         }
     }
 
     public void CloseDoors()
     {
-        foreach (GameObject door in doors)
+        foreach (Door door in doors)
         {
-            door.SetActive(true);
+            if (!door.isLocked)
+            {
+                door.door.SetActive(false);
+            }
         }
     }
 
@@ -89,6 +109,19 @@ public class BlockLogic : MonoBehaviour
         {
             playerInRoom.rb.AddForce((this.transform.position - this.playerInRoom.transform.position).normalized * pullPower, ForceMode.Impulse);
             Debug.Log("Pull PLayer");
+        }
+    }
+
+    public void EliminateDoor(DoorDirection doorDirection)
+    {
+        // delete every door in the direction
+        foreach (Door door in doors)
+        {
+            if (door.doorDirection == doorDirection)
+            {
+                door.door.SetActive(true);
+                door.isLocked = true;
+            }
         }
     }
 }

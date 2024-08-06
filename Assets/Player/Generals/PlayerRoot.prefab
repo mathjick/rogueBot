@@ -1898,6 +1898,7 @@ GameObject:
   - component: {fileID: 3811064511448961845}
   - component: {fileID: 3014131180282675880}
   - component: {fileID: 4345733800126359512}
+  - component: {fileID: 3105660302260839662}
   m_Layer: 13
   m_Name: Player
   m_TagString: tag_player
@@ -2053,6 +2054,7 @@ MonoBehaviour:
   playerUI: {fileID: 6025833086399508054}
   lifeSystem: {fileID: 3811064511448961845}
   levelSystem: {fileID: 4345733800126359512}
+  playerUnlockable: {fileID: 3105660302260839662}
   isGrounded: 0
   blockInput: 0
   updatePlayerHealth: {fileID: 11400000, guid: 089becfca95ac18498f3c81d8cdb0e48, type: 2}
@@ -2296,6 +2298,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: 0
+--- !u!114 &3105660302260839662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8106314351291948631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4eb5d1619e25847b33c444c2cb1fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnergieCores: 0
 --- !u!1 &8414460298802689008
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public PlayerUI playerUI;
     public LifeSystem lifeSystem;
     public LevelSystem levelSystem;
+    public PlayerUnlockable playerUnlockable;
     public bool isGrounded;
     public bool blockInput = false;
 

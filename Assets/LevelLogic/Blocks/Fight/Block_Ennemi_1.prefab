@@ -382,6 +382,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1478717510362756099, guid: 166eadec82101fc43bcce88746a05695, type: 3}
+      propertyPath: doors.Array.data[3].door
+      value: 
+      objectReference: {fileID: 1830994385370285607}
+    - target: {fileID: 1478717510362756099, guid: 166eadec82101fc43bcce88746a05695, type: 3}
+      propertyPath: doors.Array.data[3].doorDirection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2438880894839057418, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: SpawnSpeed
       value: 0.5
@@ -560,6 +568,11 @@ PrefabInstance:
       objectReference: {fileID: 13400000, guid: be04520ccb085384e8eb0142cb18b4f9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 166eadec82101fc43bcce88746a05695, type: 3}
+--- !u!1 &1830994385370285607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3124591030155399067, guid: 166eadec82101fc43bcce88746a05695, type: 3}
+  m_PrefabInstance: {fileID: 3617579407611513276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8257888087186448241 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4660610143348479693, guid: 166eadec82101fc43bcce88746a05695, type: 3}

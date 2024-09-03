@@ -52,6 +52,7 @@ public class BlockLogic : MonoBehaviour
 
     public void EnterRoomFirstTime()
     {
+        Debug.Log("Entered : " + this.gameObject.name);
         OnEnterRoomFirstTime.Invoke();
     }
 
@@ -98,7 +99,7 @@ public class BlockLogic : MonoBehaviour
         {
             if (!door.isLocked)
             {
-                door.door.SetActive(false);
+                door.door.SetActive(true);
             }
         }
     }

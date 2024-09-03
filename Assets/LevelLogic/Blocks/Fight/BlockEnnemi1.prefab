@@ -211,7 +211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: Waves.Array.data[0].m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: Waves.Array.data[1].m_PersistentCalls.m_Calls.Array.size
@@ -250,6 +250,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
+      propertyPath: Waves.Array.data[0].m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: Waves.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
       objectReference: {fileID: 0}
@@ -271,6 +275,10 @@ PrefabInstance:
       objectReference: {fileID: 3565980555898906637}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: Waves.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1478717510362756099}
+    - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
+      propertyPath: Waves.Array.data[0].m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 2438880894839057418}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
@@ -298,6 +306,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
+      propertyPath: Waves.Array.data[0].m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: Waves.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -319,6 +331,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: Waves.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseDoors
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
+      propertyPath: Waves.Array.data[0].m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: ReadyNextWave
       objectReference: {fileID: 0}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
@@ -363,6 +379,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: Waves.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BlockLogic, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
+      propertyPath: Waves.Array.data[0].m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: EnnemieSpawnManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
@@ -398,6 +418,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
+      propertyPath: Waves.Array.data[0].m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378224026355142422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: Waves.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -418,6 +442,14 @@ PrefabInstance:
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7915586554449270559, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
+      propertyPath: doors.Array.data[3].door
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915586554449270559, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
+      propertyPath: doors.Array.data[3].doorDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915586554449270559, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: OnEnterRoomFirstTime.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -435,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7915586554449270559, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: OnEnterRoomFirstTime.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: CallBackSpawn
+      value: LaunchWave
       objectReference: {fileID: 0}
     - target: {fileID: 7915586554449270559, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
       propertyPath: OnEnterRoomFirstTime.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName

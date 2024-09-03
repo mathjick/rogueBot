@@ -2579,6 +2579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1396279605}
   - component: {fileID: 1396279606}
+  - component: {fileID: 1396279607}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -2888,6 +2889,21 @@ MonoBehaviour:
   BlockToGenerateAfter: []
   maxNbrBlocks: 16
   chaosFactor: 0.9
+--- !u!114 &1396279607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396279604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63c0ff08ea030545ace7d322b063bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  difficulty: 1
+  difficulties: []
 --- !u!1 &1703320060
 GameObject:
   m_ObjectHideFlags: 0

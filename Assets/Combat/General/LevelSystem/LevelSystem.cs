@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public struct LevelTreshold
+[System.Serializable]
+public class LevelTreshold
 {
     public int level;
     public int treshold;
+    public UnityEvent levelEvent;
 }
 public class LevelSystem : MonoBehaviour
 {
     public int exp;
+    public LevelTreshold currentLevel;
     public List<LevelTreshold> LevelTresholds;
 
     public int GetLevel()
@@ -28,5 +32,10 @@ public class LevelSystem : MonoBehaviour
     public void AddExp(int exp)
     {
         this.exp += exp;
+        if (GetLevel() > currentLevel.level)
+        {
+            currentLevel = LevelTresholds.Find(x => x.level == GetLevel());
+            currentLevel.levelEvent.Invoke();
+        }
     }
 }

@@ -2298,6 +2298,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: 0
+  currentLevel:
+    level: 0
+    treshold: 0
+    levelEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  LevelTresholds: []
 --- !u!114 &3105660302260839662
 MonoBehaviour:
   m_ObjectHideFlags: 0

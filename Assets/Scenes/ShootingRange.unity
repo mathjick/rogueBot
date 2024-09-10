@@ -193,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 132274209826480185, guid: 610b785aaf1c7774db6b802360fa8685, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 765117285052938883, guid: 610b785aaf1c7774db6b802360fa8685, type: 3}
       propertyPath: m_RootOrder
@@ -237,10 +237,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 765117285052938883, guid: 610b785aaf1c7774db6b802360fa8685, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7896825306039378965, guid: 610b785aaf1c7774db6b802360fa8685, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1496,6 +1492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pew
       objectReference: {fileID: 0}
+    - target: {fileID: 4816187416595730883, guid: a1e6c0ae0d0772142bcc07428553511c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5304493091281259385, guid: a1e6c0ae0d0772142bcc07428553511c, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1539,10 +1539,6 @@ PrefabInstance:
     - target: {fileID: 5304493091281259385, guid: a1e6c0ae0d0772142bcc07428553511c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6121668192678596764, guid: a1e6c0ae0d0772142bcc07428553511c, type: 3}
-      propertyPath: randomFactor
-      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6121668192678596764, guid: a1e6c0ae0d0772142bcc07428553511c, type: 3}
       propertyPath: playerToFocus

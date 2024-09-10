@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using UnityEngine.InputSystem.HID;
 
 public enum MineBomber_States
@@ -19,6 +20,9 @@ public class MineBomber_IA : IaBase
     public GameObject projectileSpawnPoint;
     public GameObject canonAnchor;
     public NavMeshAgent navMeshAgent;
+    public UnityEvent ShotCallback;
+    public UnityEvent StartWalking;
+    public UnityEvent StopWalking;
 
     [Space(2)]
     //feedbacks
@@ -88,6 +92,7 @@ public class MineBomber_IA : IaBase
 
     public void Move()
     {
+        StartWalking?.Invoke();
         if (state != MineBomber_States.Dead)
         {
             float distance = Vector3.Distance(playerToFocus.transform.position, this.transform.position);
@@ -107,6 +112,7 @@ public class MineBomber_IA : IaBase
 
     public void StopMoving()
     {
+        StopWalking?.Invoke();
         if (state != MineBomber_States.Dead)
         {
             navMeshAgent.SetDestination(this.transform.position);
@@ -124,6 +130,7 @@ public class MineBomber_IA : IaBase
             //shoot
             if (attackTimer <= 0)
             {
+                ShotCallback?.Invoke();
                 GameObject _newProjectile = Instantiate(projectileToShoot, projectileSpawnPoint.transform.position, canonAnchor.transform.rotation);
                 _newProjectile.GetComponent<Rigidbody>().AddForce(canonAnchor.transform.up * -1000);
                 _newProjectile.GetComponent<MineBomberGrenadeScript>().LitFuze();

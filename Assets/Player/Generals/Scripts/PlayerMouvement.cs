@@ -77,7 +77,7 @@ public class PlayerMouvement : MonoBehaviour
         var trueGravity = gravity;
         if(playerController.actualGround.normal != Vector3.zero && playerController.isGrounded)
         {
-            trueGravity = playerController.actualGround.normal * 2;
+            trueGravity = playerController.actualGround.normal * -1;
         }
         playerController.rb.velocity += _gravityMode == 0 ? trueGravity * Time.deltaTime : holdJumpGravity * Time.deltaTime;
         if(velocityMode == 0)

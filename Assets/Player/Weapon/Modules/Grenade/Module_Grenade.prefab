@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Grenade Effect Module
       objectReference: {fileID: 0}
+    - target: {fileID: 5044408269096154280, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 66931913f9263984b9235dd2f40f7671, type: 2}
     - target: {fileID: 5089041844966463961, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -60,9 +64,9 @@ PrefabInstance:
       value: Module_Grenade
       objectReference: {fileID: 0}
     - target: {fileID: 5089041844966463967, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: eb45edd3b8201bd44a7e3aadf65f1dbc, type: 2}
+      objectReference: {fileID: 2100000, guid: 66931913f9263984b9235dd2f40f7671, type: 2}
     - target: {fileID: 6021193288038778173, guid: 23e89c4d7f9627a40b3e9d024e3fbc6c, type: 3}
       propertyPath: moduleToAddToInventory
       value: 

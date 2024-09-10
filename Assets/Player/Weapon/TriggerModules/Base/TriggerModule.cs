@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -61,6 +62,7 @@ public class TriggerModule : MonoBehaviour
         if (!isReloading)
         {
             updateAmmo.Trigger(actualNumberOfRounds);
+            weaponView.GetComponent<CameraShake>().Shake();
         }
     }
 

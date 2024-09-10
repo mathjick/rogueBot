@@ -21,7 +21,7 @@ public class TM_Marksman : TriggerModule
     public override void Hold()
     {
         isHolding = true;
-        if(timer <= 0 && actualNumberOfRounds > 0)
+        if(timer <= 0 && actualNumberOfRounds > 0 && !isReloading)
         {
             timer = 60f / RPM;
             Shoot();

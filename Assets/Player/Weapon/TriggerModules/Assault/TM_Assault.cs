@@ -19,7 +19,7 @@ public class TM_Assault : TriggerModule
         {
             timer -= Time.deltaTime;
         }
-        else if (isHolding && actualNumberOfRounds > 0)
+        else if (isHolding && actualNumberOfRounds > 0 && !isReloading)
         {
             timer = 60f / RPM;
             Shoot();

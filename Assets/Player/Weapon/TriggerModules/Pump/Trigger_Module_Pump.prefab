@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: damages
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5141299478530710677, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a7c0d9807756d94fb9f2df5d8d22d47, type: 2}
     - target: {fileID: 7400264267591625272, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: m_Name
       value: Trigger_Module_Pump

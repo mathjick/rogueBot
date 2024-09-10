@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: triggerModuleToEquip
       value: 
       objectReference: {fileID: 2230877111593696845}
+    - target: {fileID: 5141299478530710677, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd67669f09f2851489698d1f05221a39, type: 2}
     - target: {fileID: 7400264267591625272, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: m_Name
       value: Trigger_Module_Assault
@@ -70,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 8368514080915832104, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: m_text
       value: Assault Trigger Module
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653408315593238461, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5583069630158437337, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}

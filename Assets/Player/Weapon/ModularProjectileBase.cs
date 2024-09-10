@@ -15,6 +15,8 @@ public class ModularProjectileBase : MonoBehaviour
 
     public GameObject OnHitSolid;
 
+    public GameObject impactVFX;
+
     public void Start()
     {
         if (nextEffect)
@@ -51,6 +53,7 @@ public class ModularProjectileBase : MonoBehaviour
                     break;
             }
         }
+            Instantiate(impactVFX, transform.position, Quaternion.identity);
     }
 
     private void OnCollisionEnter(Collision collision)

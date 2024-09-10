@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: triggerModuleToEquip
       value: 
       objectReference: {fileID: 218545460791008067}
+    - target: {fileID: 5141299478530710677, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c5cde8aef170ed4b9238d929b3b137c, type: 2}
     - target: {fileID: 7400264267591625272, guid: 6dc7e3561ede396418f04725e80d31b7, type: 3}
       propertyPath: m_Name
       value: Trigger_Module_Marksman

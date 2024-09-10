@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIReload : MonoBehaviour
 {
-    bool isReloading = false;
+    [SerializeField] bool isReloading = false;
     float _timerMax;
     float _timer;
     Image _image;
@@ -20,10 +20,11 @@ public class UIReload : MonoBehaviour
     {
         if (isReloading)
         {
-            if (_timerMax < 0)
+            if (_timer < 0)
             {
                 isReloading = false;
-                _image.fillAmount = 0;
+                _image.fillAmount = 1;
+                UpdateDisplay();
             }
             else
             {
@@ -43,6 +44,14 @@ public class UIReload : MonoBehaviour
 
     private void UpdateDisplay()
     {
-        _image.fillAmount = _timer / _timerMax;
+        if (isReloading)
+        {
+            _image.enabled = true;
+            _image.fillAmount = 1 - _timer / _timerMax;
+        }
+        else
+        {
+            _image.enabled = false;
+        }
     }
 }

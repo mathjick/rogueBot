@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 139508871658813877}
   - component: {fileID: 2741379208145915263}
   - component: {fileID: 3587891692472917515}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: RB_Tuyaux_Gris_I
-  m_TagString: Untagged
+  m_TagString: tag_solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

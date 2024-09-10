@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1719754719018779373}
   - component: {fileID: 1719754719018779374}
   - component: {fileID: 1719754719018779375}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: RB_Terminal2
   m_TagString: tag_solid
   m_Icon: {fileID: 0}

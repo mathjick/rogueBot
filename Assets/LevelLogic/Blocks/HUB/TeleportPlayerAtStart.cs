@@ -9,6 +9,7 @@ public class TeleportPlayerAtStart : MonoBehaviour
     {
         if (LevelGenerator.instance)
         {
+            Debug.Log("Teleporting player to start");
             LevelGenerator.instance.player.transform.position = transform.position;
         }
     }

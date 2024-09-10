@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968880379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.51, y: -1.21, z: -2.17}
+  m_LocalPosition: {x: 0.15, y: 1.96, z: -2.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -417,7 +417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649219706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.12, y: -1.21, z: -44.78}
+  m_LocalPosition: {x: -40.96, y: -1.21, z: -43.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28738,15 +28738,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2740984313280750562, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.12
+      value: -39.1
       objectReference: {fileID: 0}
     - target: {fileID: 2740984313280750562, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.21
+      value: -5.27
       objectReference: {fileID: 0}
     - target: {fileID: 2740984313280750562, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.85
+      value: 37.4
       objectReference: {fileID: 0}
     - target: {fileID: 3565980555898906637, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: EnnemiesInvocables.Array.data[0]
@@ -28881,8 +28881,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 43976a31fb0652d4f8f70a08b38917a0, type: 2}
     - target: {fileID: 5653110860924572113, guid: 166eadec82101fc43bcce88746a05695, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 39.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653110860924572113, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653110860924572113, guid: 166eadec82101fc43bcce88746a05695, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -38.02
       objectReference: {fileID: 0}
     - target: {fileID: 7793395382676522413, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: m_RootOrder
@@ -28933,7 +28941,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 4fcb3eb486c373e429e3a685de51ce6e, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e160de28b4913d14796741b1c11d0c91, type: 2}
   m_BuildHeightMesh: 0
 --- !u!114 &5294007954324095137 stripped
 MonoBehaviour:

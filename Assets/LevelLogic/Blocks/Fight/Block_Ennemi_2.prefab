@@ -11226,7 +11226,7 @@ PrefabInstance:
     - target: {fileID: 2438880894839057418, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: Waves.Array.data[2].m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
-      objectReference: {fileID: 5838370981385417336}
+      objectReference: {fileID: 7231619386017131121}
     - target: {fileID: 2438880894839057418, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: Waves.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11361,7 +11361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2438880894839057418, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: Waves.Array.data[2].m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
-      value: OpenDoors
+      value: ReadyNextWave
       objectReference: {fileID: 0}
     - target: {fileID: 2438880894839057418, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: Waves.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -11437,7 +11437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2438880894839057418, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: Waves.Array.data[2].m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
-      value: BlockLogic, Assembly-CSharp
+      value: EnnemieSpawnManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2438880894839057418, guid: 166eadec82101fc43bcce88746a05695, type: 3}
       propertyPath: Waves.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

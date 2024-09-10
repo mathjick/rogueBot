@@ -132,9 +132,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   physicCollider: {fileID: 8129692738370623943}
   overlapCollider: {fileID: 638262697011990523}
-  OnHitSolid:
-    m_PersistentCalls:
-      m_Calls: []
+  OnHitSolid: {fileID: 3691920453876834703, guid: 6a989ce2522738c41b915da80be7f8b2, type: 3}
 --- !u!114 &5209842160526063553
 MonoBehaviour:
   m_ObjectHideFlags: 0

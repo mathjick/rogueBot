@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6623659687656349016}
   - component: {fileID: 717959064531707598}
   - component: {fileID: 8132114483652712466}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: RB_Armature_Beige_L
-  m_TagString: Untagged
+  m_TagString: tag_solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

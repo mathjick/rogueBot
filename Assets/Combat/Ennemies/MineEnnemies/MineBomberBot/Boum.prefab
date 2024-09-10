@@ -185,9 +185,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  renderer: {fileID: 2236460025039336716}
   spawnEffect: {fileID: 0}
   deathEffect: {fileID: 0}
-  maxAttackRange: 40
+  maxAttackRange: 100
   minAttackRange: 25
   attackRate: 2
   attackWarmup: 1

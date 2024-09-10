@@ -28,7 +28,7 @@ public class ModularProjectileBase : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "tag_solid")
+        if(other.gameObject.tag == "tag_solid" && OnHitSolid)
         {
             Instantiate(OnHitSolid, transform.position, Quaternion.identity);
         }
@@ -69,7 +69,6 @@ public class ModularProjectileBase : MonoBehaviour
         overlapCollider.enabled = false;
         if (other.GetComponent<ImpactZone>())
         {
-            Debug.Log("takeDamage");
             other.GetComponent<ImpactZone>().TakeDamage(damageData.damagesTypes, damageData.damages, owner, other.ClosestPoint(transform.position));
         }
         CleanItself();

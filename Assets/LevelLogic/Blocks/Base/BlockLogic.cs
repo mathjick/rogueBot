@@ -52,7 +52,6 @@ public class BlockLogic : MonoBehaviour
 
     public void EnterRoomFirstTime()
     {
-        Debug.Log("Entered : " + this.gameObject.name);
         OnEnterRoomFirstTime.Invoke();
     }
 
@@ -109,7 +108,6 @@ public class BlockLogic : MonoBehaviour
         if(this.playerInRoom != null)
         {
             playerInRoom.rb.AddForce((this.transform.position - this.playerInRoom.transform.position).normalized * pullPower, ForceMode.Impulse);
-            Debug.Log("Pull PLayer");
         }
     }
 

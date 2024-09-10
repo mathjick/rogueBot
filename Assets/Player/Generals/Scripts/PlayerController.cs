@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public LevelSystem levelSystem;
     public PlayerUnlockable playerUnlockable;
     public bool isGrounded;
+    public RaycastHit actualGround;
     public bool blockInput = false;
 
     [SerializeField] private IntScriptableEvent updatePlayerHealth;
@@ -58,6 +59,10 @@ public class PlayerController : MonoBehaviour
         int layer = 17;
         LayerMask ls = 1 << layer;
         isGrounded = Physics.Raycast(playerTransform.position, Vector3.down, 1.1f, ls);
+        var ray = new Ray(playerTransform.position, Vector3.down);
+        var hitinfo = new RaycastHit();
+        Physics.Raycast(ray, out hitinfo, 1.1f,ls,QueryTriggerInteraction.UseGlobal);
+        actualGround = hitinfo;
         this.playerMouvementSystem.velocityMode = isGrounded ? 0 : 1;
     }
 

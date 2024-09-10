@@ -74,7 +74,12 @@ public class PlayerMouvement : MonoBehaviour
         }
         _mouvement = playerController.playerTransform.forward * playerInput.y * _mouvementMultiplyer.x + playerController.playerTransform.right * playerInput.x * _mouvementMultiplyer.y;
         var _aimedVelocity = new Vector3(_mouvement.x * Time.deltaTime, playerController.rb.velocity.y, _mouvement.z * Time.deltaTime);
-        playerController.rb.velocity += _gravityMode == 0 ? gravity * Time.deltaTime : holdJumpGravity * Time.deltaTime;
+        var trueGravity = gravity;
+        if(playerController.actualGround.normal != Vector3.zero && playerController.isGrounded)
+        {
+            trueGravity = playerController.actualGround.normal * 2;
+        }
+        playerController.rb.velocity += _gravityMode == 0 ? trueGravity * Time.deltaTime : holdJumpGravity * Time.deltaTime;
         if(velocityMode == 0)
         {
             if(playerInput.x > 0.1 || playerInput.x < -0.1 || playerInput.y > 0.1 || playerInput.y < -0.1)

@@ -15,6 +15,7 @@ public class UsedTile
     public GameObject blockLocked;
     public bool isUsed;
     public bool isOrigin;
+    public List<DoorDirection> doorsToCheck;
     public (int,int) coordinates;
 }
 
@@ -173,12 +174,15 @@ public class LevelGenerator : MonoBehaviour
             }
             if (possibleSpawnPlaces.Count > 0)
             {
+                int indexOfBlockToGenerate = 0;
                 while (possibleSpawnPlaces.Count > 0 && _generatingAfter > 0)
                 {
+                    
                     //pick a random possible spawn place
                     if (!PossibleSpawnPoints[possibleSpawnPlaces[_generatingAfter].Item1].tiles[possibleSpawnPlaces[_generatingAfter].Item2].isUsed)
                     {
-                        GenerateBlock(BlockToGenerateAfter[0], PossibleSpawnPoints[possibleSpawnPlaces[_generatingAfter].Item1].tiles[possibleSpawnPlaces[_generatingAfter].Item2], possibleSpawnPlaces[_generatingAfter]);
+                        GenerateBlock(BlockToGenerateAfter[indexOfBlockToGenerate], PossibleSpawnPoints[possibleSpawnPlaces[_generatingAfter].Item1].tiles[possibleSpawnPlaces[_generatingAfter].Item2], possibleSpawnPlaces[_generatingAfter]);
+                        indexOfBlockToGenerate++;
                         _generatingAfter--;
                     }
                     //remove the used place from the list
@@ -199,36 +203,36 @@ public class LevelGenerator : MonoBehaviour
             {
                 if (PossibleSpawnPoints[x].tiles[y].isUsed)
                 {
-                    if (x == 0)
+                    if (x == 0 && PossibleSpawnPoints[x].tiles[y].doorsToCheck.Contains(DoorDirection.North))
                     {
                         PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.North);
                     }
-                    if (x == PossibleSpawnPoints.Count - 1)
+                    if (x == PossibleSpawnPoints.Count - 1 && PossibleSpawnPoints[x].tiles[y].doorsToCheck.Contains(DoorDirection.South))
                     {
                         PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.South);
                     }
-                    if (y == 0)
+                    if (y == 0 && PossibleSpawnPoints[x].tiles[y].doorsToCheck.Contains(DoorDirection.West))
                     {
                         PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.West);
                     }
-                    if (y == PossibleSpawnPoints[x].tiles.Count - 1)
+                    if (y == PossibleSpawnPoints[x].tiles.Count - 1 && PossibleSpawnPoints[x].tiles[y].doorsToCheck.Contains(DoorDirection.East))
                     {
                         PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.East);
                     }
 
-                    if (x - 1 >= 0 && !PossibleSpawnPoints[x - 1].tiles[y].isUsed)
+                    if (x - 1 >= 0 && !PossibleSpawnPoints[x - 1].tiles[y].isUsed && PossibleSpawnPoints[x].tiles[y].doorsToCheck.Contains(DoorDirection.North))
                     {
                         PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.North);
                     }
-                    if (x + 1 < PossibleSpawnPoints.Count && !PossibleSpawnPoints[x + 1].tiles[y].isUsed)
+                    if (x + 1 < PossibleSpawnPoints.Count && !PossibleSpawnPoints[x + 1].tiles[y].isUsed && PossibleSpawnPoints[x].tiles[y].doorsToCheck.Contains(DoorDirection.South))
                     {
                         PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.South);
                     }
-                    if (y - 1 >= 0 && !PossibleSpawnPoints[x].tiles[y - 1].isUsed)
+                    if (y - 1 >= 0 && !PossibleSpawnPoints[x].tiles[y - 1].isUsed && PossibleSpawnPoints[x].tiles[y].doorsToCheck.Contains(DoorDirection.West))
                     {
                         PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.West);
                     }
-                    if (y + 1 < PossibleSpawnPoints[x].tiles.Count && !PossibleSpawnPoints[x].tiles[y + 1].isUsed)
+                    if (y + 1 < PossibleSpawnPoints[x].tiles.Count && !PossibleSpawnPoints[x].tiles[y + 1].isUsed && PossibleSpawnPoints[x].tiles[y].doorsToCheck.Contains(DoorDirection.East))
                     {
                         PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.East);
                     }
@@ -410,6 +414,12 @@ public class LevelGeneratorEditor : Editor
                     for (int y = 0; y < gridSize; y++)
                     {
                         myScript.PossibleSpawnPoints[x].tiles[y].position = new Vector3(x * 140, 0, y * 140);
+                        var doors = new List<DoorDirection>();
+                        doors.Add(DoorDirection.North);
+                        doors.Add(DoorDirection.South);
+                        doors.Add(DoorDirection.East);
+                        doors.Add(DoorDirection.West);
+                        myScript.PossibleSpawnPoints[x].tiles[y].doorsToCheck = doors;
                     }
                 }
             }

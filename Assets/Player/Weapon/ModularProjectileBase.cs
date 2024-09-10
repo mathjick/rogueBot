@@ -26,7 +26,7 @@ public class ModularProjectileBase : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "tag_solid")
+        if(other.gameObject.tag == "tag_solid" && OnHitSolid)
         {
             Instantiate(OnHitSolid, transform.position, Quaternion.identity);
         }

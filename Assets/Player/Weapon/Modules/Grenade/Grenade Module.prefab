@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4529661817156213657
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108006462672045065, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 272413385761891218, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: moduleToAddToInventory
+      value: 
+      objectReference: {fileID: 129458349622822000}
+    - target: {fileID: 1605827365150544391, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 66931913f9263984b9235dd2f40f7671, type: 2}
+    - target: {fileID: 5718722310126398050, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_Name
+      value: Grenade Module
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266599115419946044, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+      propertyPath: m_text
+      value: Grenade Effect Module
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 415870601932709812, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+--- !u!1 &2335777798410620580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213183746901628221, guid: c050f23650c98b84aa779201d9fda75d, type: 3}
+  m_PrefabInstance: {fileID: 4529661817156213657}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &129458349622822000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335777798410620580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3d7082bd3709c49b5c05667549c848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextModule: {fileID: 0}
+  explosionPrefab: {fileID: 7171933674768868981, guid: b2e378248797afa4186f6684878cd092, type: 3}
+  sizeFactor: 1.5
+  gravityFactor: 0.5
+  player: {fileID: 0}
+  damageData: {fileID: 0}
+  ShootCallBack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6422771387676658934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335777798410620580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f2e5b9fb3e63c47988c9160ac125db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagesTypes: 02000000
+  damages: 10
+--- !u!114 &8076915301463884072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2335777798410620580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1800926740
+      Data2: 1197726252
+      Data3: -484202079
+      Data4: 1620994581
+    Path: event:/Character/Weapon/Grenade/GRE_Shoot
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

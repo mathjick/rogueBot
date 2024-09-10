@@ -13,13 +13,12 @@ public class Difficulty
 public class DifficultySystem : MonoBehaviour
 {
     public float timer = 0;
-    public Difficulty difficulty;
+    public int difficultyLevel = 0;
     public List<Difficulty> difficulties;
     public List<DifficultyCallBack> difficultyCallBacks;
 
     public void Start()
     {
-        difficulty = difficulties.First();
         foreach (DifficultyCallBack d in FindObjectsOfType<DifficultyCallBack>())
         {
             d.SubscribeToDifficultySystem(this);
@@ -29,27 +28,13 @@ public class DifficultySystem : MonoBehaviour
     public void Update()
     {
         timer += Time.deltaTime;
-        if (timer > difficulty.maxTime)
+        if (timer > difficulties[difficultyLevel].maxTime)
         {
-            difficulty = getDifficulty();
+            difficultyLevel++;
             foreach (DifficultyCallBack d in difficultyCallBacks)
             {
                 d.UpdateDifficulty();
             }
         }
-    }
-
-    public Difficulty getDifficulty()
-    {
-        Difficulty _realDifficulty = difficulties.First();
-        foreach (Difficulty d in difficulties)
-        {
-            if (timer < d.maxTime)
-            {
-                _realDifficulty = d;
-                break;
-            }
-        }
-        return _realDifficulty;
     }
 }

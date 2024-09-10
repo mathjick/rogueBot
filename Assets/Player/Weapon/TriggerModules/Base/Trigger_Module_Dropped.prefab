@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 1503819855863413188}
   - component: {fileID: 3254084798494618159}
   - component: {fileID: 5141299478530710677}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 1223029754703530820}
   - component: {fileID: 1483405334597830617}
   - component: {fileID: 1223029754703530821}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Trigger_Module_Dropped
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f400328ec17dba34c9f0bdc6d9943ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerModuleToEquip: {fileID: 0}
+  triggerModuleToEquip: {fileID: 5583069630158437337}
   updateAmmoMax: {fileID: 11400000, guid: d05ad348c8c7e8e499deabee31176634, type: 2}
   updateAmmo: {fileID: 11400000, guid: c2cefb84786ca5b499d2647dcf400186, type: 2}
 --- !u!1 &7625041600753497500
@@ -439,7 +439,7 @@ GameObject:
   - component: {fileID: 8653408315593238461}
   - component: {fileID: 1930768058988581017}
   - component: {fileID: 5583069630158437337}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Module
   m_TagString: Untagged
   m_Icon: {fileID: 0}

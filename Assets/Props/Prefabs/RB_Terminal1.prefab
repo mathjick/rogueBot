@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 860293391129032630}
   - component: {fileID: 3176329723970863996}
   - component: {fileID: 4311355171335014455}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: RB_Terminal1
   m_TagString: tag_solid
   m_Icon: {fileID: 0}

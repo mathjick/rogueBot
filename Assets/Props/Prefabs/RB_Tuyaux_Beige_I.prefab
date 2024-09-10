@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5325067281831655412}
   - component: {fileID: 7927046948592386878}
   - component: {fileID: 8773876920985501003}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: RB_Tuyaux_Beige_I
-  m_TagString: Untagged
+  m_TagString: tag_solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

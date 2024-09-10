@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 893450640431906327}
   - component: {fileID: 1992765036183299614}
   - component: {fileID: 1992765036183299615}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: RB_Citerne
   m_TagString: tag_solid
   m_Icon: {fileID: 0}

@@ -468,7 +468,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 1.8
-  m_Speed: 3.5
+  m_Speed: 50
   m_Acceleration: 120
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -498,6 +498,9 @@ MonoBehaviour:
   playerToFocus: {fileID: 0}
   ls: {fileID: 5012790351151878664}
   damageTrigger: {fileID: 1969703972511590039}
+  DamageInflicted:
+    m_PersistentCalls:
+      m_Calls: []
   spawnEffect: {fileID: 0}
   deathEffect: {fileID: 0}
   jumpMaxRange: 20

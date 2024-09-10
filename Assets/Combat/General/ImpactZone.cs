@@ -31,16 +31,13 @@ public class ImpactZone : MonoBehaviour
         lifeSystemAttached.TakeDamage(damageTypes, trueDamageTaken, sourceOfDamage);
         if (isWeakPoint)
         {
-            Debug.Log("Weak Point " + this.gameObject.name);
             WeakPointCallBack.Invoke();
         }
         else
         {
-            Debug.Log("Normal Hit " + this.gameObject.name);
             HitCallBack.Invoke();
         }
         //DamagePopup.Create(this.transform.position, trueDamageTaken, false);
-        Debug.Log(this.transform.position);
     }
 
     public void TakeDamage(DamageTypes[] damageTypes, float damages, GameObject sourceOfDamage, Vector3 popUpPos)

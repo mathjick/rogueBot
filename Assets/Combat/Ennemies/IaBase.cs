@@ -9,5 +9,11 @@ public class IaBase : MonoBehaviour
     virtual public void Dead()
     {
         if (Spawner) { Spawner.RemoveEnnemi(gameObject);}
+        Invoke("Diseapear", 3);
+    }
+
+    public void Diseapear()
+    {
+        Destroy(gameObject);
     }
 }

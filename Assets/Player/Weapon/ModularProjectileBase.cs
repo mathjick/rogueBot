@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ModularProjectileBase : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ModularProjectileBase : MonoBehaviour
     public GameObject owner;
     public Collider physicCollider;
     public Collider overlapCollider;
+
+    public GameObject OnHitSolid;
 
     public void Start()
     {
@@ -23,6 +26,10 @@ public class ModularProjectileBase : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.gameObject.tag == "tag_solid")
+        {
+            Instantiate(OnHitSolid, transform.position, Quaternion.identity);
+        }
         if (nextEffect)
         {
             nextEffect.CallOnTriggerEnter(other);

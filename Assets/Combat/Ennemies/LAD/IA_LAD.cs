@@ -98,6 +98,7 @@ public class IA_LAD : MonoBehaviour
     [Header("---------------- EventCallBacks ----------------")]
     [Space(1)]
 
+    public UnityEvent BaseShotCallBack;
     public UnityEvent BombRainCallBack;
     public UnityEvent StartBarrageCallBack;
     public UnityEvent EndBarrageCallBack;
@@ -246,6 +247,7 @@ public class IA_LAD : MonoBehaviour
         {
             currentBarrel = 0;
         }
+        BaseShotCallBack?.Invoke();
         GameObject projectile = Instantiate(projectilePrefab, barrels[currentBarrel].transform.position, barrels[currentBarrel].transform.rotation);
         projectile.GetComponent<DamageData>().damagesTypes = projectileDamage.damagesTypes;
         projectile.GetComponent<DamageData>().damages = projectileDamage.damages;

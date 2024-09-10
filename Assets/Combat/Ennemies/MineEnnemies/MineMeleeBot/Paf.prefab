@@ -87,7 +87,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383008423079401627}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.04, y: 0.05, z: 0.06}
@@ -231,6 +231,69 @@ MonoBehaviour:
   WeakPointCallBack:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &501699688268041780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 363469752406913571}
+  - component: {fileID: 3228166935358295866}
+  m_Layer: 7
+  m_Name: Swing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &363469752406913571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501699688268041780}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7075467899780854717}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3228166935358295866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501699688268041780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2096034885
+      Data2: 1106154632
+      Data3: -1998802773
+      Data4: 1377591423
+    Path: event:/Enemies/Normal/PAF/PAF_Swing
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1242527909867682933
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +1015,38 @@ MonoBehaviour:
   WeakPointCallBack:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &5898609847592310253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7075467899780854717}
+  m_Layer: 7
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7075467899780854717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898609847592310253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 363469752406913571}
+  m_Father: {fileID: 6974960193166990486}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6200578106277141564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1422,7 @@ GameObject:
   - component: {fileID: 7748401358767982130}
   - component: {fileID: 7748401358767982131}
   - component: {fileID: 7748401358767982129}
+  - component: {fileID: 4000148852503138904}
   m_Layer: 7
   m_Name: Paf
   m_TagString: tag_ennemie
@@ -1350,6 +1446,7 @@ Transform:
   - {fileID: 7563353599082897097}
   - {fileID: 2563432830003498833}
   - {fileID: 3470436147494454524}
+  - {fileID: 7075467899780854717}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1363,7 +1460,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 1.8
-  m_Speed: 3.5
+  m_Speed: 5.5
   m_Acceleration: 120
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1396,7 +1493,19 @@ MonoBehaviour:
   entityName: Paf
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4000148852503138904}
+        m_TargetAssemblyTypeName: MineMelee_AI, Assembly-CSharp
+        m_MethodName: Dead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamage:
     m_PersistentCalls:
       m_Calls: []
@@ -1414,3 +1523,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagesTypes: 00000000
   damages: 10
+--- !u!114 &4000148852503138904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748401358767982124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767346960dc998c4690d3efe230ce095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawner: {fileID: 0}
+  state: 0
+  agent: {fileID: 7748401358767982130}
+  playerToFocus: {fileID: 0}
+  ls: {fileID: 7748401358767982131}
+  damageTrigger: {fileID: 383008423079401624}
+  DamageInflicted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3228166935358295866}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  spawnEffect: {fileID: 0}
+  deathEffect: {fileID: 0}
+  jumpMaxRange: 20
+  jumpMinRange: 10
+  damageData: {fileID: 7748401358767982129}
+  attackRate: 0.5
+  speedMultiplyer: 100

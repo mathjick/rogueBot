@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public enum MineMelee_States
 {
@@ -21,6 +22,7 @@ public class MineMelee_AI : IaBase
     private float baseSpeed;
     private float attackTimer;
     private List<LifeSystem> lifeSystemsInAttackRange = new List<LifeSystem>();
+    public UnityEvent DamageInflicted;
 
     [Space(2)]
     //feedbacks
@@ -67,6 +69,10 @@ public class MineMelee_AI : IaBase
         if (attackTimer <= 0)
         {
             attackTimer = attackRate;
+            if (lifeSystemsInAttackRange.Count > 0)
+            {
+                DamageInflicted?.Invoke();
+            }
             foreach (LifeSystem ls in lifeSystemsInAttackRange)
             {
                 ls.TakeDamage(damageData.damagesTypes,damageData.damages,this.gameObject);
@@ -88,7 +94,7 @@ public class MineMelee_AI : IaBase
         if (state != MineMelee_States.Dead)
         {
             agent.speed = speedMultiplyer * baseSpeed;
-            Invoke("ChangeToMove", 1f);
+            Invoke("ChangeToMove", 0.5f);
         }
     }
 

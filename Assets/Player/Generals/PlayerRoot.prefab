@@ -2498,7 +2498,29 @@ MonoBehaviour:
     levelEvent:
       m_PersistentCalls:
         m_Calls: []
-  LevelTresholds: []
+  LevelTresholds:
+  - level: 0
+    treshold: 10
+    levelEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - level: 1
+    treshold: 20
+    levelEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3811064511448961845}
+          m_TargetAssemblyTypeName: LifeSystem, Assembly-CSharp
+          m_MethodName: AddAditionalLifePoints
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 10
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &3105660302260839662
 MonoBehaviour:
   m_ObjectHideFlags: 0

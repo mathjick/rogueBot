@@ -41,6 +41,10 @@ public class MineFlying_IA : IaBase
 
     public void Start()
     {
+        if (PlayerController.instance)
+        {
+            playerToFocus = PlayerController.instance.gameObject;
+        }
         ChangeState(MineFlying_States.MoveClose);
         attackTimer = attackRate;
     }

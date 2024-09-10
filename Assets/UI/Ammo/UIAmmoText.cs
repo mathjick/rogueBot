@@ -40,6 +40,5 @@ public class UIAmmoText : MonoBehaviour
         _tmp.text = currentAmmo.ToString();
         _timer = 0f;
         _isPlayingAnimation = true;
-        Debug.Log(_isPlayingAnimation);
     }
 }

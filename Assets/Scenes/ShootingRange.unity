@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boum
       objectReference: {fileID: 0}
+    - target: {fileID: 132274209826480185, guid: 610b785aaf1c7774db6b802360fa8685, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 765117285052938883, guid: 610b785aaf1c7774db6b802360fa8685, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -346,6 +350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MineMeleeBot
       objectReference: {fileID: 0}
+    - target: {fileID: 5012790351151878659, guid: ebe819ece4a54434a9171d38aaab5c16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5682085805688457401, guid: ebe819ece4a54434a9171d38aaab5c16, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -483,6 +491,10 @@ PrefabInstance:
     - target: {fileID: 7748401358767982124, guid: d92694d5bb484014da762cb8440b25ce, type: 3}
       propertyPath: m_Name
       value: Paf
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748401358767982124, guid: d92694d5bb484014da762cb8440b25ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d92694d5bb484014da762cb8440b25ce, type: 3}
@@ -830,6 +842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c658716167d9c8e4f8efe7507d285773, type: 3}
+--- !u!1 &699228606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8106314351291948631, guid: 95f2dd0bd6c5f9643a7169c11db10bc5, type: 3}
+  m_PrefabInstance: {fileID: 649632471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &885151180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1540,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6121668192678596764, guid: a1e6c0ae0d0772142bcc07428553511c, type: 3}
+      propertyPath: randomFactor
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121668192678596764, guid: a1e6c0ae0d0772142bcc07428553511c, type: 3}
+      propertyPath: playerToFocus
+      value: 
+      objectReference: {fileID: 699228606}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1e6c0ae0d0772142bcc07428553511c, type: 3}
 --- !u!1001 &1625151581

@@ -31,8 +31,6 @@ public class UIEnemyLifebarManager : MonoBehaviour
 
         if (hitBehind.collider)
         {
-            Debug.Log(hitBehind.collider);
-            Debug.Log(hitBehind.collider.gameObject);
                 LifeSystem ls = hitBehind.collider.gameObject.GetComponentInParent<LifeSystem>();
                 lifebar.UpdateLifebar(ls);
                 enemyName.UpdateName(ls.entityName);
@@ -40,8 +38,6 @@ public class UIEnemyLifebarManager : MonoBehaviour
         }
         else if (hit.collider)
         {
-            Debug.Log(hit.collider);
-            Debug.Log(hit.collider.gameObject);
             LifeSystem ls = hit.collider.gameObject.GetComponentInParent<LifeSystem>();
 
             lifebar.UpdateLifebar(ls);

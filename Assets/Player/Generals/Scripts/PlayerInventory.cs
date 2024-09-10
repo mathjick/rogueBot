@@ -23,7 +23,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void HoldTrigger(InputValue val)
     {
-        if(triggerModuleEquipped.actualNumberOfRounds <= 0)
+        if(triggerModuleEquipped && triggerModuleEquipped.actualNumberOfRounds <= 0)
         {
             EmptyMagCallBack?.Invoke();
         }

@@ -138,6 +138,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{56121d29-86d6-46ee-8e3f-efd865bf9fdb}">
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{3cdf5d8f-6a31-4df2-8f54-7c442f1c7802}</destination>
 		</relationship>

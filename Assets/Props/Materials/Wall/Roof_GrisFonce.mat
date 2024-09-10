@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WallGrid_GrisClair
+  m_Name: Roof_GrisFonce
   m_Shader: {fileID: 4800000, guid: f7e38193b7f064d7380403618fd8b69e, type: 3}
   m_ValidKeywords:
-  - _CELPRIMARYMODE_SINGLE
+  - _CELPRIMARYMODE_STEPS
   - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords:
   - _UNITYSHADOWMODE_NONE
@@ -74,7 +74,7 @@ Material:
     - _BumpScale: 1
     - _CelExtraEnabled: 0
     - _CelNumSteps: 3
-    - _CelPrimaryMode: 1
+    - _CelPrimaryMode: 2
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -101,7 +101,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OutlineDepthOffset: 0
-    - _OutlineWidth: 2
+    - _OutlineWidth: 1
     - _OverrideLightmapDir: 0
     - _Parallax: 0.02
     - _QueueOffset: 0
@@ -124,15 +124,15 @@ Material:
     - _VertexColorsEnabled: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
-    - _ColorDim: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
-    - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
-    - _ColorDimExtra: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
-    - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
-    - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _Color: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
+    - _ColorDim: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+    - _ColorDimCurve: {r: 0.3396226, g: 0.3396226, b: 0.3396226, a: 1}
+    - _ColorDimExtra: {r: 0.3396226, g: 0.3396226, b: 0.3396226, a: 1}
+    - _ColorDimSteps: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+    - _ColorGradient: {r: 0.3396226, g: 0.3396226, b: 0.3396226, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
-    - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
-    - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _FlatRimColor: {r: 0.3396226, g: 0.3396226, b: 0.3396226, a: 1}
+    - _FlatSpecularColor: {r: 0.3396226, g: 0.3396226, b: 0.3396226, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}

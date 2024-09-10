@@ -117,7 +117,8 @@ MonoBehaviour:
   owner: {fileID: 0}
   physicCollider: {fileID: 1039764802912384896}
   overlapCollider: {fileID: 8270286406417715633}
-  OnHitSolid: {fileID: 3691920453876834703, guid: 6a989ce2522738c41b915da80be7f8b2, type: 3}
+  OnHitSolid: {fileID: 0}
+  impactVFX: {fileID: 416251089823111746, guid: bc1f3fb5dfb63b545ba682e68b19b14f, type: 3}
 --- !u!54 &5193386609723468678
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -238,16 +239,16 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.80729437, b: 0, a: 1}
-      key1: {r: 1, g: 0.80729437, b: 0, a: 1}
-      key2: {r: 0.46226418, g: 0.12048375, b: 0, a: 0}
+      key0: {r: 0, g: 0.64705884, b: 1, a: 1}
+      key1: {r: 0, g: 1, b: 0.77254903, a: 1}
+      key2: {r: 0.48235294, g: 1, b: 0.73333335, a: 0}
       key3: {r: 0.46226418, g: 0.12048375, b: 0, a: 0}
       key4: {r: 1, g: 0.9096637, b: 0.16981131, a: 0}
       key5: {r: 0.9528302, g: 0.93055016, b: 0.62023854, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 65535
+      ctime1: 50331
       ctime2: 65535
       ctime3: 65535
       ctime4: 65035
@@ -263,7 +264,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 2
+      m_NumColorKeys: 3
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0

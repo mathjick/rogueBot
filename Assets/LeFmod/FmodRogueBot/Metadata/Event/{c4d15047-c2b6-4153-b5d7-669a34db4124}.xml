@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{c4d15047-c2b6-4153-b5d7-669a34db4124}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>PAF_Death</value>
@@ -62,7 +62,11 @@
 			<destination>{e8982f2e-8e5f-4e24-8fa3-8bcd8ff57512}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{a20811db-e425-4d99-ad6f-b6309339e709}" />
+	<object class="EventAutomatableProperties" id="{a20811db-e425-4d99-ad6f-b6309339e709}">
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{9979e966-6722-44d3-ac61-1cf1a2727348}" />
 	<object class="GroupTrack" id="{f7547d09-5e94-4014-88f5-b2ca5f753862}">
 		<relationship name="modules">
@@ -105,6 +109,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{89eaea9b-9f8c-491b-8e5b-1c6c6bd4d4ee}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{e59bb819-ddfc-49f5-a5c9-64865f3e892d}</destination>
 		</relationship>

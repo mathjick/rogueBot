@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{8bbeaa3c-5ce9-4132-a9b7-bba4aeb53fa9}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>LAD_WeakPointHit</value>

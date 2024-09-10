@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{5d24b709-c7b6-420a-9131-297c07ca74d0}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>PLS_Regen</value>
@@ -75,6 +75,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{532ec61a-0834-468d-ad0a-5f24ceca17f0}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{5fe26eb5-f4b3-421c-991d-bdd1eb5dd55c}</destination>
 		</relationship>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{d38789ba-e7ea-46f7-a259-c6422ba4de76}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>BOOM_Walk</value>
@@ -60,7 +60,11 @@
 			<destination>{e8982f2e-8e5f-4e24-8fa3-8bcd8ff57512}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{c11796af-1c15-468b-be37-d03fa0fecb65}" />
+	<object class="EventAutomatableProperties" id="{c11796af-1c15-468b-be37-d03fa0fecb65}">
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{ac9978fb-e2c7-4235-bd8d-c77ded71a630}" />
 	<object class="GroupTrack" id="{334ab033-7d97-48c5-b5c8-40e7487d1a0b}">
 		<relationship name="modules">

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{dc7c7c04-a1db-409e-be10-8bfb47115bc6}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>BOOM_Death</value>
@@ -62,7 +62,11 @@
 			<destination>{e8982f2e-8e5f-4e24-8fa3-8bcd8ff57512}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{c569db95-1067-4a7a-8952-b020a8fbf0c7}" />
+	<object class="EventAutomatableProperties" id="{c569db95-1067-4a7a-8952-b020a8fbf0c7}">
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{b6d9a0b4-fa03-4b24-ab41-807159b157eb}" />
 	<object class="GroupTrack" id="{ba6d1a43-777e-48f9-81f5-9944b1850a92}">
 		<relationship name="modules">
@@ -105,6 +109,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{8e8c325d-e4d0-4324-8a10-2dc090f2e681}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{0ed36e65-a0c5-44bc-aae8-e78b68febbde}</destination>
 		</relationship>
@@ -237,6 +244,7 @@
 	<object class="MixerBusPanner" id="{f3beb646-3152-49e4-8786-8a019ac93c79}" />
 	<object class="MixerBusEffectChain" id="{684b3297-25c8-46ad-b8d4-18c7ee96b396}">
 		<relationship name="effects">
+			<destination>{183ce6eb-4e12-4f4a-b656-a6944933903d}</destination>
 			<destination>{4143a8f5-4a99-4d21-abbf-a03e15782f34}</destination>
 		</relationship>
 	</object>
@@ -278,6 +286,17 @@
 	<object class="SpatialiserEffect" id="{beb379b4-7318-45e3-a8d1-479ae9270274}" />
 	<object class="MixerBusFader" id="{35778992-b6f3-40aa-bcc3-3fb8abf3df85}" />
 	<object class="MixerBusFader" id="{f0d6eae4-af85-4d44-a533-c8ad0833dda2}" />
+	<object class="MultibandEqEffect" id="{183ce6eb-4e12-4f4a-b656-a6944933903d}">
+		<property name="filterTypeA">
+			<value>8</value>
+		</property>
+		<property name="frequencyA">
+			<value>1908.24695</value>
+		</property>
+		<property name="gainA">
+			<value>-7</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{4143a8f5-4a99-4d21-abbf-a03e15782f34}" />
 	<object class="MultibandEqEffect" id="{4f9a2023-94c0-4837-967c-d98639a70213}">
 		<property name="filterTypeA">

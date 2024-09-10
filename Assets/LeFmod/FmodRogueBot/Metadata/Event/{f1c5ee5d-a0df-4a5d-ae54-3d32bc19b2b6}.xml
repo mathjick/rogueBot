@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{f1c5ee5d-a0df-4a5d-ae54-3d32bc19b2b6}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>BOOM_Shoot</value>
@@ -61,7 +61,11 @@
 			<destination>{e8982f2e-8e5f-4e24-8fa3-8bcd8ff57512}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{653eae8b-d955-43e9-b32d-d63e2a915d45}" />
+	<object class="EventAutomatableProperties" id="{653eae8b-d955-43e9-b32d-d63e2a915d45}">
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{f25ddc9e-72a2-4006-98d6-f51f0addcec4}" />
 	<object class="GroupTrack" id="{654a3b7b-fa85-4493-bc6e-ef54d43812cf}">
 		<relationship name="modules">
@@ -95,6 +99,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f5d16a89-305d-4b71-b6b9-c05ec53f17e8}">
+		<property name="volume">
+			<value>-4</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{8807c5e5-9387-4534-9648-994d5662699d}</destination>
 		</relationship>
@@ -217,6 +224,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{3da4a35e-abd8-45ba-97ab-839abfaa3716}">
 		<relationship name="effects">
+			<destination>{5de32cb0-2807-44e0-822d-22429bba7dde}</destination>
 			<destination>{21596c11-bf55-4ab8-96cd-3032c1d99bf3}</destination>
 		</relationship>
 	</object>
@@ -251,6 +259,17 @@
 	<object class="MixerBusFader" id="{2b646481-0eab-4f11-85db-0fc8d8499ca5}" />
 	<object class="SpatialiserEffect" id="{e4fb69b1-20f4-4327-9f35-2383d14138bd}" />
 	<object class="MixerBusFader" id="{046f7dc4-5626-4a2b-b267-2b605e559fc1}" />
+	<object class="MultibandEqEffect" id="{5de32cb0-2807-44e0-822d-22429bba7dde}">
+		<property name="filterTypeA">
+			<value>8</value>
+		</property>
+		<property name="frequencyA">
+			<value>5604.55469</value>
+		</property>
+		<property name="gainA">
+			<value>-8.79310417</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{21596c11-bf55-4ab8-96cd-3032c1d99bf3}" />
 	<object class="MixerBusFader" id="{c3b22fcf-4856-40ff-ae4c-70e1819ae43f}" />
 </objects>

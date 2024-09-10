@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{83110bbb-9488-41ee-abb0-dc887f601c52}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>PAF_Swing</value>
@@ -61,7 +61,11 @@
 			<destination>{e8982f2e-8e5f-4e24-8fa3-8bcd8ff57512}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{188f5736-6bb3-4bfd-a0bf-df8304f41131}" />
+	<object class="EventAutomatableProperties" id="{188f5736-6bb3-4bfd-a0bf-df8304f41131}">
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{73fa0354-46a5-42eb-b14e-a45252936a53}" />
 	<object class="GroupTrack" id="{106f015f-15c2-447f-81f6-8dcb766ac995}">
 		<relationship name="modules">

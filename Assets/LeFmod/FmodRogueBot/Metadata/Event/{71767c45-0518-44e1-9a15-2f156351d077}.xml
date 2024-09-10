@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{71767c45-0518-44e1-9a15-2f156351d077}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>DOO_Open</value>
@@ -59,7 +59,11 @@
 			<destination>{e8982f2e-8e5f-4e24-8fa3-8bcd8ff57512}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{5630beba-7d02-4188-abf8-3baefdf7ebc9}" />
+	<object class="EventAutomatableProperties" id="{5630beba-7d02-4188-abf8-3baefdf7ebc9}">
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{b084f9b7-4f92-425d-8ea3-ce0cde1cf56a}" />
 	<object class="GroupTrack" id="{bbd09842-5dd1-4253-84eb-7c6fd311ccaf}">
 		<relationship name="modules">

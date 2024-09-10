@@ -11,7 +11,7 @@ using UnityEditor.SceneManagement;
 [System.Serializable]
 public class UsedTile
 {
-    public Transform position;
+    public Vector3 position;
     public GameObject blockLocked;
     public bool isUsed;
     public bool isOrigin;
@@ -38,15 +38,46 @@ public class BlockPercentGeneration
 
 public class LevelGenerator : MonoBehaviour
 {
+    public static LevelGenerator instance;
+    public GameObject player;
     public List<TileRow> PossibleSpawnPoints = new List<TileRow>();
     public List<BlockPercentGeneration> BaseBlocks;
     public List<GameObject> BlockToGenerateAfter;
     public int maxNbrBlocks;
     [Range(0,1)]
     public float chaosFactor;
+    [Range(0,1)]
+    public float elongatedFactor;
+
+    public List<Vector3> origines = new List<Vector3>();
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
+    private void Start()
+    {
+        GenerateWholeLevel();
+    }
 
     public void GenerateWholeLevel()
     {
+        if(chaosFactor == 1)
+        {
+            chaosFactor = 0.99f;
+        }
+        if(elongatedFactor == 1)
+        {
+            elongatedFactor = 0.99f;
+        }
         // initAllCoordinates
         for (int x = 0; x < PossibleSpawnPoints.Count; x++)
         {
@@ -63,6 +94,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 if (PossibleSpawnPoints[x].tiles[y].isOrigin)
                 {
+                    origines.Add(PossibleSpawnPoints[x].tiles[y].position);
                     RollRandomBLock(PossibleSpawnPoints[x].tiles[y],(x,y));
                     _nbrBlocks++;
                 }
@@ -89,12 +121,13 @@ public class LevelGenerator : MonoBehaviour
             }
             if (possibleSpawnPlaces.Count > 0)
             {
-                int _nbrOfBlockToRemove = (int)(possibleSpawnPlaces.Count * chaosFactor);
-                if( possibleSpawnPlaces.Count - _nbrOfBlockToRemove > 1)
+                int _nbrOfBlockToRemove = Mathf.FloorToInt(possibleSpawnPlaces.Count * chaosFactor);
+                if( possibleSpawnPlaces.Count - _nbrOfBlockToRemove >= 1)
                 {
+                    possibleSpawnPlaces.Sort((x, y) => distanceBetweenTwoPoints(new Vector2(x.Item1, x.Item2), new Vector2(origines[0].x, origines[0].y)) < distanceBetweenTwoPoints(new Vector2(y.Item1, y.Item2), new Vector2(origines[0].x, origines[0].y)) ? -1 : 1);
                     for (int i = 0; i < _nbrOfBlockToRemove; i++)
                     {
-                        int _randomIndex = UnityEngine.Random.Range(0, possibleSpawnPlaces.Count);
+                        int _randomIndex = UnityEngine.Random.Range(0, (int)Mathf.Round(possibleSpawnPlaces.Count * ( 1 - elongatedFactor)));
                         possibleSpawnPlaces.RemoveAt(_randomIndex);
                     }
                 }
@@ -156,6 +189,50 @@ public class LevelGenerator : MonoBehaviour
             {
                 Debug.LogError("No more possible spawn places, aborting");
                 break;
+            }
+        }
+
+        //last round, lock all doors that are not next to a used block
+        for (int x = 0; x < PossibleSpawnPoints.Count; x++)
+        {
+            for (int y = 0; y < PossibleSpawnPoints[x].tiles.Count; y++)
+            {
+                if (PossibleSpawnPoints[x].tiles[y].isUsed)
+                {
+                    if (x == 0)
+                    {
+                        PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.North);
+                    }
+                    if (x == PossibleSpawnPoints.Count - 1)
+                    {
+                        PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.South);
+                    }
+                    if (y == 0)
+                    {
+                        PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.West);
+                    }
+                    if (y == PossibleSpawnPoints[x].tiles.Count - 1)
+                    {
+                        PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.East);
+                    }
+
+                    if (x - 1 >= 0 && !PossibleSpawnPoints[x - 1].tiles[y].isUsed)
+                    {
+                        PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.North);
+                    }
+                    if (x + 1 < PossibleSpawnPoints.Count && !PossibleSpawnPoints[x + 1].tiles[y].isUsed)
+                    {
+                        PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.South);
+                    }
+                    if (y - 1 >= 0 && !PossibleSpawnPoints[x].tiles[y - 1].isUsed)
+                    {
+                        PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.West);
+                    }
+                    if (y + 1 < PossibleSpawnPoints[x].tiles.Count && !PossibleSpawnPoints[x].tiles[y + 1].isUsed)
+                    {
+                        PossibleSpawnPoints[x].tiles[y].blockLocked.GetComponent<BlockLogic>().EliminateDoor(DoorDirection.East);
+                    }
+                }
             }
         }
     }
@@ -250,7 +327,7 @@ public class LevelGenerator : MonoBehaviour
         foreach(BlockPercentGeneration _block in _suitableRoomsType)
         {
             pickedNumber -= _block.chanceToGenerate;
-            if(pickedNumber <= 0)
+            if(pickedNumber <= 0 && !_place.isUsed)
             {
                 GenerateBlock(_block, _place, _coordinateCode);
             }
@@ -259,15 +336,18 @@ public class LevelGenerator : MonoBehaviour
 
     public void GenerateBlock(BlockPercentGeneration _block, UsedTile _place, (int, int) _coordinateCode)
     {
-        GameObject newBlock = Instantiate(_block.block, _place.position.position, _place.position.rotation);
-        newBlock.name = newBlock.name + "-Generated X" + _coordinateCode.Item1 + " Y" + _coordinateCode.Item2;
-        PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].blockLocked = newBlock;
-        PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].isUsed = true;
+        if (!_place.isUsed && !PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].isUsed)
+        {
+            GameObject newBlock = Instantiate(_block.block, _place.position, Quaternion.identity);
+            newBlock.name = newBlock.name + "-Generated X" + _coordinateCode.Item1 + " Y" + _coordinateCode.Item2;
+            PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].blockLocked = newBlock;
+            PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].isUsed = true;
+        }
     }
 
     public void GenerateBlock(GameObject _block, UsedTile _place, (int, int) _coordinateCode)
     {
-        GameObject newBlock = Instantiate(_block, _place.position.position, _place.position.rotation);
+        GameObject newBlock = Instantiate(_block, _place.position, Quaternion.identity);
         newBlock.name = newBlock.name + "-Generated X" + _coordinateCode.Item1 + " Y" + _coordinateCode.Item2;
         PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].blockLocked = newBlock;
         PossibleSpawnPoints[_coordinateCode.Item1].tiles[_coordinateCode.Item2].isUsed = true;
@@ -295,6 +375,11 @@ public class LevelGenerator : MonoBehaviour
 
         return _result;
     }
+
+    public float distanceBetweenTwoPoints(Vector2 _point1, Vector2 _point2)
+    {
+        return Mathf.Sqrt(Mathf.Pow(_point1.x - _point2.x, 2) + Mathf.Pow(_point1.y - _point2.y, 2));
+    }
     #endregion
 }
 
@@ -302,6 +387,7 @@ public class LevelGenerator : MonoBehaviour
 [CustomEditor(typeof(LevelGenerator))]
 public class LevelGeneratorEditor : Editor
 {
+    float gridSize = 8.0f;
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
@@ -309,8 +395,25 @@ public class LevelGeneratorEditor : Editor
         LevelGenerator myScript = (LevelGenerator)target;
         if (GUILayout.Button("Generate Whole Level"))
         {
-            myScript.GenerateWholeLevel();
             EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+            myScript.GenerateWholeLevel();
+        }
+        gridSize = EditorGUILayout.FloatField("Increase scale by:", gridSize);
+        if (GUILayout.Button("Generate Spawnpoints"))
+        {
+            EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+            gridSize = Mathf.Round(gridSize);
+            if(gridSize > 1)
+            {
+                for (int x = 0; x < gridSize; x++)
+                {
+                    for (int y = 0; y < gridSize; y++)
+                    {
+                        myScript.PossibleSpawnPoints[x].tiles[y].position = new Vector3(x * 140, 0, y * 140);
+                    }
+                }
+            }
+            
         }
     }
 }

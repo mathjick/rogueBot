@@ -37,7 +37,7 @@ public class DirectionSystem : MonoBehaviour
             directionBlocked _newModule =  new directionBlocked { direction = module.direction, isBlocked = false};
             foreach (Collider collider in module.collidersIn)
             {
-                if (collider == null && collider.gameObject.tag == "tag_solid")
+                if (collider != null && collider.gameObject.tag == "tag_solid")
                 {
                     _newModule.isBlocked = true;
                 }

@@ -19,11 +19,19 @@ public class TriggerModule : MonoBehaviour
 
     public UnityEvent ReloadFeedback;
 
+    [SerializeField] private IntScriptableEvent updateAmmo;
+    [SerializeField] private FloatScriptableEvent updateReload;
+
+    protected bool isReloading = false;
+
     /// <summary>
     /// Fall back when button is pressed
     /// </summary>
     public virtual void Hold()
     {
+        if (!isReloading)
+        {
+        }
     }
 
     /// <summary>
@@ -50,6 +58,10 @@ public class TriggerModule : MonoBehaviour
     /// </summary>
     public virtual void Shoot()
     {
+        if (!isReloading)
+        {
+            updateAmmo.Trigger(actualNumberOfRounds);
+        }
     }
 
     /// <summary>
@@ -57,8 +69,13 @@ public class TriggerModule : MonoBehaviour
     /// </summary>
     public virtual void Reload()
     {
-        Invoke("Reloaded", reloadTime);
-        ReloadFeedback.Invoke();
+        if (!isReloading)
+        {
+            isReloading = true;
+            Invoke("Reloaded", reloadTime);
+            ReloadFeedback.Invoke();
+            updateReload.Trigger(reloadTime);
+        }
     }
 
     /// <summary>
@@ -66,6 +83,8 @@ public class TriggerModule : MonoBehaviour
     /// </summary>
     public virtual void Reloaded()
     {
+        isReloading = false;
         actualNumberOfRounds = RoundsPerMag;
+        updateAmmo.Trigger(actualNumberOfRounds);
     }
 }

@@ -21,7 +21,7 @@ public class TM_Marksman : TriggerModule
     public override void Hold()
     {
         isHolding = true;
-        if(timer <= 0 && actualNumberOfRounds > 0)
+        if(timer <= 0 && actualNumberOfRounds > 0 && !isReloading)
         {
             timer = 60f / RPM;
             Shoot();
@@ -35,7 +35,6 @@ public class TM_Marksman : TriggerModule
 
     public override void Shoot()
     {
-        base.Shoot();
         actualNumberOfRounds--;
         RaycastHit hit;
         Physics.Raycast(playerWeapon.inventory.playerController.playerView.transform.position, playerWeapon.inventory.playerController.playerView.transform.forward * 1000, out hit);
@@ -53,5 +52,6 @@ public class TM_Marksman : TriggerModule
             }
             projectile.GetComponent<Rigidbody>().AddForce((hit.point - playerWeapon.projectileLaunchAnchor.transform.position).normalized * projectileSpeed);
         }
+        base.Shoot();
     }
 }

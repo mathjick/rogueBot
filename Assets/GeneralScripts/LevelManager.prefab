@@ -1,0 +1,349 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1854873110338156265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854873110338156264}
+  - component: {fileID: 1854873110338156267}
+  - component: {fileID: 1854873110338156266}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1854873110338156264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854873110338156265}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.8306341, y: 94.33414, z: -10.317032}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1854873110338156267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854873110338156265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f55a42fb44a3d64b95b78a3bacdb6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  PossibleSpawnPoints:
+  - tiles:
+    - position: {x: 0, y: 0, z: 0}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 0, y: 0, z: 140}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 0, y: 0, z: 280}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 0, y: 0, z: 420}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 0, y: 0, z: 560}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 0, y: 0, z: 700}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 0, y: 0, z: 840}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 0, y: 0, z: 980}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+  - tiles:
+    - position: {x: 140, y: 0, z: 0}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 140, y: 0, z: 140}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 140, y: 0, z: 280}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 140, y: 0, z: 420}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 140, y: 0, z: 560}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 140, y: 0, z: 700}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 140, y: 0, z: 840}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 140, y: 0, z: 980}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+  - tiles:
+    - position: {x: 280, y: 0, z: 0}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 280, y: 0, z: 140}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 280, y: 0, z: 280}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 280, y: 0, z: 420}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 280, y: 0, z: 560}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 280, y: 0, z: 700}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 280, y: 0, z: 840}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 280, y: 0, z: 980}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+  - tiles:
+    - position: {x: 420, y: 0, z: 0}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 1
+    - position: {x: 420, y: 0, z: 140}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 420, y: 0, z: 280}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 420, y: 0, z: 420}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 420, y: 0, z: 560}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 420, y: 0, z: 700}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 420, y: 0, z: 840}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 420, y: 0, z: 980}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+  - tiles:
+    - position: {x: 560, y: 0, z: 0}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 560, y: 0, z: 140}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 560, y: 0, z: 280}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 560, y: 0, z: 420}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 560, y: 0, z: 560}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 560, y: 0, z: 700}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 560, y: 0, z: 840}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 560, y: 0, z: 980}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+  - tiles:
+    - position: {x: 700, y: 0, z: 0}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 700, y: 0, z: 140}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 700, y: 0, z: 280}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 700, y: 0, z: 420}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 700, y: 0, z: 560}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 700, y: 0, z: 700}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 700, y: 0, z: 840}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 700, y: 0, z: 980}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+  - tiles:
+    - position: {x: 840, y: 0, z: 0}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 840, y: 0, z: 140}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 840, y: 0, z: 280}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 840, y: 0, z: 420}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 840, y: 0, z: 560}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 840, y: 0, z: 700}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 840, y: 0, z: 840}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 840, y: 0, z: 980}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+  - tiles:
+    - position: {x: 980, y: 0, z: 0}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 980, y: 0, z: 140}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 980, y: 0, z: 280}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 980, y: 0, z: 420}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 980, y: 0, z: 560}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 980, y: 0, z: 700}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 980, y: 0, z: 840}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+    - position: {x: 980, y: 0, z: 980}
+      blockLocked: {fileID: 0}
+      isUsed: 0
+      isOrigin: 0
+  BaseBlocks:
+  - block: {fileID: 4175247586108613422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
+    chanceToGenerate: 1
+    minimumToGenerate: 0
+    maximumToGenerate: 999999
+    originSuitable: 1
+    classicSuitable: 1
+  BlockToGenerateAfter: []
+  maxNbrBlocks: 16
+  chaosFactor: 0.9
+  elongatedFactor: 0
+  origines: []
+--- !u!114 &1854873110338156266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854873110338156265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63c0ff08ea030545ace7d322b063bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  difficulty:
+    maxTime: 0
+    difficulty: 0
+  difficulties:
+  - maxTime: 120
+    difficulty: 1
+  - maxTime: 240
+    difficulty: 2
+  - maxTime: 360
+    difficulty: 3
+  difficultyCallBacks: []

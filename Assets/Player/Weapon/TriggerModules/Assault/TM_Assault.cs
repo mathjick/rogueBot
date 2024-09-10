@@ -19,7 +19,7 @@ public class TM_Assault : TriggerModule
         {
             timer -= Time.deltaTime;
         }
-        else if (isHolding && actualNumberOfRounds > 0)
+        else if (isHolding && actualNumberOfRounds > 0 && !isReloading)
         {
             timer = 60f / RPM;
             Shoot();
@@ -38,7 +38,6 @@ public class TM_Assault : TriggerModule
 
     public override void Shoot()
     {
-        base.Shoot();
         actualNumberOfRounds--;
         RaycastHit hit = base.Raycast(ls);
         if (hit.collider /*&& hit.collider.tag != "tag_player"*/)
@@ -55,5 +54,6 @@ public class TM_Assault : TriggerModule
             }
             projectile.GetComponent<Rigidbody>().AddForce((hit.point - playerWeapon.projectileLaunchAnchor.transform.position).normalized * projectileSpeed);
         }
+        base.Shoot();
     }
 }

@@ -19,8 +19,13 @@ public class PlayerController : MonoBehaviour
     public PlayerUI playerUI;
     public LifeSystem lifeSystem;
     public LevelSystem levelSystem;
+    public PlayerUnlockable playerUnlockable;
     public bool isGrounded;
     public bool blockInput = false;
+
+    [SerializeField] private IntScriptableEvent updatePlayerHealth;
+    [SerializeField] private IntScriptableEvent updatePlayerMaxHealth;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -33,6 +38,13 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        
+    }
+
+    private void Start()
+    {
+        updatePlayerMaxHealth.Trigger(lifeSystem.maxLifePoints);
+        updatePlayerHealth.Trigger(lifeSystem.lifePoints);
     }
 
     // Update is called once per frame
@@ -47,6 +59,11 @@ public class PlayerController : MonoBehaviour
         LayerMask ls = 1 << layer;
         isGrounded = Physics.Raycast(playerTransform.position, Vector3.down, 1.1f, ls);
         this.playerMouvementSystem.velocityMode = isGrounded ? 0 : 1;
+    }
+
+    public void UpdateHealth()
+    {
+        updatePlayerHealth.Trigger(lifeSystem.lifePoints);
     }
 
     public void OnMove(InputValue val)

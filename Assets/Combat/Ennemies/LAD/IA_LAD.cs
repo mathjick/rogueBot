@@ -98,6 +98,7 @@ public class IA_LAD : MonoBehaviour
     [Header("---------------- EventCallBacks ----------------")]
     [Space(1)]
 
+    public UnityEvent BaseShotCallBack;
     public UnityEvent BombRainCallBack;
     public UnityEvent StartBarrageCallBack;
     public UnityEvent EndBarrageCallBack;
@@ -246,6 +247,7 @@ public class IA_LAD : MonoBehaviour
         {
             currentBarrel = 0;
         }
+        BaseShotCallBack?.Invoke();
         GameObject projectile = Instantiate(projectilePrefab, barrels[currentBarrel].transform.position, barrels[currentBarrel].transform.rotation);
         projectile.GetComponent<DamageData>().damagesTypes = projectileDamage.damagesTypes;
         projectile.GetComponent<DamageData>().damages = projectileDamage.damages;
@@ -257,27 +259,66 @@ public class IA_LAD : MonoBehaviour
     {
         if(calmTimer <= 0)
         {
-            if (dischargeTimer <= 0)
+            // check if LAD is seing the player
+            if ( Vector3.Dot(turretCore.transform.forward, target.transform.position - turretCore.transform.position) > 0.5f)
             {
-                RevealWeakPoint(LADWeakPoint.Back);
-                Invoke("ActivateDischarge", 1f);
-                calmTimer = calmTime;
+                if (Vector3.Distance(target.transform.position, transform.position) < 5f)
+                {
+                    if (dischargeTimer <= 0)
+                    {
+                        RevealWeakPoint(LADWeakPoint.Back);
+                        Invoke("ActivateDischarge", 1f);
+                        calmTimer = calmTime;
+                    }
+                }
+                else
+                {
+                    int random = Random.Range(0, 2);
+                    switch (random)
+                    {
+                        case 0:
+                            if (dischargeTimer <= 0)
+                            {
+                                RevealWeakPoint(LADWeakPoint.Back);
+                                Invoke("ActivateDischarge", 1f);
+                                calmTimer = calmTime;
+                            }
+                            break;
+                        case 1:
+                            if (barrageTimer <= 0)
+                            {
+                                RevealWeakPoint(LADWeakPoint.Core);
+                                StartBarrageCallBack?.Invoke();
+                                Invoke("Barrage", 1f);
+                                calmTimer = calmTime;
+                            }
+                            break;
+                        case 2:
+                            if (bombTimer <= 0)
+                            {
+                                RevealWeakPoint(LADWeakPoint.Core);
+                                BombRainCallBack?.Invoke();
+                                Invoke("BombRain", 1f);
+                                calmTimer = calmTime;
+                            }
+                            break;
+                        // TO DO : sbire summoning
+                        default:
+                            break;
+                    }
+                }
             }
-            else if (barrageTimer <= 0)
+            else
             {
-                RevealWeakPoint(LADWeakPoint.Core);
-                StartBarrageCallBack?.Invoke();
-                Invoke("Barrage", 1f);
-                calmTimer = calmTime;
+                if (bombTimer <= 0)
+                {
+                    RevealWeakPoint(LADWeakPoint.Core);
+                    BombRainCallBack?.Invoke();
+                    Invoke("BombRain", 1f);
+                    calmTimer = calmTime;
+                }
+                // TO DO : sbire summoning
             }
-            else if (bombTimer <= 0)
-            {
-                RevealWeakPoint(LADWeakPoint.Core);
-                BombRainCallBack?.Invoke();
-                Invoke("BombRain",1f);
-                calmTimer = calmTime;
-            }
-            
         }
     }
 

@@ -52,265 +52,329 @@ MonoBehaviour:
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 0, y: 0, z: 140}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 0, y: 0, z: 280}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 0, y: 0, z: 420}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 0, y: 0, z: 560}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 0, y: 0, z: 700}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 0, y: 0, z: 840}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 0, y: 0, z: 980}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
   - tiles:
     - position: {x: 140, y: 0, z: 0}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 140, y: 0, z: 140}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 140, y: 0, z: 280}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 140, y: 0, z: 420}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 140, y: 0, z: 560}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 140, y: 0, z: 700}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 140, y: 0, z: 840}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 140, y: 0, z: 980}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
   - tiles:
     - position: {x: 280, y: 0, z: 0}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 280, y: 0, z: 140}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 280, y: 0, z: 280}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 280, y: 0, z: 420}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 280, y: 0, z: 560}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 280, y: 0, z: 700}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 280, y: 0, z: 840}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 280, y: 0, z: 980}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
   - tiles:
     - position: {x: 420, y: 0, z: 0}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 1
+      doorsToCheck: 
     - position: {x: 420, y: 0, z: 140}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 420, y: 0, z: 280}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 420, y: 0, z: 420}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 420, y: 0, z: 560}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 420, y: 0, z: 700}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 420, y: 0, z: 840}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 420, y: 0, z: 980}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
   - tiles:
     - position: {x: 560, y: 0, z: 0}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 560, y: 0, z: 140}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 560, y: 0, z: 280}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 560, y: 0, z: 420}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 560, y: 0, z: 560}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 560, y: 0, z: 700}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 560, y: 0, z: 840}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 560, y: 0, z: 980}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
   - tiles:
     - position: {x: 700, y: 0, z: 0}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 700, y: 0, z: 140}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 700, y: 0, z: 280}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 700, y: 0, z: 420}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 700, y: 0, z: 560}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 700, y: 0, z: 700}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 700, y: 0, z: 840}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 700, y: 0, z: 980}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
   - tiles:
     - position: {x: 840, y: 0, z: 0}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 840, y: 0, z: 140}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 840, y: 0, z: 280}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 840, y: 0, z: 420}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 840, y: 0, z: 560}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 840, y: 0, z: 700}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 840, y: 0, z: 840}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 840, y: 0, z: 980}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
   - tiles:
     - position: {x: 980, y: 0, z: 0}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 980, y: 0, z: 140}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 980, y: 0, z: 280}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 980, y: 0, z: 420}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 980, y: 0, z: 560}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 980, y: 0, z: 700}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 980, y: 0, z: 840}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
     - position: {x: 980, y: 0, z: 980}
       blockLocked: {fileID: 0}
       isUsed: 0
       isOrigin: 0
+      doorsToCheck: 
   BaseBlocks:
   - block: {fileID: 4175247586108613422, guid: f0215483e8b72354da89ef2e634ddd2c, type: 3}
     chanceToGenerate: 1
@@ -336,9 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  difficulty:
-    maxTime: 0
-    difficulty: 0
+  difficultyLevel: 0
   difficulties:
   - maxTime: 120
     difficulty: 1
@@ -346,4 +408,6 @@ MonoBehaviour:
     difficulty: 2
   - maxTime: 360
     difficulty: 3
+  - maxTime: 480
+    difficulty: 4
   difficultyCallBacks: []

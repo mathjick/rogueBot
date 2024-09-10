@@ -1293,7 +1293,7 @@ GameObject:
   - component: {fileID: 7325298098177798535}
   - component: {fileID: 1058562783415592098}
   - component: {fileID: 3637077754014661225}
-  - component: {fileID: 1455639295321510404}
+  - component: {fileID: 2728184755207656528}
   m_Layer: 6
   m_Name: PlayerView
   m_TagString: MainCamera
@@ -1377,7 +1377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
---- !u!114 &1455639295321510404
+--- !u!114 &2728184755207656528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1386,10 +1386,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 4715186888717048414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1572160127
+      Data2: 1158546747
+      Data3: -960422514
+      Data4: -723251776
+    Path: event:/Music/MUS_Game
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &4854668403933052043
 GameObject:
   m_ObjectHideFlags: 0

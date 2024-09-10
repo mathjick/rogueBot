@@ -9,6 +9,7 @@ public class LAD_Bomb : MonoBehaviour
     private float fuzeTimer;
     private List<LifeSystem> entitysIn = new List<LifeSystem>();
     public TriggerRelay relayExplosionZone;
+    public GameObject explosionEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,10 @@ public class LAD_Bomb : MonoBehaviour
         foreach (LifeSystem entity in entitysIn)
         {
             entity.TakeDamage(damageData.damagesTypes, damageData.damages,gameObject);
+        }
+        if (explosionEffect)
+        {
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
     }

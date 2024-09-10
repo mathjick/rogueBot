@@ -158,4 +158,28 @@ public class PlayerMouvement : MonoBehaviour
     {
         frictionModifier = 1;
     }
+
+
+    #region LevelUpFallBack
+    public void AddAditionalJumps(int value)
+    {
+        jumps += value;
+    }
+
+    public void AddAditionalJumpForce(int value)
+    {
+        jumpForce += value;
+    }
+
+    public void AddAditionalGroundSpeed(float value)
+    {
+        velocityMax += new Vector3(value, value, value);
+    }
+
+    public void AddAditionalAirSpeed(float value)
+    {
+        holdJumpVelocityMax += new Vector3(value, value, value);
+    }
+
+    #endregion
 }

@@ -127,4 +127,17 @@ public class LifeSystem : MonoBehaviour
     {
 
     }
+
+    #region LevelUpFallBack
+    public void AddAditionalLifePoints(int value)
+    {
+        maxLifePoints += value;
+        lifePoints += value;
+        if (PvNBr)
+        {
+            PvNBr.text = lifePoints.ToString();
+        }
+    }
+
+    #endregion
 }

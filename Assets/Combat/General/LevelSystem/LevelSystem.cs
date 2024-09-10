@@ -13,29 +13,21 @@ public class LevelTreshold
 public class LevelSystem : MonoBehaviour
 {
     public int exp;
-    public LevelTreshold currentLevel;
+    public int currentLevelIndex;
     public List<LevelTreshold> LevelTresholds;
 
-    public int GetLevel()
+    private void Start()
     {
-        int level = 0;
-        foreach (LevelTreshold treshold in LevelTresholds)
-        {
-            if (exp >= treshold.treshold)
-            {
-                level = treshold.level;
-            }
-        }
-        return level;
+        AddExp(0);
     }
 
     public void AddExp(int exp)
     {
         this.exp += exp;
-        if (GetLevel() > currentLevel.level)
+        if (LevelTresholds[currentLevelIndex].treshold <= this.exp)
         {
-            currentLevel = LevelTresholds.Find(x => x.level == GetLevel());
-            currentLevel.levelEvent.Invoke();
+            currentLevelIndex++;
+            LevelTresholds[currentLevelIndex].levelEvent.Invoke();
         }
     }
 }

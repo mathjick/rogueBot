@@ -34263,6 +34263,7 @@ MonoBehaviour:
   fuzeTime: 5
   damageData: {fileID: 5292827745771143469}
   relayExplosionZone: {fileID: 1755767352291539008}
+  explosionEffect: {fileID: 4152986233289347198, guid: 9bf758d0232559a45b55c2a32d94d34c, type: 3}
 --- !u!114 &5292827745771143469
 MonoBehaviour:
   m_ObjectHideFlags: 0

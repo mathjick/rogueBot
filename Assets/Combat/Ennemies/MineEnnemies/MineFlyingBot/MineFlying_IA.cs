@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public enum MineFlying_States
 {
@@ -23,6 +24,8 @@ public class MineFlying_IA : IaBase
     //feedbacks
     public GameObject spawnEffect;
     public GameObject deathEffect;
+
+    public UnityEvent ShotCallback;
 
     [Header("--- parameters ---")]
     public float maxAttackRange;
@@ -134,6 +137,7 @@ public class MineFlying_IA : IaBase
         {
             if (attackTimer <= 0)
             {
+                ShotCallback?.Invoke();
                 GameObject _projectile = Instantiate(projectileToShoot, projectileSpawnPoint.transform.position, projectileSpawnPoint.transform.rotation);
                 Vector3 _predictedVector = ((playerToFocus.transform.position + (playerToFocus.GetComponent<Rigidbody>().velocity * 0.8f)) - transform.position).normalized * 2000;
                 Vector3 _randomVector = new Vector3(Random.Range(-100, 100), Random.Range(-100, 100), Random.Range(-100, 100));

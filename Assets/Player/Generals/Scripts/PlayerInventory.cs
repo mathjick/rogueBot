@@ -18,9 +18,15 @@ public class PlayerInventory : MonoBehaviour
     [Space(1)]
 
     public UnityEvent EquipModuleCallBack;
+    public UnityEvent ReloadCallBack;
+    public UnityEvent EmptyMagCallBack;
 
     public void HoldTrigger(InputValue val)
     {
+        if(triggerModuleEquipped && triggerModuleEquipped.actualNumberOfRounds <= 0)
+        {
+            EmptyMagCallBack?.Invoke();
+        }
         weapon.HoldTrigger(val);
     }
 
@@ -53,6 +59,7 @@ public class PlayerInventory : MonoBehaviour
     public void Reload()
     {
         weapon.Reload();
+        ReloadCallBack?.Invoke();
     }
 
     public void UnEquipModule()

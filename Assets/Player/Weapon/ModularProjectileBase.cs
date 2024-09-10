@@ -66,7 +66,6 @@ public class ModularProjectileBase : MonoBehaviour
         overlapCollider.enabled = false;
         if (other.GetComponent<ImpactZone>())
         {
-            Debug.Log("takeDamage");
             other.GetComponent<ImpactZone>().TakeDamage(damageData.damagesTypes, damageData.damages, owner, other.ClosestPoint(transform.position));
         }
         CleanItself();

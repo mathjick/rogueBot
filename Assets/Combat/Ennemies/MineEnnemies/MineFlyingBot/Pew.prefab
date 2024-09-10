@@ -1469,7 +1469,7 @@ MonoBehaviour:
   maxAttackRange: 30
   minAttackRange: 20
   attackRate: 0.3
-  moveSpeed: 10
+  moveSpeed: 20
   randomFactor: 0.1
   playerToFocus: {fileID: 0}
 --- !u!114 &8844611963735667967

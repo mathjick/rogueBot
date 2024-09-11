@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6b276e7d420f19445994fc8eebc7db2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d972b963dc0a53459ac8f9670a02492, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa24b8f47409a4e46a4668e54856eddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isReloading: 0
 --- !u!114 &2867663119164702017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +341,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6788423346311068397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37a8f04b67094cf48b31495fe29d0b07, type: 3}
   m_Name: 
@@ -381,7 +382,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6788423346311068397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bec192c74b38c3b47a8a8fb96158eccc, type: 3}
   m_Name: 
@@ -421,7 +422,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6788423346311068397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee6dcf54ea336d848be26a40ff4b704e, type: 3}
   m_Name: 
@@ -1118,7 +1119,6 @@ GameObject:
   - component: {fileID: 6788423347493864714}
   - component: {fileID: 6788423347493864712}
   - component: {fileID: 6788423347493864715}
-  - component: {fileID: 6788423347493864713}
   m_Layer: 5
   m_Name: Lifebar Background
   m_TagString: Untagged
@@ -1184,21 +1184,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6788423347493864713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6788423347493864717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 369b374a7ef167e449b21e3d31a2cc28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 0
-  _maxHealth: 0
-  _image: {fileID: 0}
 --- !u!1 &6788423347612939033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,6 +1388,7 @@ GameObject:
   - component: {fileID: 6788423347773965331}
   - component: {fileID: 6788423347773965329}
   - component: {fileID: 6788423347773965328}
+  - component: {fileID: 2126539197683893090}
   m_Layer: 5
   m_Name: Reticle
   m_TagString: Untagged
@@ -1468,3 +1454,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2126539197683893090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6788423347773965330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f717f9e27d9c3684dba36ab61de945df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

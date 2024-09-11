@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GenericScriptableEvent<T> : ScriptableObject
 {
-    private List<GenericScriptableEventListener<T>> listeners;
+    private List<GenericScriptableEventListener<T>> listeners = new List<GenericScriptableEventListener<T>>();
 
     public void AddListener(GenericScriptableEventListener<T> listener)
     {

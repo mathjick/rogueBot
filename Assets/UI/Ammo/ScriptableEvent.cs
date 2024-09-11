@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptableEvent : MonoBehaviour
+[CreateAssetMenu(menuName = "Scriptable Event/Scriptable Event")]
+public class ScriptableEvent : ScriptableObject
 {
     private List<ScriptableEventListener> listeners;
 

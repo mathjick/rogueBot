@@ -2411,7 +2411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   immune: 0
   lifePoints: 0
-  maxLifePoints: 500
+  maxLifePoints: 300
   damageTypesArmors: []
   PvNBr: {fileID: 7778627364470644091}
   lastSourceOfDamage: {fileID: 0}

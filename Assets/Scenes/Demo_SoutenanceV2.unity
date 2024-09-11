@@ -3807,7 +3807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1854873110338156267, guid: e4159d94a3be0ab49896e22973d541e2, type: 3}
       propertyPath: BaseBlocks.Array.size
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1854873110338156267, guid: e4159d94a3be0ab49896e22973d541e2, type: 3}
       propertyPath: BaseBlocks.Array.data[0].block
@@ -3832,19 +3832,19 @@ PrefabInstance:
     - target: {fileID: 1854873110338156267, guid: e4159d94a3be0ab49896e22973d541e2, type: 3}
       propertyPath: BaseBlocks.Array.data[5].block
       value: 
-      objectReference: {fileID: 2269138932656706766, guid: 5cdd4d1eb7cb9eb49ac4ecdb403fd2b9, type: 3}
+      objectReference: {fileID: 111137693715779218, guid: 55f39edee5eecdd43aac71843f3e1836, type: 3}
     - target: {fileID: 1854873110338156267, guid: e4159d94a3be0ab49896e22973d541e2, type: 3}
       propertyPath: BaseBlocks.Array.data[6].block
       value: 
-      objectReference: {fileID: 111137693715779218, guid: 55f39edee5eecdd43aac71843f3e1836, type: 3}
+      objectReference: {fileID: 7955720114216643964, guid: 4afca96f8caf1214cb2f3719b46a3e01, type: 3}
     - target: {fileID: 1854873110338156267, guid: e4159d94a3be0ab49896e22973d541e2, type: 3}
       propertyPath: BaseBlocks.Array.data[7].block
       value: 
-      objectReference: {fileID: 7955720114216643964, guid: 4afca96f8caf1214cb2f3719b46a3e01, type: 3}
+      objectReference: {fileID: 7776608396507214661, guid: e8305ec209b9149409b074f3f8969f3a, type: 3}
     - target: {fileID: 1854873110338156267, guid: e4159d94a3be0ab49896e22973d541e2, type: 3}
       propertyPath: BaseBlocks.Array.data[8].block
       value: 
-      objectReference: {fileID: 7776608396507214661, guid: e8305ec209b9149409b074f3f8969f3a, type: 3}
+      objectReference: {fileID: 4409098085123663633, guid: 15d72532d7e82344eb54d21e64adeaf1, type: 3}
     - target: {fileID: 1854873110338156267, guid: e4159d94a3be0ab49896e22973d541e2, type: 3}
       propertyPath: BaseBlocks.Array.data[9].block
       value: 

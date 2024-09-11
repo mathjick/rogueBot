@@ -2411,7 +2411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   immune: 0
   lifePoints: 0
-  maxLifePoints: 100
+  maxLifePoints: 500
   damageTypesArmors: []
   PvNBr: {fileID: 7778627364470644091}
   lastSourceOfDamage: {fileID: 0}
@@ -2492,12 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: 0
-  currentLevel:
-    level: 0
-    treshold: 0
-    levelEvent:
-      m_PersistentCalls:
-        m_Calls: []
+  currentLevelIndex: 0
   LevelTresholds:
   - level: 0
     treshold: 10
